@@ -4,7 +4,7 @@
 this addAction ["Name of your action", {// code for your action ... what it does}];
 ```
 
-This is essentially event handler that is displayed by player proximity.
+This is just an event handler that is displayed by player proximity.
 ```SQF
 this addAction 
 [
