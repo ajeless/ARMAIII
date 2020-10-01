@@ -6,5 +6,5 @@ Repository for ARMA III WIP.
 [Missions](./missions)  
 [MPMissions](./MPMissions)  
 
-## Scripts & Recipies
-Experiments, recipies, code snippets, and scripts can be [found here](./scripts/README.md).
+## Mission Making and Editing
+[Add Action to Object](./mission_making/add_action.md)  
