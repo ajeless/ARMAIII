@@ -1,0 +1,13 @@
+author			= "Ajeless";
+onLoadName		= "Bad Intel: Zero Dark Dirty";
+onLoadMission	= "Let's keep this one between us, ok?";
+
+class Header
+{
+	gameType =  Coop;	// Game type
+	minPlayers =  1;	// minimum number of players the mission supports
+	maxPlayers = 2;	// maximum number of players the mission supports
+};
+
+respawnOnStart=-1;
+respawnDelay=10;

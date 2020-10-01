@@ -1,0 +1,12 @@
+respawnOnStart = -1;
+
+class CfgSounds
+{
+ sounds[] = {};
+ class music1
+ {
+  name = "music1";
+  sound[] = {"\sounds\Defenders.wav", db+3000, 1};
+  titles[] = {0,""};
+ };
+};
