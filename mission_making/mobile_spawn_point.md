@@ -1,9 +1,15 @@
 # Player Mobile Spawn Point  
 
-This code allows a player to select a spawn location anywhere on the map. The scripts that require modification are `onPlayerKilled.sqf`, and `onPlayerRespawn.sqf`.
+This code allows a player to select a spawn location anywhere on the map. The scripts that require modification are `onPlayerKilled.sqf`, and `onPlayerRespawn.sqf`. So the mission folder should contain these scripts.  
+
+```bash
+mission_root_directory
+    |-onPlayerKilled.sqf
+    |-onPlayerRespawn.sqf
+```
 
 ## onPlayerKilled.sqf
-When the player is killed we create a marker called `respawn_west_player_name`.  We display it on the screen as `player name`.  When the respawn screen is shown we can click anywhere in the map to spawn there.
+When the player is killed we create a marker called `respawn_west_player_name`.  We display it on the screen as `player name`.  When the respawn screen is shown we can click anywhere in the map and then click the respawn button to spawn at our selected location.
 ```SQF
 playerMobileSpawnPoint = createMarker [format ["respawn_west_%1", name player], player];
 playerMobileSpawnPoint setMarkerType "mil_triangle";
