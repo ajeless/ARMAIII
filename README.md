@@ -7,4 +7,4 @@ Keep our ARMA III work in progress all in one place.
 [MPMissions](./MPMissions)  
 
 ## Scripts & Recipies
-Experiments, recipies, code snippets, and scripts can be [found here](./scripts).
+Experiments, recipies, code snippets, and scripts can be [found here](./scripts/README.md).
