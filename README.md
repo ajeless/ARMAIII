@@ -1,6 +1,6 @@
 # ARMAIII
 
-Keep our ARMA III work in progress all in one place.
+Repository for ARMA III WIP.
 
 ## Missions & MPMissions
 [Missions](./missions)  
