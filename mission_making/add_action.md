@@ -1,4 +1,4 @@
-# Adding Action to Object
+# Adding an Action to an Object
 
 ```SQF
 this addAction ["Name of your action", {// code for your action ... what it does}];
