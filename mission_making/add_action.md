@@ -4,7 +4,7 @@
 this addAction ["Name of your action", {// code for your action ... what it does}];
 ```
 
-This is an event handler that is triggered by player proximity.
+This is essentially event handler that is displayed by player proximity.
 ```SQF
 this addAction 
 [
@@ -13,6 +13,10 @@ this addAction
 ];
 ```
 
+Add it to the object init field in the editor.
+![Add Action](./images/add_action_to_object.png)  
+
+Here we see it availabe as an action to the player.
 ![Add Action](./images/add_action.png)  
 
 See the community wiki for 
