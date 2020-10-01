@@ -1,0 +1,4 @@
+respawnOnStart = -1;
+respawnDelay =5;
+respawnDialog = -1;
+// onLoadName = "HueHueHue";

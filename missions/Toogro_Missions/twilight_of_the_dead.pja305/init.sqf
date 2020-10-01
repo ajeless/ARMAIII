@@ -1,0 +1,1 @@
+"my_marker" setMarkerAlpha 0;

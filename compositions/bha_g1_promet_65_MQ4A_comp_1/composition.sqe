@@ -1,0 +1,3906 @@
+version=53;
+center[]={4211.2769,5,4237.4961};
+class items
+{
+	items=3;
+	class Item0
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=10;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={0.62744141,0.0014390945,-7.2509766};
+					angles[]={0,3.1415927,0};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					rank="SERGEANT";
+					isPlayer=1;
+					isPlayable=1;
+					class Inventory
+					{
+						class primaryWeapon
+						{
+							name="arifle_MSBS65_black_F";
+							class primaryMuzzleMag
+							{
+								name="30Rnd_65x39_caseless_msbs_mag";
+								ammoLeft=30;
+							};
+						};
+						class handgun
+						{
+							name="hgun_Pistol_heavy_01_green_F";
+							optics="optic_MRD_black";
+							flashlight="hlc_acc_DBALPL_FL";
+							class primaryMuzzleMag
+							{
+								name="11Rnd_45ACP_Mag";
+								ammoLeft=11;
+							};
+						};
+						class binocular
+						{
+							name="Laserdesignator_02_ghex_F";
+						};
+						class uniform
+						{
+							typeName="U_B_CTRG_2";
+							isBackpack=0;
+							class ItemCargo
+							{
+								items=1;
+								class Item0
+								{
+									name="FirstAidKit";
+									count=5;
+								};
+							};
+						};
+						class vest
+						{
+							typeName="V_PlateCarrier1_blk";
+							isBackpack=0;
+							class MagazineCargo
+							{
+								items=2;
+								class Item0
+								{
+									name="11Rnd_45ACP_Mag";
+									count=1;
+									ammoLeft=11;
+								};
+								class Item1
+								{
+									name="30Rnd_65x39_caseless_msbs_mag";
+									count=3;
+									ammoLeft=30;
+								};
+							};
+							class ItemCargo
+							{
+								items=4;
+								class Item0
+								{
+									name="muzzle_snds_acp";
+									count=1;
+								};
+								class Item1
+								{
+									name="muzzle_snds_H";
+									count=1;
+								};
+								class Item2
+								{
+									name="acc_pointer_IR";
+									count=1;
+								};
+								class Item3
+								{
+									name="optic_Nightstalker";
+									count=1;
+								};
+							};
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ItemWatch";
+						radio="ItemRadio";
+						gps="B_UavTerminal";
+						headgear="H_HelmetO_ViperSP_ghex_F";
+					};
+				};
+				id=91;
+				type="B_T_Soldier_TL_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ENH_spotDistance";
+						expression="_this setSkill ['spotDistance',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ENH_reloadingSpeed";
+						expression="_this setSkill ['reloadSpeed',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="ENH_aimingSpeed";
+						expression="_this setSkill ['aimingSpeed',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="ENH_unitTraits_engineer";
+						expression="_this setUnitTrait ['Engineer',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute4
+					{
+						property="ENH_aimingAccuracy";
+						expression="_this setSkill ['aimingAccuracy',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute5
+					{
+						property="ENH_unitTraits_audibleCoef";
+						expression="_this setUnitTrait ['AudibleCoef',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.70000005;
+							};
+						};
+					};
+					class Attribute6
+					{
+						property="ENH_unitTraits_medic";
+						expression="_this setUnitTrait ['Medic',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute7
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male09ENG";
+							};
+						};
+					};
+					class Attribute8
+					{
+						property="ENH_commanding";
+						expression="_this setSkill ['commanding',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute9
+					{
+						property="ENH_unitTrait_UAVHacker";
+						expression="_this setUnitTrait ['UAVHacker',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute10
+					{
+						property="ENH_unitTraits_loadCoef";
+						expression="_this setUnitTrait ['LoadCoef',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.70000005;
+							};
+						};
+					};
+					class Attribute11
+					{
+						property="ENH_courage";
+						expression="_this setSkill ['courage',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute12
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					class Attribute13
+					{
+						property="ENH_allowFleeing";
+						expression="_this allowFleeing _value";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.25;
+							};
+						};
+					};
+					class Attribute14
+					{
+						property="ENH_unitTraits_camouflage";
+						expression="_this setUnitTrait ['CamouflageCoef',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.70000005;
+							};
+						};
+					};
+					class Attribute15
+					{
+						property="ENH_spotTime";
+						expression="_this setSkill ['spotTime',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute16
+					{
+						property="enh_general";
+						expression="_this setSkill ['general',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute17
+					{
+						property="ENH_unitTrait_explosiveSpecialist";
+						expression="_this setUnitTrait ['ExplosiveSpecialist',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute18
+					{
+						property="ENH_aimingShake";
+						expression="_this setSkill ['aimingShake',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					nAttributes=19;
+				};
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-0.765625,0.0014390945,-6.0698242};
+					angles[]={0,3.3761301,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.44999999;
+					rank="CORPORAL";
+					isPlayable=1;
+					class Inventory
+					{
+						class primaryWeapon
+						{
+							name="arifle_MSBS65_black_F";
+							class primaryMuzzleMag
+							{
+								name="30Rnd_65x39_caseless_msbs_mag";
+								ammoLeft=30;
+							};
+						};
+						class handgun
+						{
+							name="hgun_Pistol_heavy_01_green_F";
+							optics="optic_MRD_black";
+							flashlight="hlc_acc_DBALPL_FL";
+							class primaryMuzzleMag
+							{
+								name="11Rnd_45ACP_Mag";
+								ammoLeft=11;
+							};
+						};
+						class binocular
+						{
+							name="Laserdesignator_02_ghex_F";
+						};
+						class uniform
+						{
+							typeName="U_B_CTRG_2";
+							isBackpack=0;
+							class ItemCargo
+							{
+								items=1;
+								class Item0
+								{
+									name="FirstAidKit";
+									count=5;
+								};
+							};
+						};
+						class vest
+						{
+							typeName="V_PlateCarrier1_blk";
+							isBackpack=0;
+							class MagazineCargo
+							{
+								items=2;
+								class Item0
+								{
+									name="11Rnd_45ACP_Mag";
+									count=1;
+									ammoLeft=11;
+								};
+								class Item1
+								{
+									name="30Rnd_65x39_caseless_msbs_mag";
+									count=3;
+									ammoLeft=30;
+								};
+							};
+							class ItemCargo
+							{
+								items=4;
+								class Item0
+								{
+									name="muzzle_snds_acp";
+									count=1;
+								};
+								class Item1
+								{
+									name="muzzle_snds_H";
+									count=1;
+								};
+								class Item2
+								{
+									name="acc_pointer_IR";
+									count=1;
+								};
+								class Item3
+								{
+									name="optic_Nightstalker";
+									count=1;
+								};
+							};
+						};
+						class backpack
+						{
+							typeName="B_UAV_01_backpack_F";
+							isBackpack=1;
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ItemWatch";
+						radio="ItemRadio";
+						gps="B_UavTerminal";
+						headgear="H_HelmetO_ViperSP_ghex_F";
+					};
+				};
+				id=92;
+				type="B_T_Soldier_UAV_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ENH_spotDistance";
+						expression="_this setSkill ['spotDistance',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ENH_reloadingSpeed";
+						expression="_this setSkill ['reloadSpeed',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="ENH_aimingSpeed";
+						expression="_this setSkill ['aimingSpeed',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="ENH_unitTraits_engineer";
+						expression="_this setUnitTrait ['Engineer',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute4
+					{
+						property="ENH_aimingAccuracy";
+						expression="_this setSkill ['aimingAccuracy',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute5
+					{
+						property="ENH_unitTraits_audibleCoef";
+						expression="_this setUnitTrait ['AudibleCoef',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.70000005;
+							};
+						};
+					};
+					class Attribute6
+					{
+						property="ENH_unitTraits_medic";
+						expression="_this setUnitTrait ['Medic',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute7
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male10ENG";
+							};
+						};
+					};
+					class Attribute8
+					{
+						property="ENH_commanding";
+						expression="_this setSkill ['commanding',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute9
+					{
+						property="ENH_unitTraits_loadCoef";
+						expression="_this setUnitTrait ['LoadCoef',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.70000005;
+							};
+						};
+					};
+					class Attribute10
+					{
+						property="ENH_courage";
+						expression="_this setSkill ['courage',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute11
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.04;
+							};
+						};
+					};
+					class Attribute12
+					{
+						property="ENH_allowFleeing";
+						expression="_this allowFleeing _value";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.25;
+							};
+						};
+					};
+					class Attribute13
+					{
+						property="ENH_unitTraits_camouflage";
+						expression="_this setUnitTrait ['CamouflageCoef',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.70000005;
+							};
+						};
+					};
+					class Attribute14
+					{
+						property="ENH_spotTime";
+						expression="_this setSkill ['spotTime',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute15
+					{
+						property="enh_general";
+						expression="_this setSkill ['general',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute16
+					{
+						property="ENH_unitTrait_explosiveSpecialist";
+						expression="_this setUnitTrait ['ExplosiveSpecialist',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute17
+					{
+						property="ENH_aimingShake";
+						expression="_this setSkill ['aimingShake',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					nAttributes=18;
+				};
+			};
+			class Item2
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-2.2597656,0.0014390945,-3.3071289};
+					angles[]={0,3.6282427,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.44999999;
+					isPlayable=1;
+					class Inventory
+					{
+						class primaryWeapon
+						{
+							name="arifle_MSBS65_black_F";
+							class primaryMuzzleMag
+							{
+								name="30Rnd_65x39_caseless_msbs_mag";
+								ammoLeft=30;
+							};
+						};
+						class secondaryWeapon
+						{
+							name="launch_O_Titan_short_ghex_F";
+							class primaryMuzzleMag
+							{
+								name="Titan_AT";
+								ammoLeft=1;
+							};
+						};
+						class handgun
+						{
+							name="hgun_Pistol_heavy_01_green_F";
+							optics="optic_MRD_black";
+							flashlight="hlc_acc_DBALPL_FL";
+							class primaryMuzzleMag
+							{
+								name="11Rnd_45ACP_Mag";
+								ammoLeft=11;
+							};
+						};
+						class binocular
+						{
+							name="Laserdesignator_02_ghex_F";
+						};
+						class uniform
+						{
+							typeName="U_B_CTRG_2";
+							isBackpack=0;
+							class ItemCargo
+							{
+								items=1;
+								class Item0
+								{
+									name="FirstAidKit";
+									count=5;
+								};
+							};
+						};
+						class vest
+						{
+							typeName="V_PlateCarrier1_blk";
+							isBackpack=0;
+							class MagazineCargo
+							{
+								items=2;
+								class Item0
+								{
+									name="11Rnd_45ACP_Mag";
+									count=1;
+									ammoLeft=11;
+								};
+								class Item1
+								{
+									name="30Rnd_65x39_caseless_msbs_mag";
+									count=3;
+									ammoLeft=30;
+								};
+							};
+							class ItemCargo
+							{
+								items=4;
+								class Item0
+								{
+									name="muzzle_snds_acp";
+									count=1;
+								};
+								class Item1
+								{
+									name="muzzle_snds_H";
+									count=1;
+								};
+								class Item2
+								{
+									name="acc_pointer_IR";
+									count=1;
+								};
+								class Item3
+								{
+									name="optic_Nightstalker";
+									count=1;
+								};
+							};
+						};
+						class backpack
+						{
+							typeName="B_AssaultPack_blk";
+							isBackpack=1;
+							class MagazineCargo
+							{
+								items=1;
+								class Item0
+								{
+									name="Titan_AT";
+									count=1;
+									ammoLeft=1;
+								};
+							};
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ItemWatch";
+						radio="ItemRadio";
+						gps="B_UavTerminal";
+						headgear="H_HelmetO_ViperSP_ghex_F";
+					};
+				};
+				id=95;
+				type="B_T_Soldier_AT_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ENH_spotDistance";
+						expression="_this setSkill ['spotDistance',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ENH_reloadingSpeed";
+						expression="_this setSkill ['reloadSpeed',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="ENH_aimingSpeed";
+						expression="_this setSkill ['aimingSpeed',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="ENH_unitTraits_engineer";
+						expression="_this setUnitTrait ['Engineer',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute4
+					{
+						property="ENH_aimingAccuracy";
+						expression="_this setSkill ['aimingAccuracy',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute5
+					{
+						property="ENH_unitTraits_audibleCoef";
+						expression="_this setUnitTrait ['AudibleCoef',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.70000005;
+							};
+						};
+					};
+					class Attribute6
+					{
+						property="ENH_unitTraits_medic";
+						expression="_this setUnitTrait ['Medic',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute7
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male03ENG";
+							};
+						};
+					};
+					class Attribute8
+					{
+						property="ENH_commanding";
+						expression="_this setSkill ['commanding',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute9
+					{
+						property="ENH_unitTrait_UAVHacker";
+						expression="_this setUnitTrait ['UAVHacker',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute10
+					{
+						property="ENH_unitTraits_loadCoef";
+						expression="_this setUnitTrait ['LoadCoef',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.70000005;
+							};
+						};
+					};
+					class Attribute11
+					{
+						property="ENH_courage";
+						expression="_this setSkill ['courage',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute12
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.04;
+							};
+						};
+					};
+					class Attribute13
+					{
+						property="ENH_unitTraits_camouflage";
+						expression="_this setUnitTrait ['CamouflageCoef',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.70000005;
+							};
+						};
+					};
+					class Attribute14
+					{
+						property="ENH_spotTime";
+						expression="_this setSkill ['spotTime',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute15
+					{
+						property="enh_general";
+						expression="_this setSkill ['general',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute16
+					{
+						property="ENH_unitTrait_explosiveSpecialist";
+						expression="_this setUnitTrait ['ExplosiveSpecialist',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute17
+					{
+						property="ENH_aimingShake";
+						expression="_this setSkill ['aimingShake',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					nAttributes=18;
+				};
+			};
+			class Item3
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-3.3623047,0.0014390945,-0.55419922};
+					angles[]={0,3.9842901,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.40000001;
+					isPlayable=1;
+					class Inventory
+					{
+						class primaryWeapon
+						{
+							name="arifle_MSBS65_black_F";
+							class primaryMuzzleMag
+							{
+								name="30Rnd_65x39_caseless_msbs_mag";
+								ammoLeft=30;
+							};
+						};
+						class secondaryWeapon
+						{
+							name="launch_O_Titan_ghex_F";
+							class primaryMuzzleMag
+							{
+								name="Titan_AA";
+								ammoLeft=1;
+							};
+						};
+						class handgun
+						{
+							name="hgun_Pistol_heavy_01_green_F";
+							optics="optic_MRD_black";
+							flashlight="hlc_acc_DBALPL_FL";
+							class primaryMuzzleMag
+							{
+								name="11Rnd_45ACP_Mag";
+								ammoLeft=11;
+							};
+						};
+						class binocular
+						{
+							name="Laserdesignator_02_ghex_F";
+						};
+						class uniform
+						{
+							typeName="U_B_CTRG_2";
+							isBackpack=0;
+							class ItemCargo
+							{
+								items=1;
+								class Item0
+								{
+									name="FirstAidKit";
+									count=5;
+								};
+							};
+						};
+						class vest
+						{
+							typeName="V_PlateCarrier1_blk";
+							isBackpack=0;
+							class MagazineCargo
+							{
+								items=2;
+								class Item0
+								{
+									name="11Rnd_45ACP_Mag";
+									count=1;
+									ammoLeft=11;
+								};
+								class Item1
+								{
+									name="30Rnd_65x39_caseless_msbs_mag";
+									count=3;
+									ammoLeft=30;
+								};
+							};
+							class ItemCargo
+							{
+								items=4;
+								class Item0
+								{
+									name="muzzle_snds_acp";
+									count=1;
+								};
+								class Item1
+								{
+									name="muzzle_snds_H";
+									count=1;
+								};
+								class Item2
+								{
+									name="acc_pointer_IR";
+									count=1;
+								};
+								class Item3
+								{
+									name="optic_Nightstalker";
+									count=1;
+								};
+							};
+						};
+						class backpack
+						{
+							typeName="B_AssaultPack_blk";
+							isBackpack=1;
+							class MagazineCargo
+							{
+								items=1;
+								class Item0
+								{
+									name="Titan_AA";
+									count=1;
+									ammoLeft=1;
+								};
+							};
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ItemWatch";
+						radio="ItemRadio";
+						gps="B_UavTerminal";
+						headgear="H_HelmetO_ViperSP_ghex_F";
+					};
+				};
+				id=96;
+				type="B_T_Soldier_AA_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ENH_spotDistance";
+						expression="_this setSkill ['spotDistance',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ENH_reloadingSpeed";
+						expression="_this setSkill ['reloadSpeed',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="ENH_aimingSpeed";
+						expression="_this setSkill ['aimingSpeed',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="ENH_unitTraits_engineer";
+						expression="_this setUnitTrait ['Engineer',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute4
+					{
+						property="ENH_aimingAccuracy";
+						expression="_this setSkill ['aimingAccuracy',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute5
+					{
+						property="ENH_unitTraits_audibleCoef";
+						expression="_this setUnitTrait ['AudibleCoef',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.70000005;
+							};
+						};
+					};
+					class Attribute6
+					{
+						property="ENH_unitTraits_medic";
+						expression="_this setUnitTrait ['Medic',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute7
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male05ENG";
+							};
+						};
+					};
+					class Attribute8
+					{
+						property="ENH_commanding";
+						expression="_this setSkill ['commanding',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute9
+					{
+						property="ENH_unitTrait_UAVHacker";
+						expression="_this setUnitTrait ['UAVHacker',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute10
+					{
+						property="ENH_unitTraits_loadCoef";
+						expression="_this setUnitTrait ['LoadCoef',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.70000005;
+							};
+						};
+					};
+					class Attribute11
+					{
+						property="ENH_courage";
+						expression="_this setSkill ['courage',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute12
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.99000001;
+							};
+						};
+					};
+					class Attribute13
+					{
+						property="ENH_unitTraits_camouflage";
+						expression="_this setUnitTrait ['CamouflageCoef',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.70000005;
+							};
+						};
+					};
+					class Attribute14
+					{
+						property="ENH_spotTime";
+						expression="_this setSkill ['spotTime',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute15
+					{
+						property="enh_general";
+						expression="_this setSkill ['general',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute16
+					{
+						property="ENH_unitTrait_explosiveSpecialist";
+						expression="_this setUnitTrait ['ExplosiveSpecialist',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute17
+					{
+						property="ENH_aimingShake";
+						expression="_this setSkill ['aimingShake',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					nAttributes=18;
+				};
+			};
+			class Item4
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-4.5566406,0.0014390945,3.3999023};
+					angles[]={0,4.2509065,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					isPlayable=1;
+					class Inventory
+					{
+						class primaryWeapon
+						{
+							name="arifle_MSBS65_black_F";
+							class primaryMuzzleMag
+							{
+								name="30Rnd_65x39_caseless_msbs_mag";
+								ammoLeft=30;
+							};
+						};
+						class secondaryWeapon
+						{
+							name="launch_O_Titan_short_ghex_F";
+							class primaryMuzzleMag
+							{
+								name="Titan_AT";
+								ammoLeft=1;
+							};
+						};
+						class handgun
+						{
+							name="hgun_Pistol_heavy_01_green_F";
+							optics="optic_MRD_black";
+							flashlight="hlc_acc_DBALPL_FL";
+							class primaryMuzzleMag
+							{
+								name="11Rnd_45ACP_Mag";
+								ammoLeft=11;
+							};
+						};
+						class binocular
+						{
+							name="Laserdesignator_02_ghex_F";
+						};
+						class uniform
+						{
+							typeName="U_B_CTRG_2";
+							isBackpack=0;
+							class ItemCargo
+							{
+								items=1;
+								class Item0
+								{
+									name="FirstAidKit";
+									count=5;
+								};
+							};
+						};
+						class vest
+						{
+							typeName="V_PlateCarrier1_blk";
+							isBackpack=0;
+							class MagazineCargo
+							{
+								items=2;
+								class Item0
+								{
+									name="11Rnd_45ACP_Mag";
+									count=1;
+									ammoLeft=11;
+								};
+								class Item1
+								{
+									name="30Rnd_65x39_caseless_msbs_mag";
+									count=3;
+									ammoLeft=30;
+								};
+							};
+							class ItemCargo
+							{
+								items=4;
+								class Item0
+								{
+									name="muzzle_snds_acp";
+									count=1;
+								};
+								class Item1
+								{
+									name="muzzle_snds_H";
+									count=1;
+								};
+								class Item2
+								{
+									name="acc_pointer_IR";
+									count=1;
+								};
+								class Item3
+								{
+									name="optic_Nightstalker";
+									count=1;
+								};
+							};
+						};
+						class backpack
+						{
+							typeName="B_AssaultPack_blk";
+							isBackpack=1;
+							class MagazineCargo
+							{
+								items=2;
+								class Item0
+								{
+									name="CUP_PipeBomb_M";
+									count=1;
+									ammoLeft=1;
+								};
+								class Item1
+								{
+									name="Titan_AT";
+									count=1;
+									ammoLeft=1;
+								};
+							};
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ItemWatch";
+						radio="ItemRadio";
+						gps="B_UavTerminal";
+						headgear="H_HelmetO_ViperSP_ghex_F";
+					};
+				};
+				id=97;
+				type="B_T_Soldier_Exp_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ENH_spotDistance";
+						expression="_this setSkill ['spotDistance',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ENH_reloadingSpeed";
+						expression="_this setSkill ['reloadSpeed',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="ENH_aimingSpeed";
+						expression="_this setSkill ['aimingSpeed',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="ENH_unitTraits_engineer";
+						expression="_this setUnitTrait ['Engineer',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute4
+					{
+						property="ENH_aimingAccuracy";
+						expression="_this setSkill ['aimingAccuracy',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute5
+					{
+						property="ENH_unitTraits_audibleCoef";
+						expression="_this setUnitTrait ['AudibleCoef',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.70000005;
+							};
+						};
+					};
+					class Attribute6
+					{
+						property="ENH_unitTraits_medic";
+						expression="_this setUnitTrait ['Medic',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute7
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male12ENG";
+							};
+						};
+					};
+					class Attribute8
+					{
+						property="ENH_commanding";
+						expression="_this setSkill ['commanding',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute9
+					{
+						property="ENH_unitTrait_UAVHacker";
+						expression="_this setUnitTrait ['UAVHacker',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute10
+					{
+						property="ENH_unitTraits_loadCoef";
+						expression="_this setUnitTrait ['LoadCoef',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.70000005;
+							};
+						};
+					};
+					class Attribute11
+					{
+						property="ENH_courage";
+						expression="_this setSkill ['courage',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute12
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.94999999;
+							};
+						};
+					};
+					class Attribute13
+					{
+						property="ENH_unitTraits_camouflage";
+						expression="_this setUnitTrait ['CamouflageCoef',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.70000005;
+							};
+						};
+					};
+					class Attribute14
+					{
+						property="ENH_spotTime";
+						expression="_this setSkill ['spotTime',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute15
+					{
+						property="enh_general";
+						expression="_this setSkill ['general',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute16
+					{
+						property="ENH_aimingShake";
+						expression="_this setSkill ['aimingShake',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					nAttributes=17;
+				};
+			};
+			class Item5
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-3.2397461,0.0014390945,6.3569336};
+					angles[]={0,4.9411144,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					isPlayable=1;
+					class Inventory
+					{
+						class primaryWeapon
+						{
+							name="arifle_MSBS65_black_F";
+							class primaryMuzzleMag
+							{
+								name="30Rnd_65x39_caseless_msbs_mag";
+								ammoLeft=30;
+							};
+						};
+						class handgun
+						{
+							name="hgun_Pistol_heavy_01_green_F";
+							optics="optic_MRD_black";
+							flashlight="hlc_acc_DBALPL_FL";
+							class primaryMuzzleMag
+							{
+								name="11Rnd_45ACP_Mag";
+								ammoLeft=11;
+							};
+						};
+						class binocular
+						{
+							name="Laserdesignator_02_ghex_F";
+						};
+						class uniform
+						{
+							typeName="U_B_CTRG_2";
+							isBackpack=0;
+							class ItemCargo
+							{
+								items=1;
+								class Item0
+								{
+									name="FirstAidKit";
+									count=5;
+								};
+							};
+						};
+						class vest
+						{
+							typeName="V_PlateCarrier1_blk";
+							isBackpack=0;
+							class MagazineCargo
+							{
+								items=2;
+								class Item0
+								{
+									name="11Rnd_45ACP_Mag";
+									count=1;
+									ammoLeft=11;
+								};
+								class Item1
+								{
+									name="30Rnd_65x39_caseless_msbs_mag";
+									count=3;
+									ammoLeft=30;
+								};
+							};
+							class ItemCargo
+							{
+								items=4;
+								class Item0
+								{
+									name="muzzle_snds_acp";
+									count=1;
+								};
+								class Item1
+								{
+									name="muzzle_snds_H";
+									count=1;
+								};
+								class Item2
+								{
+									name="acc_pointer_IR";
+									count=1;
+								};
+								class Item3
+								{
+									name="optic_Nightstalker";
+									count=1;
+								};
+							};
+						};
+						class backpack
+						{
+							typeName="B_AssaultPack_blk";
+							isBackpack=1;
+							class MagazineCargo
+							{
+								items=2;
+								class Item0
+								{
+									name="CUP_PipeBomb_M";
+									count=3;
+									ammoLeft=1;
+								};
+								class Item1
+								{
+									name="DemoCharge_Remote_Mag";
+									count=1;
+									ammoLeft=1;
+								};
+							};
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ItemWatch";
+						radio="ItemRadio";
+						gps="B_UavTerminal";
+						headgear="H_HelmetO_ViperSP_ghex_F";
+					};
+				};
+				id=98;
+				type="B_T_Soldier_Exp_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ENH_spotDistance";
+						expression="_this setSkill ['spotDistance',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ENH_reloadingSpeed";
+						expression="_this setSkill ['reloadSpeed',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="ENH_aimingSpeed";
+						expression="_this setSkill ['aimingSpeed',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="ENH_unitTraits_engineer";
+						expression="_this setUnitTrait ['Engineer',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute4
+					{
+						property="ENH_aimingAccuracy";
+						expression="_this setSkill ['aimingAccuracy',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute5
+					{
+						property="ENH_unitTraits_audibleCoef";
+						expression="_this setUnitTrait ['AudibleCoef',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.70000005;
+							};
+						};
+					};
+					class Attribute6
+					{
+						property="ENH_unitTraits_medic";
+						expression="_this setUnitTrait ['Medic',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute7
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male03ENG";
+							};
+						};
+					};
+					class Attribute8
+					{
+						property="ENH_commanding";
+						expression="_this setSkill ['commanding',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute9
+					{
+						property="ENH_unitTrait_UAVHacker";
+						expression="_this setUnitTrait ['UAVHacker',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute10
+					{
+						property="ENH_unitTraits_loadCoef";
+						expression="_this setUnitTrait ['LoadCoef',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.70000005;
+							};
+						};
+					};
+					class Attribute11
+					{
+						property="ENH_courage";
+						expression="_this setSkill ['courage',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute12
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.98000002;
+							};
+						};
+					};
+					class Attribute13
+					{
+						property="ENH_unitTraits_camouflage";
+						expression="_this setUnitTrait ['CamouflageCoef',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.70000005;
+							};
+						};
+					};
+					class Attribute14
+					{
+						property="ENH_spotTime";
+						expression="_this setSkill ['spotTime',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute15
+					{
+						property="enh_general";
+						expression="_this setSkill ['general',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute16
+					{
+						property="ENH_aimingShake";
+						expression="_this setSkill ['aimingShake',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					nAttributes=17;
+				};
+			};
+			class Item6
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-1.0043945,0.0014390945,7.8251953};
+					angles[]={0,5.3968019,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					isPlayable=1;
+					class Inventory
+					{
+						class primaryWeapon
+						{
+							name="MMG_02_black_F";
+							underBarrel="bipod_01_F_blk";
+							class primaryMuzzleMag
+							{
+								name="130Rnd_338_Mag";
+								ammoLeft=130;
+							};
+						};
+						class handgun
+						{
+							name="hgun_Pistol_heavy_01_green_F";
+							optics="optic_MRD_black";
+							flashlight="hlc_acc_DBALPL_FL";
+							class primaryMuzzleMag
+							{
+								name="11Rnd_45ACP_Mag";
+								ammoLeft=11;
+							};
+						};
+						class binocular
+						{
+							name="Laserdesignator_02_ghex_F";
+						};
+						class uniform
+						{
+							typeName="U_B_CTRG_2";
+							isBackpack=0;
+							class ItemCargo
+							{
+								items=1;
+								class Item0
+								{
+									name="FirstAidKit";
+									count=5;
+								};
+							};
+						};
+						class vest
+						{
+							typeName="V_PlateCarrier1_blk";
+							isBackpack=0;
+							class MagazineCargo
+							{
+								items=2;
+								class Item0
+								{
+									name="11Rnd_45ACP_Mag";
+									count=1;
+									ammoLeft=11;
+								};
+								class Item1
+								{
+									name="130Rnd_338_Mag";
+									count=1;
+									ammoLeft=130;
+								};
+							};
+							class ItemCargo
+							{
+								items=4;
+								class Item0
+								{
+									name="muzzle_snds_acp";
+									count=1;
+								};
+								class Item1
+								{
+									name="muzzle_snds_338_black";
+									count=1;
+								};
+								class Item2
+								{
+									name="CUP_acc_LLM01_L";
+									count=1;
+								};
+								class Item3
+								{
+									name="optic_Nightstalker";
+									count=1;
+								};
+							};
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ItemWatch";
+						radio="ItemRadio";
+						gps="B_UavTerminal";
+						headgear="H_HelmetO_ViperSP_ghex_F";
+					};
+				};
+				id=99;
+				type="B_HeavyGunner_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ENH_spotDistance";
+						expression="_this setSkill ['spotDistance',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ENH_reloadingSpeed";
+						expression="_this setSkill ['reloadSpeed',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="ENH_aimingSpeed";
+						expression="_this setSkill ['aimingSpeed',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="ENH_unitTraits_engineer";
+						expression="_this setUnitTrait ['Engineer',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute4
+					{
+						property="ENH_aimingAccuracy";
+						expression="_this setSkill ['aimingAccuracy',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute5
+					{
+						property="ENH_unitTraits_audibleCoef";
+						expression="_this setUnitTrait ['AudibleCoef',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.70000005;
+							};
+						};
+					};
+					class Attribute6
+					{
+						property="ENH_unitTraits_medic";
+						expression="_this setUnitTrait ['Medic',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute7
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male04ENG";
+							};
+						};
+					};
+					class Attribute8
+					{
+						property="ENH_commanding";
+						expression="_this setSkill ['commanding',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute9
+					{
+						property="ENH_unitTrait_UAVHacker";
+						expression="_this setUnitTrait ['UAVHacker',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute10
+					{
+						property="ENH_unitTraits_loadCoef";
+						expression="_this setUnitTrait ['LoadCoef',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.70000005;
+							};
+						};
+					};
+					class Attribute11
+					{
+						property="ENH_courage";
+						expression="_this setSkill ['courage',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute12
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					class Attribute13
+					{
+						property="ENH_unitTraits_camouflage";
+						expression="_this setUnitTrait ['CamouflageCoef',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.70000005;
+							};
+						};
+					};
+					class Attribute14
+					{
+						property="ENH_spotTime";
+						expression="_this setSkill ['spotTime',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute15
+					{
+						property="enh_general";
+						expression="_this setSkill ['general',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute16
+					{
+						property="ENH_unitTrait_explosiveSpecialist";
+						expression="_this setUnitTrait ['ExplosiveSpecialist',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute17
+					{
+						property="ENH_aimingShake";
+						expression="_this setSkill ['aimingShake',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					nAttributes=18;
+				};
+			};
+			class Item7
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={1.3852539,0.0014390945,8.8100586};
+					angles[]={0,5.6485839,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					isPlayable=1;
+					class Inventory
+					{
+						class primaryWeapon
+						{
+							name="CUP_arifle_Mk20_black";
+							optics="optic_Nightstalker";
+							flashlight="CUP_acc_LLM01_L";
+							underBarrel="CUP_bipod_VLTOR_Modpod_black";
+							class primaryMuzzleMag
+							{
+								name="CUP_20Rnd_762x51_B_SCAR_bkl";
+								ammoLeft=20;
+							};
+						};
+						class handgun
+						{
+							name="hgun_Pistol_heavy_01_green_F";
+							optics="optic_MRD_black";
+							flashlight="hlc_acc_DBALPL_FL";
+							class primaryMuzzleMag
+							{
+								name="11Rnd_45ACP_Mag";
+								ammoLeft=11;
+							};
+						};
+						class binocular
+						{
+							name="Laserdesignator_02_ghex_F";
+						};
+						class uniform
+						{
+							typeName="U_B_CTRG_2";
+							isBackpack=0;
+							class ItemCargo
+							{
+								items=1;
+								class Item0
+								{
+									name="FirstAidKit";
+									count=5;
+								};
+							};
+						};
+						class vest
+						{
+							typeName="V_PlateCarrier1_blk";
+							isBackpack=0;
+							class MagazineCargo
+							{
+								items=2;
+								class Item0
+								{
+									name="11Rnd_45ACP_Mag";
+									count=1;
+									ammoLeft=11;
+								};
+								class Item1
+								{
+									name="CUP_20Rnd_762x51_B_SCAR_bkl";
+									count=3;
+									ammoLeft=20;
+								};
+							};
+							class ItemCargo
+							{
+								items=2;
+								class Item0
+								{
+									name="muzzle_snds_acp";
+									count=1;
+								};
+								class Item1
+								{
+									name="muzzle_snds_B";
+									count=1;
+								};
+							};
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ItemWatch";
+						radio="ItemRadio";
+						gps="B_UavTerminal";
+						headgear="H_HelmetO_ViperSP_ghex_F";
+					};
+				};
+				id=100;
+				type="B_T_Recon_M_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ENH_spotDistance";
+						expression="_this setSkill ['spotDistance',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ENH_reloadingSpeed";
+						expression="_this setSkill ['reloadSpeed',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="ENH_aimingSpeed";
+						expression="_this setSkill ['aimingSpeed',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="ENH_unitTraits_engineer";
+						expression="_this setUnitTrait ['Engineer',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute4
+					{
+						property="ENH_aimingAccuracy";
+						expression="_this setSkill ['aimingAccuracy',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute5
+					{
+						property="ENH_unitTraits_audibleCoef";
+						expression="_this setUnitTrait ['AudibleCoef',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.70000005;
+							};
+						};
+					};
+					class Attribute6
+					{
+						property="ENH_unitTraits_medic";
+						expression="_this setUnitTrait ['Medic',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute7
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male05ENG";
+							};
+						};
+					};
+					class Attribute8
+					{
+						property="ENH_commanding";
+						expression="_this setSkill ['commanding',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute9
+					{
+						property="ENH_unitTrait_UAVHacker";
+						expression="_this setUnitTrait ['UAVHacker',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute10
+					{
+						property="ENH_unitTraits_loadCoef";
+						expression="_this setUnitTrait ['LoadCoef',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.70000005;
+							};
+						};
+					};
+					class Attribute11
+					{
+						property="ENH_courage";
+						expression="_this setSkill ['courage',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute12
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.03;
+							};
+						};
+					};
+					class Attribute13
+					{
+						property="ENH_unitTraits_camouflage";
+						expression="_this setUnitTrait ['CamouflageCoef',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.70000005;
+							};
+						};
+					};
+					class Attribute14
+					{
+						property="ENH_spotTime";
+						expression="_this setSkill ['spotTime',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute15
+					{
+						property="enh_general";
+						expression="_this setSkill ['general',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					class Attribute16
+					{
+						property="ENH_unitTrait_explosiveSpecialist";
+						expression="_this setUnitTrait ['ExplosiveSpecialist',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute17
+					{
+						property="ENH_aimingShake";
+						expression="_this setSkill ['aimingShake',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.60000002;
+							};
+						};
+					};
+					nAttributes=18;
+				};
+			};
+			class Item8
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={11.928711,0.0014386177,-0.21630859};
+					angles[]={-0,3.1415927,0};
+				};
+				side="West";
+				flags=4;
+				class Attributes
+				{
+				};
+				id=107;
+				type="B_UAV_AI";
+			};
+			class Item9
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={11.928711,0.0014386177,-0.21630859};
+					angles[]={-0,3.1415927,0};
+				};
+				side="West";
+				flags=4;
+				class Attributes
+				{
+				};
+				id=108;
+				type="B_UAV_AI";
+			};
+		};
+		class Attributes
+		{
+		};
+		class CrewLinks
+		{
+			class LinkIDProvider
+			{
+				nextID=2;
+			};
+			class Links
+			{
+				items=2;
+				class Item0
+				{
+					linkID=0;
+					item0=107;
+					item1=106;
+					class CustomData
+					{
+						role=1;
+					};
+				};
+				class Item1
+				{
+					linkID=1;
+					item0=108;
+					item1=106;
+					class CustomData
+					{
+						role=2;
+						turretPath[]={0};
+					};
+				};
+			};
+		};
+		id=90;
+	};
+	class Item1
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={11.928711,1.5683393,-0.27734375};
+			angles[]={-0,3.1415927,0};
+		};
+		side="West";
+		flags=4;
+		class Attributes
+		{
+			skill=0.40000001;
+			reportOwnPosition=1;
+		};
+		id=106;
+		type="B_UAV_02_dynamicLoadout_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[""arifle_MSBS65_black_F"",""CUP_arifle_Mk17_STD_black"",""CUP_arifle_Mk20_black"",""MMG_02_black_F"",""srifle_DMR_05_blk_F"",""launch_O_Titan_ghex_F"",""launch_O_Titan_short_ghex_F""],[5,2,1,1,1,1,1]],[[""30Rnd_65x39_caseless_msbs_mag"",""CUP_50Rnd_762x51_B_SCAR"",""CUP_20Rnd_762x51_B_SCAR_bkl"",""130Rnd_338_Mag"",""10Rnd_93x64_DMR_05_Mag"",""Titan_AA"",""Titan_AT"",""Titan_AP"",""MiniGrenade"",""ffaa_granada_alhambra"",""CUP_PipeBomb_M"",""SmokeShellBlue""],[10,10,5,5,5,3,3,3,10,8,6,5]],[[""Laserdesignator_02_ghex_F"",""muzzle_snds_B"",""optic_Nightstalker"",""muzzle_snds_338_black"",""muzzle_snds_93mmg"",""muzzle_snds_65_TI_blk_F"",""optic_ico_01_black_f"",""CUP_bipod_VLTOR_Modpod_black"",""H_HelmetO_ViperSP_ghex_F"",""B_UavTerminal"",""FirstAidKit"",""Medikit"",""ToolKit""],[3,2,2,2,1,5,5,7,3,3,10,2,2]],[[""B_AssaultPack_blk"",""B_Bergen_hex_F"",""B_Carryall_eaf_F""],[2,2,2]]],false]";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item2
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0.61279297,0.38152885,-1.2460938};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=102;
+		type="Land_MetalCase_01_large_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ENH_virtualArsenal";
+				expression="if (!is3DEN && {_value}) then {['AmmoboxInit',[_this,true]] spawn BIS_fnc_arsenal}";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=1;
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+					};
+				};
+			};
+			nAttributes=2;
+		};
+	};
+};
