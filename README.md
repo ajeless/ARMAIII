@@ -8,3 +8,5 @@ Repository for ARMA III WIP.
 
 ## Mission Making and Editing
 [Add Action to Object](./mission_making/add_action.md)  
+[Player Mobile Spawn Point](./mission_making/mobile_spawn_point.md)
+
