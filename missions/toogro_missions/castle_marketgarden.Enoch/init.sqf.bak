@@ -1,0 +1,100 @@
+// respawnPositionUpdateInterval = 15;
+
+// if (!isNil "bha_op_1") then {
+// 	[] spawn {
+// 		while { !isNull bha_op_1 } do {
+// 			_bha_op_1_position = getPos bha_op_1;
+// 			"respawn_west_bha_op1" setMarkerPos _bha_op_1_position;
+// 			_message = format ["Update player position: %1", _bha_op_1_position];
+// 			sleep respawnPositionUpdateInterval;
+// 			// Uncomment the following line for debugging
+// 			// systemChat str _message; 
+// 		};
+// 	};	
+// };
+
+// if (!isNil "bha_op_2") then {
+// 	[] spawn {
+// 		while { !isNull bha_op_2 } do {
+// 			_bha_op_2_position = getPos bha_op_2;
+// 			"respawn_west_bha_op2" setMarkerPos _bha_op_2_position;
+// 			_message = format ["Update player position: %1", _bha_op_2_position];
+// 			sleep respawnPositionUpdateInterval;
+// 			// Uncomment the following line for debugging
+// 			//systemChat str _message; 
+// 		};
+// 	};
+// };
+
+
+/**		NICE TRY BUT I NEED MORE INFO :) */
+// [] spawn {
+// 	private _playerPositionPollInterval = 4;
+// 	private _headlessClients = entities "HeadlessClient_F";
+// 	private _humanPlayers = allPlayers - _headlessClients;
+// 	private _playerMarkerMappings = [];
+
+// 	{
+// 		_currentMarkerName = format ["respawn_west_%1", name _x];
+// 		_mobileMarker = createMarker [_currentMarkerName, _x];
+// 		_mobileMarker setMarkerType "respawn_unknown";
+// 		_mobileMarker setMarkerText (name _x);
+// 		_mobileMarker setMarkerColor "ColorWEST";
+// 		_currentMapping = [_x, _mobileMarker];
+// 		_playerMarkerMappings set [count _playerMarkerMappings, _currentMapping];
+// 	} forEach _humanPlayers;
+
+// 	{
+// 		_currentPlayer = _x select 0;
+// 		_currentMarker = _x select 1;
+		
+// 		while {!isNull _currentPlayer} do {
+// 			_headlessClients = entities "HeadlessClient_F";
+// 			_humanPlayers = allPlayers - _headlessClients;
+// 			systemChat format ["CURRENT: %1", _humanPlayers];
+// 			_currentPlayerPosition = getPos _currentPlayer;
+// 			_currentMarker setMarkerPos _currentPlayerPosition;
+// 			sleep _playerPositionPollInterval;
+// 		};
+
+// 	} forEach _playerMarkerMappings;
+// };
+
+posPollIntrvl = 4;
+mobileMarkerColor = "ColorWEST";
+
+playerMarkerMappings = [];
+
+[] spawn {
+	_headlessClients = entities "HeadlessClient_F";
+	_humanPlayers = allPlayers - _headlessClients;
+
+	{
+		_playerName =  name _x;
+		_x setVehicleVarName (_playerName);
+		_mobileMarkerIdentifier = format ["respawn_west_%1", _playerName];
+		_mobileMarker = createMarker [_mobileMarkerIdentifier, _x];
+		_mobileMarker setMarkerType "respawn_unknown";
+		_mobileMarker setMarkerText _playerName;
+		_mobileMarker setMarkerColor mobileMarkerColor;
+		_playerMapping = [_x, _mobileMarker];
+		playerMarkerMappings set [count playerMarkerMappings, _playerMapping];
+	} forEach _humanPlayers;
+
+	[] spawn {
+		{
+			_player = _x select 0;
+			_marker = _x select 1;
+
+			while {!isNull _player} do {
+				_marker setMarkerPos getPos player;
+				// systemChat format [
+				// 	"MarkerPos: %1, WorkingPlayer: %2, CurrentPlayer: %3", 
+				// 	getMarkerPos _marker, 
+				// 	getPos _player, 
+				// 	getPos player];
+				sleep posPollIntrvl;
+			};	
+		} forEach playerMarkerMappings;
+	};
+};
