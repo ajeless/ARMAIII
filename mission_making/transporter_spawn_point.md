@@ -1,4 +1,4 @@
-# Player Mobile Spawn Point  
+# Player Transporter Spawn Point
 
 This code allows a player to select a spawn location anywhere on the map. The scripts that require modification are `onPlayerKilled.sqf`, and `onPlayerRespawn.sqf`. So the mission folder should contain these scripts.  
 
