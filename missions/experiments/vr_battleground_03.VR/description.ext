@@ -1,0 +1,27 @@
+author			= "Ajeless";
+onLoadName		= "VR BattleGround";
+onLoadMission	= "SCREE AHHHH!";
+
+class Header
+{
+	gameType =  Coop;	// Game type
+	minPlayers =  1;	// minimum number of players the mission supports
+	maxPlayers = 2;	// maximum number of players the mission supports
+};
+
+respawnOnStart=-1;
+respawnDelay=10;
+
+class CfgFunctions
+{
+	file = "functions";
+	class tgro
+	{
+		class tgro_Functions
+		{
+			class readWaveGroups {description = "Reads a group from groups infantry east.";};
+			class spawnRandomGroup {description = "Reads an array of groups and spawns one at random";};
+			class deleteTheDead {description = "Reads an array of groups and spawns one at random";};
+		};
+	};
+};

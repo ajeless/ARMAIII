@@ -1,0 +1,37 @@
+author			= "Ajeless";
+onLoadName		= "VR Battle Lab";
+onLoadMission	= "AhhhhScreeAhhhh ;)";
+
+class Header
+{
+	gameType =  Coop;	// Game type
+	minPlayers =  1;	// minimum number of players the mission supports
+	maxPlayers = 2;	// maximum number of players the mission supports
+};
+
+respawnOnStart=-1;
+respawnDelay=10;
+
+class CfgFunctions
+{
+	file = "functions";
+	class tgro
+	{
+		class tgro
+		{
+			class vectorMarkerDir {description = "Looks for SPAWN_VECTOR_LOCATOR marker on map";};
+			class vectorArc {description = "Returns the start point and length in degrees of an arc, whose bisector is a direction";};
+			class selectRandomOnARC {description = "Returns a random point between the start/end points of a given arc";};
+			class selectRandomDistance {description = "Returns a random distance given min, avg, max parameters";};
+			class getXYComponents {description = "Takes a direction in degrees and returns the x, y vector components";};
+			class getSpawnPos  {description = "Takes a distance and dir x, y vectors and returns an absolute spawn position";};
+			class manageVectorSpawn  {description = "Return a spawn for the player in the direction of the spawn vector marker";};
+			class managePlayerInventoryOnKilled {description = "Keep track of player inventory on death.";};
+			class managePlayerInventoryOnRespawn {description = "Manage player inventory on respawn.";};
+			class manageResupply {description = "Resupply crate for player on respawn.";};
+			// class testHello {description = "Says hello from the function library!";};
+			class getWaveSpawnAnchors {description = "Returns all the spawn anchors.";};
+
+		};
+	};
+};

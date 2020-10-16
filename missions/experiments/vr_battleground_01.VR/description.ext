@@ -1,0 +1,10 @@
+class CfgFunctions
+{
+	class myTag
+	{
+		class myCategory
+		{
+			class myFunction {file = "myFile.sqf";};
+		};
+	};
+};

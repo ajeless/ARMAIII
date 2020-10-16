@@ -1,0 +1,1 @@
+deleteMarker format ["respawn_west_%1", name player];

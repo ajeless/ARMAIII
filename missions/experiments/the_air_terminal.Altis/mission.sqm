@@ -8,11 +8,11 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=3900;
+		nextID=3901;
 	};
 	class MarkerIDProvider
 	{
-		nextID=23;
+		nextID=24;
 	};
 	class Camera
 	{
@@ -28,6 +28,7 @@ addons[]=
 	"alive_main",
 	"alive_sys_profile",
 	"A3_Ui_F",
+	"WW2_Core_c_IF_Gui_c",
 	"alive_mil_opcom",
 	"alive_mil_placement",
 	"A3_Characters_F",
@@ -35,6 +36,8 @@ addons[]=
 	"A3_Weapons_F_Acc",
 	"A3_Weapons_F",
 	"A3_Weapons_F_Pistols_P07",
+	"uns_weap_c",
+	"WW2_Assets_c_Weapons_InfantryWeapons_c",
 	"A3_Weapons_F_Items",
 	"alive_mil_cqb",
 	"A3_Props_F_Orange_Humanitarian_Supplies",
@@ -46,7 +49,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=12;
+		items=15;
 		class Item0
 		{
 			className="ALiVE_main";
@@ -68,57 +71,72 @@ class AddonsMetaData
 		};
 		class Item3
 		{
+			className="WW2_Core_c_IF_Gui_c";
+			name="WW2_Core_c_IF_Gui_c";
+		};
+		class Item4
+		{
 			className="ALiVE_mil_OPCOM";
 			name="alive_mil_opcom";
 			author="ALiVE Mod Team";
 		};
-		class Item4
+		class Item5
 		{
 			className="ALiVE_mil_placement";
 			name="alive_mil_placement";
 			author="ALiVE Mod Team";
 		};
-		class Item5
+		class Item6
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item6
+		class Item7
 		{
 			className="A3_Weapons_F";
 			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item7
+		class Item8
+		{
+			className="uns_weap_c";
+			name="uns_weap_c";
+		};
+		class Item9
+		{
+			className="WW2_Assets_c_Weapons_InfantryWeapons_c";
+			name="WW2_Assets_c_Weapons_InfantryWeapons_c";
+		};
+		class Item10
 		{
 			className="ALiVE_mil_cqb";
 			name="alive_mil_cqb";
 			author="ALiVE Mod Team";
 		};
-		class Item8
+		class Item11
 		{
 			className="A3_Props_F_Orange";
 			name="Arma 3 Orange - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item9
+		class Item12
 		{
 			className="A3_Supplies_F_Heli";
 			name="Arma 3 Helicopters - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item10
+		class Item13
 		{
 			className="ALiVE_mil_placement_custom";
 			name="alive_mil_placement_custom";
 			author="ALiVE Mod Team";
 		};
-		class Item11
+		class Item14
 		{
 			className="DrongosMapPopulation";
 			name="Drongo's Map Population";
@@ -131,6 +149,7 @@ class ScenarioData
 {
 	author="ajeless";
 	respawn=3;
+	respawnDelay=10;
 	wreckRemovalMaxTime=3600;
 };
 class CustomAttributes
@@ -477,7 +496,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=28;
+		items=29;
 		class Item0
 		{
 			dataType="Logic";
@@ -5980,6 +5999,17 @@ class Mission
 				};
 				nAttributes=7;
 			};
+		};
+		class Item28
+		{
+			dataType="Marker";
+			position[]={14151.773,19.360001,16289.655};
+			name="SPAWN_VECTOR_MARKER";
+			text="SVM";
+			type="LIB_mil_start";
+			angle=41.782993;
+			id=3900;
+			atlOffset=-0.00042915344;
 		};
 	};
 	class Connections

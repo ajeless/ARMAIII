@@ -8,14 +8,14 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=119;
+		nextID=160;
 	};
 	class Camera
 	{
-		pos[]={4226.4492,15.562082,5374.6445};
-		dir[]={0.36236861,-0.15566814,-0.91895634};
-		up[]={0.057106417,0.98780954,-0.14481983};
-		aside[]={-0.93029833,-1.6851118e-007,-0.36684015};
+		pos[]={4220.7192,30.864006,5288.4087};
+		dir[]={0.039920535,-0.19629599,0.97981447};
+		up[]={0.0079919165,0.98052943,0.196152};
+		aside[]={0.99925339,2.0139942e-007,-0.040712155};
 	};
 };
 binarizationWanted=0;
@@ -160,7 +160,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4232.3262,5.0014391,5359.3989};
-						angles[]={0,2.8178339,0};
+						angles[]={0,0.0026378836,0};
 					};
 					side="West";
 					flags=7;
@@ -403,8 +403,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={4229.918,5,5359.918};
-				angles[]={0,2.8178337,0};
+				position[]={4232.2485,5,5358.8047};
+				angles[]={-0,2.8178337,0};
 			};
 			id=36;
 			type="ModuleCurator_F";
@@ -494,8 +494,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={4230.7744,5,5361.5854};
-				angles[]={0,2.8178337,0};
+				position[]={4232.1602,5,5358.2065};
+				angles[]={-0,2.8178337,0};
 			};
 			id=37;
 			type="ModuleMPTypeGameMaster_F";
