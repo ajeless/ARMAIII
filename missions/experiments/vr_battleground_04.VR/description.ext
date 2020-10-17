@@ -12,16 +12,14 @@ class Header
 respawnOnStart=-1;
 respawnDelay=10;
 
-// class CfgFunctions
-// {
-// 	file = "functions";
-// 	class tgro
-// 	{
-// 		class tgro_Functions
-// 		{
-// 			class readWaveGroups {description = "Reads a group from groups infantry east.";};
-// 			class spawnRandomGroup {description = "Reads an array of groups and spawns one at random";};
-// 			class deleteTheDead {description = "Reads an array of groups and spawns one at random";};
-// 		};
-// 	};
-// };
+class CfgFunctions
+{
+	file = "functions";
+	class tgro
+	{
+		class tgro_Functions
+		{
+			class getRndswmEastLoc {description = "Returns a random location within SWM_EAST marker";};
+		};
+	};
+};
