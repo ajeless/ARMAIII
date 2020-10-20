@@ -9,9 +9,4 @@ _wp =_grp addWaypoint [_rndPosInAWM, 1];
 _wp setWaypointType "HOLD";
 
 _rndPosInSWM
-// [ 
-// 	[
-// 		[position player, 50]
-// 	], 
-// 	[] 
-// ] call BIS_fnc_randomPos;  
+ 

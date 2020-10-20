@@ -1,6 +1,26 @@
-author			= "William Collazo & Ajeless";
+// Mission Configuration Contstants/Vars
+
+GlobalObjectiveMarker = "PANAGIA_OBJECTIVE";
+
+MaxArtilleryRounds = 100000;
+ArtilleryMinPause = 5;
+ArtilleryAvgPause = 30;
+ArtilleryMaxPause = 60;
+ArtilleryVar = "ARTILLERY_1";
+
+InsertpawnMinDist = 4000; // 4Km
+InsertpawnAvgDist = 6000; // 6Km
+InsertpawnMaxDist = 8000; // 8Km
+
+DropMinDist = 1000; // 1Km
+DropAvgDist = 1250; // 1.25Km
+DropMaxDist = 1500; // 1.5Km
+
+
+
+author			= "The Republic of Curdestan and Private Floydy";
 onLoadName		= "Paras of Panagia";
-onLoadMission	= "Dead from above! :p";
+onLoadMission	= "It's rainin' dead, hallelujah! :p";
 
 class Header
 {
@@ -11,3 +31,29 @@ class Header
 
 respawnOnStart=-1;
 respawnDelay=10;
+
+class CfgFunctions
+{
+	file = "functions";
+	class tgro
+	{
+		class tgro_Functions
+		{
+
+			class getRndLoc
+			{
+				description = "Returns a random location within a marker area.";
+			};
+
+			class getRndLocRel
+			{
+				description = "Returns a random location a certain distance from a central point.";
+			};
+
+			class randomArilleryFire
+			{
+				description = "Random artillery rain on a target";
+			};
+		};
+	};
+};
