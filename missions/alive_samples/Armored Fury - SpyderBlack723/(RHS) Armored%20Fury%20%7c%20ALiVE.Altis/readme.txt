@@ -1,0 +1,1 @@
+This mission file is an exact copy of the vanilla Armored Fury except it uses RHS units for both sides instead of NATO and CSAT

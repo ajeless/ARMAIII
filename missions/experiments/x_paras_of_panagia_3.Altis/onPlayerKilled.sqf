@@ -1,2 +1,1 @@
-[] call tgro_fnc_managePlayerInventoryOnKilled;
-[] call tgro_fnc_manageVectorSpawn;
+player setVariable["Saved_Loadout",getUnitLoadout player];

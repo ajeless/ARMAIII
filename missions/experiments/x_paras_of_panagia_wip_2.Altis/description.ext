@@ -1,0 +1,40 @@
+author			= "The Republic of Curdestan and Private Floydy";
+onLoadName		= "Paras of Panagia";
+onLoadMission	= "It's rainin' dead, hallelujah! :p";
+
+class Header
+{
+	gameType =  Coop;	// Game type
+	minPlayers =  1;	// minimum number of players the mission supports
+	maxPlayers = 2;	// maximum number of players the mission supports
+};
+
+respawnOnStart=-1;
+respawnDelay=10;
+
+class CfgFunctions
+{
+	file = "functions";
+	class tgro
+	{
+		class tgro_Functions
+		{
+
+			class setSkills
+			{
+				description = "Takes the unit and an array of skills and sets the unit skill";
+			};
+
+			class forceNumbersInArea
+			{
+				description = "Return array counting number of units alive in: [blufor, opfor, independent, civilian]";
+			};
+
+			class friendFoeRatioInArea
+			{
+				description = "Return the friend to foe ratio in an area friend/foe ... 1 if foe count = 0";
+			};
+
+		};
+	};
+};

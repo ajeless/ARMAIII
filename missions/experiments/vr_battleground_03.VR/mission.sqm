@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=4;
+		nextID=8;
 	};
 	class Camera
 	{
-		pos[]={4226.3457,214.61156,3780.23};
-		dir[]={-0.49899706,-0.45660788,0.73671257};
-		up[]={-0.25645003,0.88924038,0.37861919};
-		aside[]={0.82804966,2.9599832e-006,0.56086129};
+		pos[]={4281.5054,185.77338,4024.0991};
+		dir[]={-0.92474324,-0.38086033,0.0052369074};
+		up[]={-0.3815909,0.92425388,0.0021605175};
+		aside[]={0.0056659221,2.8284139e-006,1.0001047};
 	};
 };
 binarizationWanted=0;
@@ -233,7 +233,7 @@ class Mission
 			text="SWL_EAST";
 			type="mil_start";
 			colorName="ColorEAST";
-			angle=181.47351;
+			angle=181.4735;
 			id=23;
 		};
 		class Item2
@@ -2276,7 +2276,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4308,169.39992,4019};
-						angles[]={0,3.926991,-0};
+						angles[]={0,3.926991,0};
 					};
 					id=175;
 					type="ModuleCurator_F";
@@ -2367,7 +2367,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4307,169.39992,4018};
-						angles[]={0,3.926991,-0};
+						angles[]={0,3.926991,0};
 					};
 					id=176;
 					type="ModuleMPTypeGameMaster_F";
@@ -2641,7 +2641,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4307,169.39999,4015};
-						angles[]={-0,4.1887903,-0};
+						angles[]={0,4.1887903,0};
 					};
 					id=180;
 					type="ModuleCurator_F";

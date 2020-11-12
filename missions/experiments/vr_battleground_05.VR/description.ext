@@ -1,0 +1,13 @@
+author			= "The Republic of Curdestan and Private Floydy";
+onLoadName		= "VR Scripting Sanbox";
+onLoadMission	= "To test out scripting ideas :p";
+
+class Header
+{
+	gameType =  Coop;	// Game type
+	minPlayers =  1;	// minimum number of players the mission supports
+	maxPlayers = 2;	// maximum number of players the mission supports
+};
+
+respawnOnStart=-1;
+respawnDelay=10;
