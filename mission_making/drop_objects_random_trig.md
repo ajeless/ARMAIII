@@ -1,6 +1,6 @@
 # Drop Object at Random Inside Marker Area - Triggered
 
-Exampled of how to use a trigger to call a script to drop random artillery/bombs on a position inside a marker area.
+Example of how to use a trigger to call a script to drop random artillery/bombs on a position inside a marker area.
 
 ## Dependencies
 scripts\randomarty.sqf
