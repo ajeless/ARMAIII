@@ -41,6 +41,6 @@ while {true} do {
 	private _rndPos = [["TGAT_C"]] call BIS_fnc_randomPos;
 	_mrkr = createMarker [_mrkrName, _rndPos];
 	_mrkr setMarkerType "mil_triangle";
-	["Smoke_120mm_AMOS_White", _rndPos] call TG_fnc_dropObject;
+	[selectRandom _carnageClasses, _rndPos] call TG_fnc_dropObject;
 };
 
