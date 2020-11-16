@@ -25,4 +25,4 @@ Repository for ARMA III WIP.
 [Drop Object on Random Position Inside Marker Area - triggered](./mission_making/drop_objects_random_trig.md)
 
 ### Paradrop Examples
-[Paradrop a Unit and Add Steerable Parachite](./mission_making/paradrop_units.md)
+[Paradrop a Unit and Add Steerable Parachute](./mission_making/paradrop_units.md)
