@@ -23,3 +23,6 @@ Repository for ARMA III WIP.
 [Player Tracking Marker](./mission_making/tracking_marker.md)  
 [Drop Object on Random Position Inside Marker Area - scripted](./mission_making/drop_objects_random_fl.md)  
 [Drop Object on Random Position Inside Marker Area - triggered](./mission_making/drop_objects_random_trig.md)
+
+### Paradrop Examples
+[Paradrop a Unit and Add Steerable Parachite](./mission_making/paradrop_units.md)
