@@ -1,0 +1,35 @@
+author			= "The Republic of Curdestan and Private Floydy";
+onLoadName		= "Marker mayhem";
+onLoadMission	= "Dat poor town :p";
+
+class Header
+{
+	gameType =  Coop;	// Game type
+	minPlayers =  1;	// minimum number of players the mission supports
+	maxPlayers = 2;	// maximum number of players the mission supports
+};
+
+respawnOnStart=-1;
+respawnDelay=10;
+
+class CfgFunctions
+{
+	file = "functions";
+	class tg
+	{
+		class TG_Functions
+		{
+
+			class dropObject
+			{
+				description = "Takes vehicle class, 2d position, optional altitude (200 m default).  Spawns vehicle and pushes towards ground";
+			};
+
+			class paraDropUnit
+			{
+				description = "Takes any unit, moves them out of vehicle and puts them in a steerable parachute.";
+			};
+
+		};
+	};
+};
