@@ -53,7 +53,7 @@ That should be self explanatory, but the in case it's not:
 
 **_vehicle** The variable name of your vehicle.
 
-**_shellClass** The ammo class, not the magazine class, from: https://community.bistudio.com/wiki/Arma_3_CfgMagazines.  For flak it's gest to use the remote ammo types like satchel charges or demo charges because the detonate when setDamage = 1;
+**_shellClass** The ammo class, not the magazine class, from: https://community.bistudio.com/wiki/Arma_3_CfgMagazines.  For flak it's best to use the remote ammo types like satchel charges or demo charges because the detonate when setDamage = 1;
 
 **_numberOfShells** How many flak shells in the barrage
 
