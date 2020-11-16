@@ -26,3 +26,6 @@ Repository for ARMA III WIP.
 
 ### Paradrop Examples
 [Paradrop a Unit and Add Steerable Parachute](./mission_making/paradrop_units.md)
+
+### Flak Generator
+[Paradrop a Unit and Add Steerable Parachute](./mission_making/flak_generator.md)
