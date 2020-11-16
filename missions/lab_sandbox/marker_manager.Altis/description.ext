@@ -1,0 +1,90 @@
+author			= "The Republic of Curdestan and Private Floydy";
+onLoadName		= "Marker Manager Lab";
+onLoadMission	= "Read and Manage all markers ";
+
+class Header
+{
+	gameType =  Coop;	// Game type
+	minPlayers =  1;	// minimum number of players the mission supports
+	maxPlayers = 2;	// maximum number of players the mission supports
+};
+
+respawnOnStart=-1;
+respawnDelay=10;
+
+class CfgFunctions
+{
+	file = "functions";
+	class tg
+	{
+		class tg_Functions
+		{
+
+			class getRndPosTGAO_W
+			{
+				description = "Returns a random position from any one of the TGAO_W markers";
+			};
+
+			class getRndPosTGAT_W
+			{
+				description = "Returns a random position from any one of the TGAT_W markers";
+			};
+
+			class getRndPosTGAS_W
+			{
+				description = "Returns a random position from any one of the TGAS_W markers";
+			};
+
+			class getRndPosTGAO_E
+			{
+				description = "Returns a random position from any one of the TGAO_E markers";
+			};
+
+			class getRndPosTGAT_E
+			{
+				description = "Returns a random position from any one of the TGAT_E markers";
+			};
+
+			class getRndPosTGAS_E
+			{
+				description = "Returns a random position from any one of the TGAS_E markers";
+			};
+
+			class getRndPosTGAO_I
+			{
+				description = "Returns a random position from any one of the TGAO_I markers";
+			};
+
+			class getRndPosTGAT_I
+			{
+				description = "Returns a random position from any one of the TGAT_I markers";
+			};
+
+			class getRndPosTGAS_I
+			{
+				description = "Returns a random position from any one of the TGAS_I markers";
+			};
+
+			class getRndPosTGAO_C
+			{
+				description = "Returns a random position from any one of the TGAO_C markers";
+			};
+
+			class getRndPosTGAT_C
+			{
+				description = "Returns a random position from any one of the TGAT_C markers";
+			};
+
+			class getRndPosTGAS_C
+			{
+				description = "Returns a random position from any one of the TGAS_C markers";
+			};
+
+			class dropVehicle
+			{
+				description = " Take vehicle class, 2d position, optional altitude.  Spawns vehicle and pushes towards ground";
+			};
+
+		};
+	};
+};
