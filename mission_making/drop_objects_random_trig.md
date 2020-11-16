@@ -54,3 +54,5 @@ That should be self explanatory, but the in case it's not:
 **_numberOfShells** How many shells in the barrage
 
 **_maxDelayBetweenShells** Random delay (seconds) between shells in barrage. Maximum delay.
+
+![Add Action](./images/triggered_arty_drop.png)
