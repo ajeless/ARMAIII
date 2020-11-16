@@ -1,0 +1,30 @@
+author			= "The Republic of Curdestan and Private Floydy";
+onLoadName		= "Self Generating Flak";
+onLoadMission	= "I'm never flying again! ;p";
+
+class Header
+{
+	gameType =  Coop;	// Game type
+	minPlayers =  1;	// minimum number of players the mission supports
+	maxPlayers = 2;	// maximum number of players the mission supports
+};
+
+respawnOnStart=-1;
+respawnDelay=10;
+
+class CfgFunctions
+{
+	file = "functions";
+	class tg
+	{
+		class TG_Functions
+		{
+
+			class generateFlak
+			{
+				description = "Takes [_vehicle,  _shellClass, _numberOfShells, _maxDelayBetweenShells] and generate flak around vehicle.";
+			};
+
+		};
+	};
+};

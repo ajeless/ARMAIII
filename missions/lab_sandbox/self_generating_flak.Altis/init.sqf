@@ -1,0 +1,1 @@
+// [BLACKFISH_1, "SatchelCharge_Remote_Ammo", 1000, 2]  call TG_fnc_generateFlak;
