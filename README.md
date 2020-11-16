@@ -7,7 +7,7 @@ Repository for ARMA III WIP.
 [MPMissions](./MPMissions)  
 
 ## Mission Making and Editing Examples
-[See examples](./missions/toogro_examples)
+[Mission Examples](./missions/toogro_examples)
 
 ### Add Action Examples
 [Add Action to Object](./mission_making/add_action.md)  
