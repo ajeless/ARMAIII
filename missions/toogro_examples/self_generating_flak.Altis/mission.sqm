@@ -685,7 +685,7 @@ class Mission
 			class Attributes
 			{
 				condition="call{this}";
-				onActivation="call{null = [BLACKFISH_1, ""SatchelCharge_Remote_Ammo"", 1000, 2] execVM ""scripts\generateFlak.sqf"";}";
+				onActivation="call{[BLACKFISH_1, ""SatchelCharge_Remote_Ammo"", 1000, 2] execVM ""scripts\generateFlak.sqf"";}";
 				sizeA=34.248001;
 				sizeB=651.39203;
 				activationBy="WEST";

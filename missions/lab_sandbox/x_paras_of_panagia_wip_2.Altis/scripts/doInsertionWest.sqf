@@ -7,32 +7,41 @@ while {!_insertTeamsDropped} do {
 	sleep random [DistanceCheckFrequencyMin, DistanceCheckFrequencyAvg, DistanceCheckFrequencyMax];
 	_distanceToDZ = IVehicleAirFrame distance _dz;
 
+	if (_distanceToDZ <= 2000) then {
+		if (FlakInProgress) then {
+			FlakInProgress = false;
+			[] spawn {
+				[IVehicleAirFrame, "SatchelCharge_Remote_Ammo", 1000, 2] call TGRO_fnc_generateFlak;
+			};
+		};
+	};
+
 	if (_distanceToDZ <= _dropTimingDistance) then {
 
 		{
-			unassignVehicle _x;
-			moveOut _x;
+			unassignVehicle player;
+			moveOut player;
 			sleep random [.5, 1, 2];
 			_sp = "Steerable_Parachute_F" createVehicle [0,0,0];
-			_sp setPos getPos _x; 
-			_x moveIndriver _sp; 
+			_sp setPos getPos player; 
+			player moveIndriver _sp; 
 			sleep random [TimeBetweenJumpsMin, TimeBetweenJumpsAvg, TimeBetweenJumpsMax];
-		} forEach allPlayers;
+		} remoteExec ["bis_fnc_call", 0];
+		
+		// {
+		// 	unassignVehicle _x;
+		// 	moveOut _x;
+		// 	sleep random [.5, 1, 2];
+		// 	_sp = "Steerable_Parachute_F" createVehicle [0,0,0];
+		// 	_sp setPos getPos _x; 
+		// 	_x moveIndriver _sp; 
+		// 	sleep random [TimeBetweenJumpsMin, TimeBetweenJumpsAvg, TimeBetweenJumpsMax];
+		// } forEach allPlayers;
 			
 		{
 			_iTeamGroup = _x;
 			{
-				unassignVehicle _x;
-				moveOut _x;
-				private _unitPos = getPos _x;
-				private _unitPosX = _unitPos select 0;
-				private _unitPosY = _unitPos select 1;
-				private _unitPosZ = (_unitPos select 2) - 10;
-				private _dropPos = [_unitPosX, _unitPosY, _unitPosZ];
-				_sp = "Steerable_Parachute_F" createVehicle [0,0,0];
-				_x setPos _dropPos;
-				_sp setPos _dropPos; 
-				_x moveIndriver _sp; 
+				[_x] call TGRO_fnc_paraDropUnit;
 				sleep random [TimeBetweenJumpsMin, TimeBetweenJumpsAvg, TimeBetweenJumpsMax];	
 			} forEach units _iTeamGroup;
 		} forEach [IteamAlpha1, IteamAlpha2, IteamAlpha3];

@@ -35,6 +35,27 @@ class CfgFunctions
 				description = "Return the friend to foe ratio in an area friend/foe ... 1 if foe count = 0";
 			};
 
+			class dropObject
+			{
+				description = "Takes vehicle class, 2d position, optional altitude (200 m default).  Spawns vehicle and pushes towards ground";
+			};
+
+			class paraDropUnit
+			{
+				description = "Takes any unit, moves them out of vehicle and puts them in a steerable parachute.";
+			};
+
+			class generateFlak
+			{
+				description = "Takes [_vehicle,  _shellClass, _numberOfShells, _maxDelayBetweenShells] and generate flak around vehicle.";
+			};
+
+
+			class ambientDestruction
+			{
+				description = "[area marker, number of wrecks] generates wrecks with fire in safe positions.";
+			};
+
 		};
 	};
 };

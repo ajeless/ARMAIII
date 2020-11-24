@@ -2,10 +2,10 @@
 
 params ["_area"];
 
-_countB = 0; // # blufor units
-_countO = 0; // # opfor units
-_countI = 0; // # indepent units 
-_countC = 0; // # civilian units
+private _countB = 0; // # blufor units
+private _countO = 0; // # opfor units
+private _countI = 0; // # indepent units 
+private _countC = 0; // # civilian units
 
 {
 	if (alive _x) then {

@@ -39,7 +39,7 @@ private _iUnits = nil;
 	_iGroup = _x select 0;
 	_iUnits = _x select 1;
 	{
-		_unit_x = _iGroup createunit [_x, [23580, 18378],  [], 0, "FORM"]; 
+		_unit_x = _iGroup createunit [_x, [14355, 16323],  [], 0, "FORM"]; 
 		_unit_x setSkill ["aimingAccuracy", .2];
 		_unit_x setSkill ["aimingShake", .2];
 		_unit_x setSkill ["aimingSpeed", .2];
@@ -49,10 +49,14 @@ private _iUnits = nil;
 	_iGroup allowFleeing 0;
 } forEach _insertionGroups;
 
+sleep 15;
+
+
+{player moveInCargo IVehicleAirFrame;} remoteExec ["bis_fnc_call", 0];
 // load insertion groups in vehicles
-{
-	_x moveInCargo IVehicleAirFrame;
-} forEach allPlayers;
+// {
+// 		_x moveInCargo IVehicleAirFrame;
+// } forEach allPlayers;
 
 private _vehicleGroups = [IteamAlpha1, IteamAlpha2, IteamAlpha3];
 

@@ -1,0 +1,29 @@
+version=53;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	class ItemIDProvider
+	{
+		nextID=50;
+	};
+	class Camera
+	{
+		pos[]={23565.049,18.536852,17853.602};
+		dir[]={-0.18576711,-0.18876819,0.96429282};
+		up[]={-0.035709068,0.98202252,0.18536112};
+		aside[]={0.98194873,-5.7589205e-008,0.18916886};
+	};
+};
+binarizationWanted=0;
+class AddonsMetaData
+{
+};
+randomSeed=246396;
+class ScenarioData
+{
+	author="ajeless";
+};

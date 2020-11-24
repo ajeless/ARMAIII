@@ -3,9 +3,16 @@
 if (!isServer) exitWith {};
 
 60 setOvercast (random 1);
-60 setFog (random .5);
+60 setFog (random .35);
 
-skipTime (5.0 - daytime + 24 ) % 24;// Skip forward to a specific time, irrespective of the current mission time
+skipTime (4.5 - daytime + 24 ) % 24;// Skip forward to a specific time, irrespective of the current mission time
+
+// Create Carnage
+for "_i" from 1 to 30 do { 
+	[selectRandom CarnageClasses, [[GlobalObjective]] call BIS_fnc_randomPos ] call TGRO_fnc_dropObject;
+ };
+
+ [GlobalObjective, 3] call TGRO_fnc_ambientDestruction;
 
 [] execVM "scripts\updateFriendFoeRatioInPanagia.sqf";
 [] execVM "scripts\checkPanagiaInsertCapture.sqf";
