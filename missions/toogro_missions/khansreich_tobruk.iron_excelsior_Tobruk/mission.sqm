@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1184;
+		nextID=1192;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=672;
+		nextID=705;
 	};
 	class Camera
 	{
-		pos[]={-71.126068,106.25912,8863.2432};
-		dir[]={0.76606184,-0.41772696,-0.48857531};
-		up[]={0.35220554,0.90856636,-0.2246283};
-		aside[]={-0.53773797,-1.1420343e-007,-0.8431443};
+		pos[]={-3.2247376,63.671185,8782.4766};
+		dir[]={0.52927911,-0.69235289,0.49054226};
+		up[]={0.50781012,0.7215445,0.47064447};
+		aside[]={0.67980301,-7.2980765e-007,-0.73348439};
 	};
 };
 binarizationWanted=0;
@@ -156,7 +156,8 @@ addons[]=
 	"cba_xeh",
 	"A3_Modules_F",
 	"gm_vehicles_land_tracked_m92_dk_army_m92",
-	"A3_Props_F_Enoch_Military_Equipment"
+	"A3_Props_F_Enoch_Military_Equipment",
+	"A3_Modules_F_Curator_Flares"
 };
 class AddonsMetaData
 {
@@ -1418,7 +1419,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=215;
+		items=223;
 		class Item0
 		{
 			dataType="Layer";
@@ -20345,7 +20346,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={4336.6782,99.10527,3220.7141};
-			angle=5.3084874;
+			angle=5.3084869;
 			class Attributes
 			{
 				condition="call{this}";
@@ -20711,25 +20712,6 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="ENH_aimingAccuracy";
-									expression="_this setSkill ['aimingAccuracy',_value]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.2;
-										};
-									};
-								};
-								class Attribute2
-								{
 									property="ENH_disableAI_cover";
 									expression="if(_value) then {_this disableAI 'COVER'}";
 									class Value
@@ -20744,6 +20726,25 @@ class Mission
 												};
 											};
 											value=1;
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="gm_servicebranch";
+									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="";
 										};
 									};
 								};
@@ -20863,8 +20864,8 @@ class Mission
 								};
 								class Attribute9
 								{
-									property="gm_rightarmband";
-									expression="[_this, [4,_value]] call gm_core_characters_fnc_setUnitAttribute;";
+									property="gm_leftarmband";
+									expression="[_this, [3,_value]] call gm_core_characters_fnc_setUnitAttribute;";
 									class Value
 									{
 										class data
@@ -20882,27 +20883,8 @@ class Mission
 								};
 								class Attribute10
 								{
-									property="ENH_aimingShake";
-									expression="_this setSkill ['aimingShake',_value]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.2;
-										};
-									};
-								};
-								class Attribute11
-								{
-									property="gm_leftarmband";
-									expression="[_this, [3,_value]] call gm_core_characters_fnc_setUnitAttribute;";
+									property="gm_rightarmband";
+									expression="[_this, [4,_value]] call gm_core_characters_fnc_setUnitAttribute;";
 									class Value
 									{
 										class data
@@ -20915,6 +20897,25 @@ class Mission
 												};
 											};
 											value="gm_ge_armband_none";
+										};
+									};
+								};
+								class Attribute11
+								{
+									property="ENH_courage";
+									expression="_this setSkill ['courage',_value]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=1;
 										};
 									};
 								};
@@ -20939,8 +20940,8 @@ class Mission
 								};
 								class Attribute13
 								{
-									property="ENH_courage";
-									expression="_this setSkill ['courage',_value]";
+									property="ENH_aimingShake";
+									expression="_this setSkill ['aimingShake',_value]";
 									class Value
 									{
 										class data
@@ -20952,14 +20953,14 @@ class Mission
 													"SCALAR"
 												};
 											};
-											value=1;
+											value=0.2;
 										};
 									};
 								};
 								class Attribute14
 								{
-									property="gm_servicebranch";
-									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
+									property="ENH_aimingAccuracy";
+									expression="_this setSkill ['aimingAccuracy',_value]";
 									class Value
 									{
 										class data
@@ -20968,10 +20969,10 @@ class Mission
 											{
 												type[]=
 												{
-													"STRING"
+													"SCALAR"
 												};
 											};
-											value="";
+											value=0.2;
 										};
 									};
 								};
@@ -21128,25 +21129,6 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="gm_leftarmband";
-									expression="[_this, [3,_value]] call gm_core_characters_fnc_setUnitAttribute;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="gm_ge_armband_none";
-										};
-									};
-								};
-								class Attribute2
-								{
 									property="ENH_allowFleeing";
 									expression="_this allowFleeing _value";
 									class Value
@@ -21161,6 +21143,25 @@ class Mission
 												};
 											};
 											value=0.1;
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="gm_servicebranch";
+									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="";
 										};
 									};
 								};
@@ -21280,8 +21281,8 @@ class Mission
 								};
 								class Attribute9
 								{
-									property="gm_rightarmband";
-									expression="[_this, [4,_value]] call gm_core_characters_fnc_setUnitAttribute;";
+									property="gm_leftarmband";
+									expression="[_this, [3,_value]] call gm_core_characters_fnc_setUnitAttribute;";
 									class Value
 									{
 										class data
@@ -21298,25 +21299,6 @@ class Mission
 									};
 								};
 								class Attribute10
-								{
-									property="ENH_courage";
-									expression="_this setSkill ['courage',_value]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1;
-										};
-									};
-								};
-								class Attribute11
 								{
 									property="ENH_aimingShake";
 									expression="_this setSkill ['aimingShake',_value]";
@@ -21335,7 +21317,7 @@ class Mission
 										};
 									};
 								};
-								class Attribute12
+								class Attribute11
 								{
 									property="ENH_aimingAccuracy";
 									expression="_this setSkill ['aimingAccuracy',_value]";
@@ -21354,7 +21336,45 @@ class Mission
 										};
 									};
 								};
+								class Attribute12
+								{
+									property="gm_rightarmband";
+									expression="[_this, [4,_value]] call gm_core_characters_fnc_setUnitAttribute;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="gm_ge_armband_none";
+										};
+									};
+								};
 								class Attribute13
+								{
+									property="ENH_courage";
+									expression="_this setSkill ['courage',_value]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=1;
+										};
+									};
+								};
+								class Attribute14
 								{
 									property="ENH_disableAI_cover";
 									expression="if(_value) then {_this disableAI 'COVER'}";
@@ -21370,25 +21390,6 @@ class Mission
 												};
 											};
 											value=1;
-										};
-									};
-								};
-								class Attribute14
-								{
-									property="gm_servicebranch";
-									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="";
 										};
 									};
 								};
@@ -21545,8 +21546,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="ENH_aimingShake";
-									expression="_this setSkill ['aimingShake',_value]";
+									property="gm_rightarmband";
+									expression="[_this, [4,_value]] call gm_core_characters_fnc_setUnitAttribute;";
 									class Value
 									{
 										class data
@@ -21555,17 +21556,17 @@ class Mission
 											{
 												type[]=
 												{
-													"SCALAR"
+													"STRING"
 												};
 											};
-											value=0.2;
+											value="gm_ge_armband_none";
 										};
 									};
 								};
 								class Attribute2
 								{
-									property="ENH_aimingAccuracy";
-									expression="_this setSkill ['aimingAccuracy',_value]";
+									property="gm_servicebranch";
+									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
 									class Value
 									{
 										class data
@@ -21574,10 +21575,10 @@ class Mission
 											{
 												type[]=
 												{
-													"SCALAR"
+													"STRING"
 												};
 											};
-											value=0.2;
+											value="";
 										};
 									};
 								};
@@ -21716,25 +21717,6 @@ class Mission
 								};
 								class Attribute10
 								{
-									property="gm_rightarmband";
-									expression="[_this, [4,_value]] call gm_core_characters_fnc_setUnitAttribute;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="gm_ge_armband_none";
-										};
-									};
-								};
-								class Attribute11
-								{
 									property="ENH_courage";
 									expression="_this setSkill ['courage',_value]";
 									class Value
@@ -21749,6 +21731,25 @@ class Mission
 												};
 											};
 											value=1;
+										};
+									};
+								};
+								class Attribute11
+								{
+									property="ENH_aimingShake";
+									expression="_this setSkill ['aimingShake',_value]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.2;
 										};
 									};
 								};
@@ -21773,6 +21774,25 @@ class Mission
 								};
 								class Attribute13
 								{
+									property="ENH_aimingAccuracy";
+									expression="_this setSkill ['aimingAccuracy',_value]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.2;
+										};
+									};
+								};
+								class Attribute14
+								{
 									property="ENH_allowFleeing";
 									expression="_this allowFleeing _value";
 									class Value
@@ -21787,25 +21807,6 @@ class Mission
 												};
 											};
 											value=0.1;
-										};
-									};
-								};
-								class Attribute14
-								{
-									property="gm_servicebranch";
-									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="";
 										};
 									};
 								};
@@ -21972,8 +21973,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="gm_servicebranch";
-									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
+									property="ENH_allowFleeing";
+									expression="_this allowFleeing _value";
 									class Value
 									{
 										class data
@@ -21982,10 +21983,10 @@ class Mission
 											{
 												type[]=
 												{
-													"STRING"
+													"SCALAR"
 												};
 											};
-											value="";
+											value=0.15000001;
 										};
 									};
 								};
@@ -22143,6 +22144,25 @@ class Mission
 								};
 								class Attribute10
 								{
+									property="ENH_aimingShake";
+									expression="_this setSkill ['aimingShake',_value]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.20999999;
+										};
+									};
+								};
+								class Attribute11
+								{
 									property="ENH_courage";
 									expression="_this setSkill ['courage',_value]";
 									class Value
@@ -22160,7 +22180,7 @@ class Mission
 										};
 									};
 								};
-								class Attribute11
+								class Attribute12
 								{
 									property="ENH_aimingAccuracy";
 									expression="_this setSkill ['aimingAccuracy',_value]";
@@ -22179,7 +22199,7 @@ class Mission
 										};
 									};
 								};
-								class Attribute12
+								class Attribute13
 								{
 									property="gm_rightarmband";
 									expression="[_this, [4,_value]] call gm_core_characters_fnc_setUnitAttribute;";
@@ -22198,29 +22218,10 @@ class Mission
 										};
 									};
 								};
-								class Attribute13
-								{
-									property="ENH_allowFleeing";
-									expression="_this allowFleeing _value";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.15000001;
-										};
-									};
-								};
 								class Attribute14
 								{
-									property="ENH_aimingShake";
-									expression="_this setSkill ['aimingShake',_value]";
+									property="gm_servicebranch";
+									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
 									class Value
 									{
 										class data
@@ -22229,10 +22230,10 @@ class Mission
 											{
 												type[]=
 												{
-													"SCALAR"
+													"STRING"
 												};
 											};
-											value=0.20999999;
+											value="";
 										};
 									};
 								};
@@ -22675,8 +22676,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="gm_servicebranch";
-									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
+									property="ENH_allowFleeing";
+									expression="_this allowFleeing _value";
 									class Value
 									{
 										class data
@@ -22685,10 +22686,10 @@ class Mission
 											{
 												type[]=
 												{
-													"STRING"
+													"SCALAR"
 												};
 											};
-											value="";
+											value=0.15000001;
 										};
 									};
 								};
@@ -22846,6 +22847,25 @@ class Mission
 								};
 								class Attribute10
 								{
+									property="ENH_aimingShake";
+									expression="_this setSkill ['aimingShake',_value]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.20999999;
+										};
+									};
+								};
+								class Attribute11
+								{
 									property="ENH_courage";
 									expression="_this setSkill ['courage',_value]";
 									class Value
@@ -22863,7 +22883,7 @@ class Mission
 										};
 									};
 								};
-								class Attribute11
+								class Attribute12
 								{
 									property="ENH_aimingAccuracy";
 									expression="_this setSkill ['aimingAccuracy',_value]";
@@ -22882,7 +22902,7 @@ class Mission
 										};
 									};
 								};
-								class Attribute12
+								class Attribute13
 								{
 									property="gm_rightarmband";
 									expression="[_this, [4,_value]] call gm_core_characters_fnc_setUnitAttribute;";
@@ -22901,29 +22921,10 @@ class Mission
 										};
 									};
 								};
-								class Attribute13
-								{
-									property="ENH_allowFleeing";
-									expression="_this allowFleeing _value";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.15000001;
-										};
-									};
-								};
 								class Attribute14
 								{
-									property="ENH_aimingShake";
-									expression="_this setSkill ['aimingShake',_value]";
+									property="gm_servicebranch";
+									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
 									class Value
 									{
 										class data
@@ -22932,10 +22933,10 @@ class Mission
 											{
 												type[]=
 												{
-													"SCALAR"
+													"STRING"
 												};
 											};
-											value=0.20999999;
+											value="";
 										};
 									};
 								};
@@ -24760,8 +24761,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="gm_servicebranch";
-									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
+									property="gm_rightarmband";
+									expression="[_this, [4,_value]] call gm_core_characters_fnc_setUnitAttribute;";
 									class Value
 									{
 										class data
@@ -24773,7 +24774,7 @@ class Mission
 													"STRING"
 												};
 											};
-											value="";
+											value="gm_ge_armband_none";
 										};
 									};
 								};
@@ -24969,6 +24970,25 @@ class Mission
 								};
 								class Attribute12
 								{
+									property="ENH_allowFleeing";
+									expression="_this allowFleeing _value";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.15000001;
+										};
+									};
+								};
+								class Attribute13
+								{
 									property="ENH_aimingAccuracy";
 									expression="_this setSkill ['aimingAccuracy',_value]";
 									class Value
@@ -24986,10 +25006,10 @@ class Mission
 										};
 									};
 								};
-								class Attribute13
+								class Attribute14
 								{
-									property="gm_rightarmband";
-									expression="[_this, [4,_value]] call gm_core_characters_fnc_setUnitAttribute;";
+									property="gm_servicebranch";
+									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
 									class Value
 									{
 										class data
@@ -25001,26 +25021,7 @@ class Mission
 													"STRING"
 												};
 											};
-											value="gm_ge_armband_none";
-										};
-									};
-								};
-								class Attribute14
-								{
-									property="ENH_allowFleeing";
-									expression="_this allowFleeing _value";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.15000001;
+											value="";
 										};
 									};
 								};
@@ -25465,8 +25466,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="gm_servicebranch";
-									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
+									property="gm_rightarmband";
+									expression="[_this, [4,_value]] call gm_core_characters_fnc_setUnitAttribute;";
 									class Value
 									{
 										class data
@@ -25478,7 +25479,7 @@ class Mission
 													"STRING"
 												};
 											};
-											value="";
+											value="gm_ge_armband_none";
 										};
 									};
 								};
@@ -25674,6 +25675,25 @@ class Mission
 								};
 								class Attribute12
 								{
+									property="ENH_allowFleeing";
+									expression="_this allowFleeing _value";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.15000001;
+										};
+									};
+								};
+								class Attribute13
+								{
 									property="ENH_aimingAccuracy";
 									expression="_this setSkill ['aimingAccuracy',_value]";
 									class Value
@@ -25691,10 +25711,10 @@ class Mission
 										};
 									};
 								};
-								class Attribute13
+								class Attribute14
 								{
-									property="gm_rightarmband";
-									expression="[_this, [4,_value]] call gm_core_characters_fnc_setUnitAttribute;";
+									property="gm_servicebranch";
+									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
 									class Value
 									{
 										class data
@@ -25706,26 +25726,7 @@ class Mission
 													"STRING"
 												};
 											};
-											value="gm_ge_armband_none";
-										};
-									};
-								};
-								class Attribute14
-								{
-									property="ENH_allowFleeing";
-									expression="_this allowFleeing _value";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.15000001;
+											value="";
 										};
 									};
 								};
@@ -34792,8 +34793,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="gm_servicebranch";
-									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
+									property="ENH_allowFleeing";
+									expression="_this allowFleeing _value";
 									class Value
 									{
 										class data
@@ -34802,10 +34803,10 @@ class Mission
 											{
 												type[]=
 												{
-													"STRING"
+													"SCALAR"
 												};
 											};
-											value="";
+											value=0.052670293;
 										};
 									};
 								};
@@ -34906,6 +34907,25 @@ class Mission
 								};
 								class Attribute7
 								{
+									property="ENH_courage";
+									expression="_this setSkill ['courage',_value]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=1;
+										};
+									};
+								};
+								class Attribute8
+								{
 									property="ENH_aimingShake";
 									expression="_this setSkill ['aimingShake',_value]";
 									class Value
@@ -34923,7 +34943,7 @@ class Mission
 										};
 									};
 								};
-								class Attribute8
+								class Attribute9
 								{
 									property="ENH_aimingAccuracy";
 									expression="_this setSkill ['aimingAccuracy',_value]";
@@ -34942,7 +34962,7 @@ class Mission
 										};
 									};
 								};
-								class Attribute9
+								class Attribute10
 								{
 									property="ENH_disableAI_cover";
 									expression="if(_value) then {_this disableAI 'COVER'}";
@@ -34961,29 +34981,10 @@ class Mission
 										};
 									};
 								};
-								class Attribute10
-								{
-									property="ENH_allowFleeing";
-									expression="_this allowFleeing _value";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.052670293;
-										};
-									};
-								};
 								class Attribute11
 								{
-									property="ENH_courage";
-									expression="_this setSkill ['courage',_value]";
+									property="gm_servicebranch";
+									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
 									class Value
 									{
 										class data
@@ -34992,10 +34993,10 @@ class Mission
 											{
 												type[]=
 												{
-													"SCALAR"
+													"STRING"
 												};
 											};
-											value=1;
+											value="";
 										};
 									};
 								};
@@ -35136,8 +35137,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="gm_servicebranch";
-									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
+									property="ENH_aimingShake";
+									expression="_this setSkill ['aimingShake',_value]";
 									class Value
 									{
 										class data
@@ -35146,10 +35147,10 @@ class Mission
 											{
 												type[]=
 												{
-													"STRING"
+													"SCALAR"
 												};
 											};
-											value="";
+											value=0.2;
 										};
 									};
 								};
@@ -35288,6 +35289,25 @@ class Mission
 								};
 								class Attribute9
 								{
+									property="ENH_courage";
+									expression="_this setSkill ['courage',_value]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=1;
+										};
+									};
+								};
+								class Attribute10
+								{
 									property="gm_leftarmband";
 									expression="[_this, [3,_value]] call gm_core_characters_fnc_setUnitAttribute;";
 									class Value
@@ -35305,7 +35325,7 @@ class Mission
 										};
 									};
 								};
-								class Attribute10
+								class Attribute11
 								{
 									property="ENH_aimingAccuracy";
 									expression="_this setSkill ['aimingAccuracy',_value]";
@@ -35324,7 +35344,7 @@ class Mission
 										};
 									};
 								};
-								class Attribute11
+								class Attribute12
 								{
 									property="ENH_allowFleeing";
 									expression="_this allowFleeing _value";
@@ -35343,29 +35363,10 @@ class Mission
 										};
 									};
 								};
-								class Attribute12
-								{
-									property="ENH_aimingShake";
-									expression="_this setSkill ['aimingShake',_value]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.2;
-										};
-									};
-								};
 								class Attribute13
 								{
-									property="ENH_courage";
-									expression="_this setSkill ['courage',_value]";
+									property="gm_servicebranch";
+									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
 									class Value
 									{
 										class data
@@ -35374,10 +35375,10 @@ class Mission
 											{
 												type[]=
 												{
-													"SCALAR"
+													"STRING"
 												};
 											};
-											value=1;
+											value="";
 										};
 									};
 								};
@@ -37566,8 +37567,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="gm_servicebranch";
-									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
+									property="ENH_disableAI_cover";
+									expression="if(_value) then {_this disableAI 'COVER'}";
 									class Value
 									{
 										class data
@@ -37576,10 +37577,10 @@ class Mission
 											{
 												type[]=
 												{
-													"STRING"
+													"BOOL"
 												};
 											};
-											value="";
+											value=1;
 										};
 									};
 								};
@@ -37718,6 +37719,25 @@ class Mission
 								};
 								class Attribute9
 								{
+									property="ENH_allowFleeing";
+									expression="_this allowFleeing _value";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.052670293;
+										};
+									};
+								};
+								class Attribute10
+								{
 									property="ENH_aimingAccuracy";
 									expression="_this setSkill ['aimingAccuracy',_value]";
 									class Value
@@ -37735,29 +37755,10 @@ class Mission
 										};
 									};
 								};
-								class Attribute10
-								{
-									property="ENH_disableAI_cover";
-									expression="if(_value) then {_this disableAI 'COVER'}";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=1;
-										};
-									};
-								};
 								class Attribute11
 								{
-									property="ENH_allowFleeing";
-									expression="_this allowFleeing _value";
+									property="gm_servicebranch";
+									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
 									class Value
 									{
 										class data
@@ -37766,10 +37767,10 @@ class Mission
 											{
 												type[]=
 												{
-													"SCALAR"
+													"STRING"
 												};
 											};
-											value=0.052670293;
+											value="";
 										};
 									};
 								};
@@ -37909,8 +37910,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="gm_servicebranch";
-									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
+									property="ENH_allowFleeing";
+									expression="_this allowFleeing _value";
 									class Value
 									{
 										class data
@@ -37919,10 +37920,10 @@ class Mission
 											{
 												type[]=
 												{
-													"STRING"
+													"SCALAR"
 												};
 											};
-											value="";
+											value=0.052670293;
 										};
 									};
 								};
@@ -38061,6 +38062,25 @@ class Mission
 								};
 								class Attribute9
 								{
+									property="ENH_aimingShake";
+									expression="_this setSkill ['aimingShake',_value]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.2;
+										};
+									};
+								};
+								class Attribute10
+								{
 									property="ENH_courage";
 									expression="_this setSkill ['courage',_value]";
 									class Value
@@ -38078,7 +38098,7 @@ class Mission
 										};
 									};
 								};
-								class Attribute10
+								class Attribute11
 								{
 									property="gm_leftarmband";
 									expression="[_this, [3,_value]] call gm_core_characters_fnc_setUnitAttribute;";
@@ -38097,7 +38117,7 @@ class Mission
 										};
 									};
 								};
-								class Attribute11
+								class Attribute12
 								{
 									property="ENH_aimingAccuracy";
 									expression="_this setSkill ['aimingAccuracy',_value]";
@@ -38116,29 +38136,10 @@ class Mission
 										};
 									};
 								};
-								class Attribute12
-								{
-									property="ENH_allowFleeing";
-									expression="_this allowFleeing _value";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.052670293;
-										};
-									};
-								};
 								class Attribute13
 								{
-									property="ENH_aimingShake";
-									expression="_this setSkill ['aimingShake',_value]";
+									property="gm_servicebranch";
+									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
 									class Value
 									{
 										class data
@@ -38147,10 +38148,10 @@ class Mission
 											{
 												type[]=
 												{
-													"SCALAR"
+													"STRING"
 												};
 											};
-											value=0.2;
+											value="";
 										};
 									};
 								};
@@ -38534,8 +38535,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="ENH_allowFleeing";
-									expression="_this allowFleeing _value";
+									property="gm_servicebranch";
+									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
 									class Value
 									{
 										class data
@@ -38544,10 +38545,10 @@ class Mission
 											{
 												type[]=
 												{
-													"SCALAR"
+													"STRING"
 												};
 											};
-											value=0;
+											value="";
 										};
 									};
 								};
@@ -38686,25 +38687,6 @@ class Mission
 								};
 								class Attribute9
 								{
-									property="ENH_aimingAccuracy";
-									expression="_this setSkill ['aimingAccuracy',_value]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.2;
-										};
-									};
-								};
-								class Attribute10
-								{
 									property="ENH_disableAI_cover";
 									expression="if(_value) then {_this disableAI 'COVER'}";
 									class Value
@@ -38722,10 +38704,10 @@ class Mission
 										};
 									};
 								};
-								class Attribute11
+								class Attribute10
 								{
-									property="gm_servicebranch";
-									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
+									property="ENH_allowFleeing";
+									expression="_this allowFleeing _value";
 									class Value
 									{
 										class data
@@ -38734,10 +38716,29 @@ class Mission
 											{
 												type[]=
 												{
-													"STRING"
+													"SCALAR"
 												};
 											};
-											value="";
+											value=0;
+										};
+									};
+								};
+								class Attribute11
+								{
+									property="ENH_aimingAccuracy";
+									expression="_this setSkill ['aimingAccuracy',_value]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.2;
 										};
 									};
 								};
@@ -39706,8 +39707,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="ENH_disableAI_cover";
-									expression="if(_value) then {_this disableAI 'COVER'}";
+									property="gm_servicebranch";
+									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
 									class Value
 									{
 										class data
@@ -39716,10 +39717,10 @@ class Mission
 											{
 												type[]=
 												{
-													"BOOL"
+													"STRING"
 												};
 											};
-											value=1;
+											value="";
 										};
 									};
 								};
@@ -39839,44 +39840,6 @@ class Mission
 								};
 								class Attribute8
 								{
-									property="ENH_courage";
-									expression="_this setSkill ['courage',_value]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1;
-										};
-									};
-								};
-								class Attribute9
-								{
-									property="ENH_allowFleeing";
-									expression="_this allowFleeing _value";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute10
-								{
 									property="ENH_aimingAccuracy";
 									expression="_this setSkill ['aimingAccuracy',_value]";
 									class Value
@@ -39894,10 +39857,10 @@ class Mission
 										};
 									};
 								};
-								class Attribute11
+								class Attribute9
 								{
-									property="gm_servicebranch";
-									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
+									property="ENH_courage";
+									expression="_this setSkill ['courage',_value]";
 									class Value
 									{
 										class data
@@ -39906,10 +39869,48 @@ class Mission
 											{
 												type[]=
 												{
-													"STRING"
+													"SCALAR"
 												};
 											};
-											value="";
+											value=1;
+										};
+									};
+								};
+								class Attribute10
+								{
+									property="ENH_disableAI_cover";
+									expression="if(_value) then {_this disableAI 'COVER'}";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=1;
+										};
+									};
+								};
+								class Attribute11
+								{
+									property="ENH_allowFleeing";
+									expression="_this allowFleeing _value";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0;
 										};
 									};
 								};
@@ -40880,8 +40881,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="ENH_disableAI_cover";
-									expression="if(_value) then {_this disableAI 'COVER'}";
+									property="gm_servicebranch";
+									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
 									class Value
 									{
 										class data
@@ -40890,10 +40891,10 @@ class Mission
 											{
 												type[]=
 												{
-													"BOOL"
+													"STRING"
 												};
 											};
-											value=1;
+											value="";
 										};
 									};
 								};
@@ -41013,44 +41014,6 @@ class Mission
 								};
 								class Attribute8
 								{
-									property="ENH_courage";
-									expression="_this setSkill ['courage',_value]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1;
-										};
-									};
-								};
-								class Attribute9
-								{
-									property="ENH_allowFleeing";
-									expression="_this allowFleeing _value";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute10
-								{
 									property="ENH_aimingAccuracy";
 									expression="_this setSkill ['aimingAccuracy',_value]";
 									class Value
@@ -41068,10 +41031,10 @@ class Mission
 										};
 									};
 								};
-								class Attribute11
+								class Attribute9
 								{
-									property="gm_servicebranch";
-									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
+									property="ENH_courage";
+									expression="_this setSkill ['courage',_value]";
 									class Value
 									{
 										class data
@@ -41080,10 +41043,48 @@ class Mission
 											{
 												type[]=
 												{
-													"STRING"
+													"SCALAR"
 												};
 											};
-											value="";
+											value=1;
+										};
+									};
+								};
+								class Attribute10
+								{
+									property="ENH_disableAI_cover";
+									expression="if(_value) then {_this disableAI 'COVER'}";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=1;
+										};
+									};
+								};
+								class Attribute11
+								{
+									property="ENH_allowFleeing";
+									expression="_this allowFleeing _value";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0;
 										};
 									};
 								};
@@ -41279,8 +41280,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="ENH_disableAI_cover";
-									expression="if(_value) then {_this disableAI 'COVER'}";
+									property="gm_servicebranch";
+									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
 									class Value
 									{
 										class data
@@ -41289,10 +41290,10 @@ class Mission
 											{
 												type[]=
 												{
-													"BOOL"
+													"STRING"
 												};
 											};
-											value=1;
+											value="";
 										};
 									};
 								};
@@ -41412,44 +41413,6 @@ class Mission
 								};
 								class Attribute8
 								{
-									property="ENH_courage";
-									expression="_this setSkill ['courage',_value]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1;
-										};
-									};
-								};
-								class Attribute9
-								{
-									property="ENH_allowFleeing";
-									expression="_this allowFleeing _value";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute10
-								{
 									property="ENH_aimingAccuracy";
 									expression="_this setSkill ['aimingAccuracy',_value]";
 									class Value
@@ -41467,10 +41430,10 @@ class Mission
 										};
 									};
 								};
-								class Attribute11
+								class Attribute9
 								{
-									property="gm_servicebranch";
-									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
+									property="ENH_courage";
+									expression="_this setSkill ['courage',_value]";
 									class Value
 									{
 										class data
@@ -41479,10 +41442,48 @@ class Mission
 											{
 												type[]=
 												{
-													"STRING"
+													"SCALAR"
 												};
 											};
-											value="";
+											value=1;
+										};
+									};
+								};
+								class Attribute10
+								{
+									property="ENH_disableAI_cover";
+									expression="if(_value) then {_this disableAI 'COVER'}";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=1;
+										};
+									};
+								};
+								class Attribute11
+								{
+									property="ENH_allowFleeing";
+									expression="_this allowFleeing _value";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0;
 										};
 									};
 								};
@@ -42449,8 +42450,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="ENH_disableAI_cover";
-									expression="if(_value) then {_this disableAI 'COVER'}";
+									property="gm_servicebranch";
+									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
 									class Value
 									{
 										class data
@@ -42459,10 +42460,10 @@ class Mission
 											{
 												type[]=
 												{
-													"BOOL"
+													"STRING"
 												};
 											};
-											value=1;
+											value="";
 										};
 									};
 								};
@@ -42582,44 +42583,6 @@ class Mission
 								};
 								class Attribute8
 								{
-									property="ENH_courage";
-									expression="_this setSkill ['courage',_value]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1;
-										};
-									};
-								};
-								class Attribute9
-								{
-									property="ENH_allowFleeing";
-									expression="_this allowFleeing _value";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute10
-								{
 									property="ENH_aimingAccuracy";
 									expression="_this setSkill ['aimingAccuracy',_value]";
 									class Value
@@ -42637,10 +42600,10 @@ class Mission
 										};
 									};
 								};
-								class Attribute11
+								class Attribute9
 								{
-									property="gm_servicebranch";
-									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
+									property="ENH_courage";
+									expression="_this setSkill ['courage',_value]";
 									class Value
 									{
 										class data
@@ -42649,10 +42612,48 @@ class Mission
 											{
 												type[]=
 												{
-													"STRING"
+													"SCALAR"
 												};
 											};
-											value="";
+											value=1;
+										};
+									};
+								};
+								class Attribute10
+								{
+									property="ENH_disableAI_cover";
+									expression="if(_value) then {_this disableAI 'COVER'}";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=1;
+										};
+									};
+								};
+								class Attribute11
+								{
+									property="ENH_allowFleeing";
+									expression="_this allowFleeing _value";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0;
 										};
 									};
 								};
@@ -43620,8 +43621,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="ENH_disableAI_cover";
-									expression="if(_value) then {_this disableAI 'COVER'}";
+									property="gm_servicebranch";
+									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
 									class Value
 									{
 										class data
@@ -43630,10 +43631,10 @@ class Mission
 											{
 												type[]=
 												{
-													"BOOL"
+													"STRING"
 												};
 											};
-											value=1;
+											value="";
 										};
 									};
 								};
@@ -43753,44 +43754,6 @@ class Mission
 								};
 								class Attribute8
 								{
-									property="ENH_courage";
-									expression="_this setSkill ['courage',_value]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1;
-										};
-									};
-								};
-								class Attribute9
-								{
-									property="ENH_allowFleeing";
-									expression="_this allowFleeing _value";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute10
-								{
 									property="ENH_aimingAccuracy";
 									expression="_this setSkill ['aimingAccuracy',_value]";
 									class Value
@@ -43808,10 +43771,10 @@ class Mission
 										};
 									};
 								};
-								class Attribute11
+								class Attribute9
 								{
-									property="gm_servicebranch";
-									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
+									property="ENH_courage";
+									expression="_this setSkill ['courage',_value]";
 									class Value
 									{
 										class data
@@ -43820,10 +43783,48 @@ class Mission
 											{
 												type[]=
 												{
-													"STRING"
+													"SCALAR"
 												};
 											};
-											value="";
+											value=1;
+										};
+									};
+								};
+								class Attribute10
+								{
+									property="ENH_disableAI_cover";
+									expression="if(_value) then {_this disableAI 'COVER'}";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=1;
+										};
+									};
+								};
+								class Attribute11
+								{
+									property="ENH_allowFleeing";
+									expression="_this allowFleeing _value";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0;
 										};
 									};
 								};
@@ -44020,8 +44021,8 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="ENH_disableAI_cover";
-									expression="if(_value) then {_this disableAI 'COVER'}";
+									property="gm_servicebranch";
+									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
 									class Value
 									{
 										class data
@@ -44030,10 +44031,10 @@ class Mission
 											{
 												type[]=
 												{
-													"BOOL"
+													"STRING"
 												};
 											};
-											value=1;
+											value="";
 										};
 									};
 								};
@@ -44153,44 +44154,6 @@ class Mission
 								};
 								class Attribute8
 								{
-									property="ENH_courage";
-									expression="_this setSkill ['courage',_value]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1;
-										};
-									};
-								};
-								class Attribute9
-								{
-									property="ENH_allowFleeing";
-									expression="_this allowFleeing _value";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute10
-								{
 									property="ENH_aimingAccuracy";
 									expression="_this setSkill ['aimingAccuracy',_value]";
 									class Value
@@ -44208,10 +44171,10 @@ class Mission
 										};
 									};
 								};
-								class Attribute11
+								class Attribute9
 								{
-									property="gm_servicebranch";
-									expression="[_this, [0,_value]] call gm_core_characters_fnc_setUnitAttribute;";
+									property="ENH_courage";
+									expression="_this setSkill ['courage',_value]";
 									class Value
 									{
 										class data
@@ -44220,10 +44183,48 @@ class Mission
 											{
 												type[]=
 												{
-													"STRING"
+													"SCALAR"
 												};
 											};
-											value="";
+											value=1;
+										};
+									};
+								};
+								class Attribute10
+								{
+									property="ENH_disableAI_cover";
+									expression="if(_value) then {_this disableAI 'COVER'}";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=1;
+										};
+									};
+								};
+								class Attribute11
+								{
+									property="ENH_allowFleeing";
+									expression="_this allowFleeing _value";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0;
 										};
 									};
 								};
@@ -46855,7 +46856,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={-688.85101,246.53336,9038.4951};
+						position[]={-688.85101,276.53336,9038.4951};
 						angles[]={0,2.1355326,0};
 					};
 					side="Independent";
@@ -46946,7 +46947,7 @@ class Mission
 					};
 					id=591;
 					type="sab_pilot_1";
-					atlOffset=200;
+					atlOffset=230;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -47014,7 +47015,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={-688.85101,246.53336,9038.4951};
+						position[]={-688.85101,276.53336,9038.4951};
 						angles[]={0,2.1355326,0};
 					};
 					side="Independent";
@@ -47103,7 +47104,7 @@ class Mission
 					};
 					id=592;
 					type="sab_pilot_1";
-					atlOffset=200;
+					atlOffset=230;
 				};
 				class Item2
 				{
@@ -47156,14 +47157,14 @@ class Mission
 				};
 			};
 			id=589;
-			atlOffset=200;
+			atlOffset=230;
 		};
 		class Item86
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={-688.87421,248.40512,9040.2266};
+				position[]={-688.87421,278.40512,9040.2266};
 				angles[]={0,2.1355326,0};
 			};
 			side="Independent";
@@ -47173,7 +47174,7 @@ class Mission
 			};
 			id=590;
 			type="sab_dauntless";
-			atlOffset=200;
+			atlOffset=230;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -47210,7 +47211,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={-403.048,241.54613,8897.6475};
+						position[]={-403.048,271.54611,8897.6475};
 						angles[]={0,2.0829632,0};
 					};
 					side="Independent";
@@ -47302,7 +47303,7 @@ class Mission
 					};
 					id=600;
 					type="sab_pilot_1";
-					atlOffset=200;
+					atlOffset=229.99998;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -47370,7 +47371,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={-403.048,241.54613,8897.6475};
+						position[]={-403.048,271.54611,8897.6475};
 						angles[]={0,2.0829632,0};
 					};
 					side="Independent";
@@ -47459,7 +47460,7 @@ class Mission
 					};
 					id=601;
 					type="sab_pilot_1";
-					atlOffset=200;
+					atlOffset=229.99998;
 				};
 				class Item2
 				{
@@ -47512,14 +47513,14 @@ class Mission
 				};
 			};
 			id=599;
-			atlOffset=200;
+			atlOffset=229.99998;
 		};
 		class Item88
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={-403.0712,243.62965,8899.126};
+				position[]={-403.0712,273.62964,8899.126};
 				angles[]={0,2.0829632,0};
 			};
 			side="Independent";
@@ -47529,7 +47530,7 @@ class Mission
 			};
 			id=603;
 			type="sab_dauntless";
-			atlOffset=200;
+			atlOffset=229.99998;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -47566,7 +47567,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={-309.77301,231.64975,9171.4258};
+						position[]={-309.77301,261.64975,9171.4258};
 						angles[]={0,2.0867157,0};
 					};
 					side="Independent";
@@ -47657,7 +47658,7 @@ class Mission
 					};
 					id=605;
 					type="sab_pilot_1";
-					atlOffset=200;
+					atlOffset=230;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -47725,7 +47726,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={-309.77301,231.64975,9171.4258};
+						position[]={-309.77301,261.64975,9171.4258};
 						angles[]={0,2.0867157,0};
 					};
 					side="Independent";
@@ -47814,7 +47815,7 @@ class Mission
 					};
 					id=606;
 					type="sab_pilot_1";
-					atlOffset=200;
+					atlOffset=230;
 				};
 				class Item2
 				{
@@ -47866,14 +47867,14 @@ class Mission
 				};
 			};
 			id=604;
-			atlOffset=200;
+			atlOffset=230;
 		};
 		class Item90
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={-309.7962,233.42749,9173.251};
+				position[]={-309.7962,263.42749,9173.251};
 				angles[]={0,2.0867157,0};
 			};
 			side="Independent";
@@ -47883,7 +47884,7 @@ class Mission
 			};
 			id=608;
 			type="sab_dauntless";
-			atlOffset=200;
+			atlOffset=230;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -47911,7 +47912,7 @@ class Mission
 		class Item91
 		{
 			dataType="Trigger";
-			position[]={27.486029,37.982574,8805.5654};
+			position[]={25.163074,37.983379,8805.6494};
 			class Attributes
 			{
 				sizeA=25;
@@ -48061,7 +48062,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={-296.61935,89.149567,9416.5225};
+						position[]={-296.61899,109.1494,9416.5518};
 						angles[]={0,2.259608,0};
 					};
 					side="West";
@@ -48071,7 +48072,7 @@ class Mission
 					};
 					id=745;
 					type="uns_pilot7";
-					atlOffset=69.999916;
+					atlOffset=89.999985;
 				};
 				class Item1
 				{
@@ -48113,7 +48114,7 @@ class Mission
 				};
 			};
 			id=656;
-			atlOffset=69.999649;
+			atlOffset=90;
 		};
 		class Item96
 		{
@@ -53253,7 +53254,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={-296.61935,91.010513,9416.5186};
+				position[]={-296.61899,111.01086,9416.5186};
 				angles[]={0,2.259608,0};
 			};
 			side="West";
@@ -53266,7 +53267,7 @@ class Mission
 			};
 			id=744;
 			type="UNS_skymaster_CBU";
-			atlOffset=69.999649;
+			atlOffset=90;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -72348,7 +72349,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={4825.5112,110.74917,2810.8669};
-			angle=0.9526006;
+			angle=0.95260054;
 			class Attributes
 			{
 				condition="call{this}";
@@ -83202,7 +83203,6 @@ class Mission
 				repeatable=1;
 				activationType="EAST D";
 				activationBy="GUER";
-				isServerOnly=1;
 				effectSoundTrigger="BattlefieldExplosions";
 			};
 			id=1155;
@@ -83235,7 +83235,6 @@ class Mission
 				sizeC=30;
 				activationType="EAST D";
 				activationBy="WEST";
-				isServerOnly=1;
 				effectSoundTrigger="LIB_Ambience2";
 			};
 			id=1157;
@@ -84472,16 +84471,267 @@ class Mission
 			id=1181;
 			type="Land_Laptop_03_olive_F";
 		};
+		class Item215
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4906.5371,149.99001,1973.97};
+			};
+			id=1184;
+			type="ModuleFlare_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleFlare_F_Type";
+					expression="_this setVariable ['Type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="F_40mm_Red";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item216
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={5840.9741,103.13478,2866.04};
+			};
+			id=1185;
+			type="ModuleFlare_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleFlare_F_Type";
+					expression="_this setVariable ['Type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="F_40mm_Red";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item217
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4868.4302,149.99001,1577.5995};
+			};
+			id=1186;
+			type="ModuleFlare_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleFlare_F_Type";
+					expression="_this setVariable ['Type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="F_40mm_Red";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item218
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={5334.7314,174.84819,1535.1428};
+				angles[]={6.1914454,0,6.2272439};
+			};
+			id=1187;
+			type="ModuleFlare_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleFlare_F_Type";
+					expression="_this setVariable ['Type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="F_40mm_Red";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item219
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={6202.8687,109.34102,2406.9355};
+				angles[]={6.2272439,0,6.2631927};
+			};
+			id=1188;
+			type="ModuleFlare_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleFlare_F_Type";
+					expression="_this setVariable ['Type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="F_40mm_Red";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item220
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={6172.5791,133.56149,1738.9594};
+				angles[]={0.059925474,0,6.2711902};
+			};
+			id=1189;
+			type="ModuleFlare_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleFlare_F_Type";
+					expression="_this setVariable ['Type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="F_40mm_Red";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item221
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={5480.9932,128.28154,2216.7822};
+				angles[]={0.071879961,0,0.01999305};
+			};
+			id=1190;
+			type="ModuleFlare_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleFlare_F_Type";
+					expression="_this setVariable ['Type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="F_40mm_White";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item222
+		{
+			dataType="Trigger";
+			position[]={5395.4209,125.931,2226.6084};
+			angle=6.2729754;
+			class Attributes
+			{
+				sizeB=900;
+				sizeC=25;
+				repeatable=1;
+				activationBy="ANYPLAYER";
+				effectSoundEnvironment="Combat";
+			};
+			id=1191;
+			type="EmptyDetectorArea10x10";
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=50;
+			nextID=57;
 		};
 		class Links
 		{
-			items=50;
+			items=57;
 			class Item0
 			{
 				linkID=0;
@@ -84977,6 +85227,76 @@ class Mission
 				linkID=49;
 				item0=1179;
 				item1=374;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item50
+			{
+				linkID=50;
+				item0=1184;
+				item1=1155;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item51
+			{
+				linkID=51;
+				item0=1185;
+				item1=1155;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item52
+			{
+				linkID=52;
+				item0=1186;
+				item1=1156;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item53
+			{
+				linkID=53;
+				item0=1187;
+				item1=1156;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item54
+			{
+				linkID=54;
+				item0=1188;
+				item1=1157;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item55
+			{
+				linkID=55;
+				item0=1189;
+				item1=1157;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item56
+			{
+				linkID=56;
+				item0=1190;
+				item1=1191;
 				class CustomData
 				{
 					type="Sync";
