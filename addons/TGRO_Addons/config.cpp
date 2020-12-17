@@ -35,7 +35,6 @@ class CfgFunctions
         {
             file = "\TGRO_Addons\functions";
 
-            // class moduleTemplate{};
             class moduleRandomArtillery {};
             class moduleRandomSmokeAndFlares {};
             class dropOrdnance {};
