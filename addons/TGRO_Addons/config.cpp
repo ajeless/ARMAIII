@@ -10,6 +10,7 @@ class CfgPatches
          units[] = {
             //  "TGRO_ModuleTemplate",
             "TGRO_ModuleRandomArtillery",
+            "TGRO_ModuleRandomSmokeAndFlares",
             "TGRO_ModuleRandomCarnage"
          };
          weapons[] = {};
@@ -36,6 +37,7 @@ class CfgFunctions
 
             // class moduleTemplate{};
             class moduleRandomArtillery {};
+            class moduleRandomSmokeAndFlares {};
             class dropOrdnance {};
             class moduleRandomCarnage {};
             class waitForPopulateMapEntities {};
@@ -194,7 +196,7 @@ class CfgVehicles
             class Shells: Edit
             {
                 property = "TGRO_ModuleRandomArtillery_Shells";
-                displayName = "# Shells/Bombs";
+                displayName = "Shells/bombs";
                 tooltip = "Number of shells in barrage/bombardment.";
                 typeName = "NUMBER";
                 defaultValue = 1;
@@ -227,79 +229,15 @@ class CfgVehicles
                 defaultValue = "Bo_Mk82";
                 class values 
                 {
-                    // 40mm smoke
-                    class G_40mm_Smoke
-                    {
-                        name = "GL - 40mm Smoke White"; 
-                        value = "G_40mm_Smoke";
-                        default = 1;
-                    };
-                    class G_40mm_SmokeRed
-                    {
-                        name = "GL - 40mm Smoke Red"; 
-                        value = "G_40mm_SmokeRed";
-                    };
-                    class G_40mm_SmokeGreen
-                    {
-                        name = "GL - 40mm Smoke Green"; 
-                        value = "G_40mm_SmokeGreen";
-                    };
-                    class G_40mm_SmokeYellow
-                    {
-                        name = "GL - 40mm Smoke Yellow"; 
-                        value = "G_40mm_SmokeYellow";
-                    };
-                    class G_40mm_SmokePurple
-                    {
-                        name = "GL - 40mm Smoke Purple"; 
-                        value = "G_40mm_SmokePurple";
-                    };
-                    class G_40mm_SmokeBlue
-                    {
-                        name = "GL - 40mm Smoke Blue"; 
-                        value = "G_40mm_SmokeBlue";
-                    };
-                    class G_40mm_SmokeOrange
-                    {
-                        name = "GL - 40mm Smoke Orange"; 
-                        value = "G_40mm_SmokeOrange";
-                    };
-                    
-                    // 40mm flares
-                    class F_40mm_White
-                    {
-                        name = "GL - 40mm Flare White"; 
-                        value = "F_40mm_White";
-                    };
-                    class F_40mm_Red
-                    {
-                        name = "GL - 40mm Flare Red"; 
-                        value = "F_40mm_Red";
-                    };
-                    class F_40mm_Green
-                    {
-                        name = "GL - 40mm Flare Green"; 
-                        value = "F_40mm_Green";
-                    };
-                    class F_40mm_Yellow
-                    {
-                        name = "GL - 40mm Flare Yellow"; 
-                        value = "F_40mm_Yellow";
-                    };
-                    
                     // 40mm HE
                     class G_40mm_HE
                     {
-                        name = "GL - 40mm HE Grenade"; 
+                        name = "UGL - 40mm HE Grenade"; 
                         value = "G_40mm_HE";
+                        default = 1;
                     };
 
-                    // 82mm HE and Smoke
-                    class Smoke_82mm_AMOS_White
-                    {
-                        name = "Mortar - 82mm Smoke White"; 
-                        value = "Smoke_82mm_AMOS_White";
-                    };
+                    // 82mm HE
                     class Sh_82mm_AMOS
                     {
                         name = "Mortar - 82mm HE Shells"; 
@@ -345,15 +283,247 @@ class CfgVehicles
 		{
 			description[] = {
                 "Random Artillery/Ordnance",
+                " ",
+                "Choose a fixed number of shells, or check 'Persistent' for shelling that lasts for the entire mission.",
+                "Choose a delay betwen shells.",
+                " ", 
+                "Place module on map and shelling will take place in a radius around it.",
                 "Bombardment will start immediately when not activated by trigger.",
                 "When not synced, and no marker is provided, bombardment is centered in radius around module position.",
-                "Target an object by syncing it to the module.",
-                "Or use area/marker for bombardment. IE: provide module with marker name.",
+                " ", 
+                "Module may be synced to an object in order to target it.",
+                "Bombardment will be centered in a radius around the object.",
                 "Tick the follow checkbox for bombardment to follow synced entity/object.",
-                "Tick the 'Use trigger area' checkbox to use the tigger's area for bombardment.  Marker takes precedence (use trigger is ignored) if marker is entered."
-            }; // Short description, will be formatted as structured text
-			sync[] = {"LocationArea_F"}; // Array of synced entities (can contain base classes)
-            duplicate = 1; // Multiple entities of this type can be synced
+                " ",
+                "Provide a marker name instead in order for bombardment to take place within the marker area.",
+                "Tick the 'Use trigger area' checkbox to use the tigger's area for bombardment instead of a marker.", 
+                "Marker takes precedence (use trigger is ignored) if marker is entered."
+            };
+			sync[] = {"LocationArea_F"};
+            duplicate = 1;
+            position = 1;
+		};
+    };
+
+    class TGRO_ModuleRandomSmokeAndFlares: Module_F
+    {
+        scope = 2;
+        displayName = "Random smoke and flares";
+        category = "TGRO_Modules";
+        function = "TGRO_fnc_moduleRandomSmokeAndFlares";
+        functionPriority = 1;
+        isGlobal = 0;
+        isTriggerActivated = 1;
+        isDisposable = 1;
+
+        class Attributes: AttributesBase
+        {
+            class Persistent: Checkbox   
+            {
+                property = "TGRO_ModuleRandomSmokeAndFlares_Persistent";
+                displayName = "Persistent";
+                tooltip = "Persistent ordnance dropped throughout the mission. Shell count infinite/ignored.";
+                typeName = "BOOLEAN";
+                defaultValue = false;
+            };
+
+            class Follow: Checkbox 
+            {
+                property = "TGRO_ModuleRandomSmokeAndFlares_Follow";
+                displayName = "Follow";
+                tooltip = "Follows/tracks target for duration of bombardment.";
+                typeName = "BOOLEAN";
+                defaultValue = false;
+            };
+
+            class TrigIsZone: Checkbox 
+            {
+                property = "TGRO_ModuleRandomSmokeAndFlares_TrigIsZone";
+                displayName = "Use trigger area";
+                tooltip = "When checked the trigger area will be used as the SmokeAndFlares zone.  Marker takes precedence.  Will be ignored if marker used.";
+                typeName = "BOOLEAN";
+                defaultValue = false;
+            };
+      
+            class MarkerArea: Edit
+            {
+                property = "TGRO_ModuleRandomSmokeAndFlares_MarkerArea";
+                displayName = "Marker";
+                tooltip = "Bombardment will take place in this marker's area.";
+                typeName = "STRING";
+                defaultValue = nil;
+            };
+
+            class Radius: Edit
+            {
+                property = "TGRO_ModuleRandomSmokeAndFlares_Radius";
+                displayName = "Radius(m)";
+                tooltip = "Radius/max-distance from center where ordnance will drop.  Random direction between '0 - Radius(m)'.  Ignored if bombardment dropped on area (IE: marker).";
+                typeName = "NUMBER";
+                defaultValue = 250;
+            };
+
+            class Shells: Edit
+            {
+                property = "TGRO_ModuleRandomSmokeAndFlares_Shells";
+                displayName = "Shells/bombs";
+                tooltip = "Number of shells in barrage/bombardment.";
+                typeName = "NUMBER";
+                defaultValue = 1;
+            };
+
+            class Altitude: Edit
+            {
+                property = "TGRO_ModuleRandomSmokeAndFlares_Altitude";
+                displayName = "Altitude(m)";
+                tooltip = "Altitude from which ordnance is to be dropped";
+                typeName = "NUMBER";
+                defaultValue = 150;
+            };
+
+            class Delay: Edit
+            {
+                property = "TGRO_ModuleRandomSmokeAndFlares_Delay";
+                displayName = "Delay(s)";
+                tooltip = "Random delay between shells.  0 - Delay(s)";
+                typeName = "NUMBER";
+                defaultValue = 5;
+            };
+
+            class G_40mm_Smoke: CheckBox
+            {
+                property = "TGRO_ModuleRandomSmokeAndFlares_G_40mm_Smoke";
+                displayName = "UGL - 40mm Smoke White";
+                tooltip = "40mm, white, smoke shells.";
+                typeName = "BOOLEAN";
+                defaultValue = true;
+            };
+
+            class G_40mm_SmokeRed: CheckBox
+            {
+                property = "TGRO_ModuleRandomSmokeAndFlares_G_40mm_SmokeRed";
+                displayName = "UGL - 40mm Smoke Red";
+                tooltip = "40mm, red, smoke shells.";
+                typeName = "BOOLEAN";
+                defaultValue = false;
+            };
+
+            class G_40mm_SmokeGreen: CheckBox
+            {
+                property = "TGRO_ModuleRandomSmokeAndFlares_G_40mm_SmokeGreen";
+                displayName = "UGL - 40mm Smoke Green";
+                tooltip = "40mm, green, smoke shells.";
+                typeName = "BOOLEAN";
+                defaultValue = false;
+            };
+
+            class G_40mm_SmokeYellow: CheckBox
+            {
+                property = "TGRO_ModuleRandomSmokeAndFlares_G_40mm_SmokeYellow";
+                displayName = "UGL - 40mm Smoke Yellow";
+                tooltip = "40mm, yellow, smoke shells.";
+                typeName = "BOOLEAN";
+                defaultValue = false;
+            };
+
+            class G_40mm_SmokePurple: CheckBox
+            {
+                property = "TGRO_ModuleRandomSmokeAndFlares_G_40mm_SmokePurple";
+                displayName = "UGL - 40mm Smoke Purple";
+                tooltip = "40mm, purple, smoke shells.";
+                typeName = "BOOLEAN";
+                defaultValue = false;
+            };
+
+            class G_40mm_SmokeBlue: CheckBox
+            {
+                property = "TGRO_ModuleRandomSmokeAndFlares_G_40mm_SmokeBlue";
+                displayName = "UGL - 40mm Smoke Blue";
+                tooltip = "40mm, blue, smoke shells.";
+                typeName = "BOOLEAN";
+                defaultValue = false;
+            };
+
+            class G_40mm_SmokeOrange: CheckBox
+            {
+                property = "TGRO_ModuleRandomSmokeAndFlares_G_40mm_SmokeOrange";
+                displayName = "UGL - 40mm Smoke Orange";
+                tooltip = "40mm, orange, smoke shells.";
+                typeName = "BOOLEAN";
+                defaultValue = false;
+            };
+
+            class Smoke_82mm_AMOS_White: CheckBox
+            {
+                property = "TGRO_ModuleRandomSmokeAndFlares_Smoke_82mm_AMOS_White";
+                displayName = "Mortar - 82mm Smoke White";
+                tooltip = "82mm, white, smoke, mortar shells.";
+                typeName = "BOOLEAN";
+                defaultValue = false;
+            };
+
+            class F_40mm_White: CheckBox
+            {
+                property = "TGRO_ModuleRandomSmokeAndFlares_F_40mm_White";
+                displayName = "UGL - 40mm Flare White";
+                tooltip = "40mm, white, flare shells.";
+                typeName = "BOOLEAN";
+                defaultValue = false;
+            };
+
+            class F_40mm_Red: CheckBox
+            {
+                property = "TGRO_ModuleRandomSmokeAndFlares_F_40mm_Red";
+                displayName = "UGL - 40mm Flare Red";
+                tooltip = "40mm, red, flare shells.";
+                typeName = "BOOLEAN";
+                defaultValue = false;
+            };
+
+            class F_40mm_Green: CheckBox
+            {
+                property = "TGRO_ModuleRandomSmokeAndFlares_F_40mm_Green";
+                displayName = "UGL - 40mm Flare Green";
+                tooltip = "40mm, green, flare shells.";
+                typeName = "BOOLEAN";
+                defaultValue = false;
+            };
+
+            class F_40mm_Yellow: CheckBox
+            {
+                property = "TGRO_ModuleRandomSmokeAndFlares_F_40mm_Yellow";
+                displayName = "UGL - 40mm Flare Yellow";
+                tooltip = "40mm, yellow, flare shells.";
+                typeName = "BOOLEAN";
+                defaultValue = false;
+            };
+
+            class ModuleDescription: ModuleDescription
+			{
+			};
+        };
+        class ModuleDescription: ModuleDescription
+		{
+			description[] = {
+                "Random Smoke and Flares",
+                " ",
+                "Choose a fixed number of shells, or check 'Persistent' for shelling that lasts for the entire mission.",
+                "Choose the delay betwen shells.",
+                " ", 
+                "Place module on map and shelling will take place in a radius around it.",
+                "Bombardment will start immediately when not activated by trigger.",
+                "When not synced, and no marker is provided, bombardment is centered in radius around module position.",
+                " ", 
+                "Module may be synced to an object in order to target it.",
+                "Bombardment will be centered in a radius around the object.",
+                "Tick the follow checkbox for bombardment to follow synced entity/object.",
+                " ",
+                "Provide a marker name instead in order for bombardment to take place within the marker area.",
+                "Tick the 'Use trigger area' checkbox to use the tigger's area for bombardment instead of a marker.", 
+                "Marker takes precedence (use trigger is ignored) if marker is entered."
+            };
+			sync[] = {"LocationArea_F"};
+            duplicate = 1;
             position = 1;
 		};
     };
@@ -377,7 +547,7 @@ class CfgVehicles
                 displayName = "Radius(m)";
                 tooltip = "The maximum distance, centered on the module position, around which wrecks, bodies, fires will spawn.";
                 typeName = "NUMBER";
-                defaultValue = 0;
+                defaultValue = 10;
             };
 
             class MarkerArea: Edit
@@ -395,7 +565,7 @@ class CfgVehicles
                 displayName = "Corpses";
                 tooltip = "The number of corpses to spawn.";
                 typeName = "NUMBER";
-                defaultValue = 15;
+                defaultValue = 5;
             };
 
             class Wrecks: Edit
@@ -404,23 +574,23 @@ class CfgVehicles
                 displayName = "Wrecks";
                 tooltip = "The number of wrecked vehicles to spawn.";
                 typeName = "NUMBER";
-                defaultValue = 3;
+                defaultValue = 1;
             };
 
             class FiresPercent: Edit
             {
                 property = "TGRO_ModuleRandomCarnage_FiresPercent";
-                displayName = "Fires percent";
+                displayName = "Wreck fires %";
                 tooltip = "The %chance that a particular wreck will remain on fire.  EG: 50 means 50-50 chance of a spawned wreck being on fire. Effect persists.";
                 typeName = "NUMBER";
-                defaultValue = 25;
+                defaultValue = 0;
             };
 
             class SmolderingBodiesPercent: Edit
             {
                 property = "TGRO_ModuleRandomCarnage_SmolderingBodiesPercent";
-                displayName = "Smoldering bodies percent";
-                tooltip = "The % chance that a particular corpse is smoldering as if burned. EG: 50 means 50-50 chance that a corpse is smoldering. Effect persists.";
+                displayName = "Corpse fires %";
+                tooltip = "The % chance that a particular corpse is on fire. EG: 50 means 50-50 chance that a corpse is smoldering. Effect persists.";
                 typeName = "NUMBER";
                 defaultValue = 0;
             };
@@ -432,17 +602,22 @@ class CfgVehicles
         class ModuleDescription: ModuleDescription
 		{
 			description[] = {
-                "Random Carnage (Corpses, Wrecks, Fires)",
+                "Random Carnage",  
+                " ",
+                "Entities will spawn about 60 seconds after mission start so give it some time.",
+                "Entities are based on soldier and vehicle classes that are in the mission.",
+                "NOTE: These objects are exempt from garbage/remains collection.  Use conservatively.",
+                " ",
+                "Create an area of carnage/destruction by spawning corpses, wrecks, and fires.",
                 "Place the module on its own for carnage in a radius around it.",
-                "Provide a marker name for carnage inside the marker area.",
+                "Provide a marker name for carnage inside the marker area instead.",
+                "The radius will be ignored when a marker is provided.  IE: The marker area is the carnage area.",
                 "Provide number of corpses and wrecked vehicles.",
-                "Provide the chance of vehicle wrecks being in flames and corpses smoldering.",
-                "NOTE: These objects are exempt"
-            }; // Short description, will be formatted as structured text
-			sync[] = {"LocationArea_F"}; // Array of synced entities (can contain base classes)
-            duplicate = 1; // Multiple entities of this type can be synced
+                "Provide the chance of vehicle wrecks being in flames and corpses Being on fire.",
+            };
+			sync[] = {"LocationArea_F"};
+            duplicate = 1;
+            position = 1;
 		};
     };
-
-
 };
