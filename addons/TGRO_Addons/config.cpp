@@ -9,7 +9,8 @@ class CfgPatches
          };
          units[] = {
             //  "TGRO_ModuleTemplate",
-            "TGRO_ModuleRandomArtillery"
+            "TGRO_ModuleRandomArtillery",
+            "TGRO_ModuleRandomCarnage"
          };
          weapons[] = {};
      };
@@ -36,6 +37,9 @@ class CfgFunctions
             // class moduleTemplate{};
             class moduleRandomArtillery {};
             class dropOrdnance {};
+            class moduleRandomCarnage {};
+            class waitForPopulateMapEntities {};
+            class getMenAndVehicleClasses {};
         };
 
     };
@@ -132,6 +136,7 @@ class CfgVehicles
     {
         scope = 2;
         displayName = "Random Artillery";
+        icon = "\A3\Modules_F_Curator\Data\iconOrdnance_ca.paa";
         category = "TGRO_Modules";
         function = "TGRO_fnc_moduleRandomArtillery";
         functionPriority = 1;
@@ -352,5 +357,92 @@ class CfgVehicles
             position = 1;
 		};
     };
+
+    class TGRO_ModuleRandomCarnage: Module_F
+    {
+        scope = 2;
+        displayName = "Random Carnage";
+        category = "TGRO_Modules";
+        function = "TGRO_fnc_moduleRandomCarnage";
+        functionPriority = 1;
+        isGlobal = 0;
+        isTriggerActivated = 0;
+        isDisposable = 1;
+
+        class Attributes: AttributesBase
+        {
+            class Radius: Edit
+            {
+                property = "TGRO_ModuleRandomCarnage_Radius";
+                displayName = "Radius(m)";
+                tooltip = "The maximum distance, centered on the module position, around which wrecks, bodies, fires will spawn.";
+                typeName = "NUMBER";
+                defaultValue = 0;
+            };
+
+            class MarkerArea: Edit
+            {
+                property = "TGRO_ModuleRandomCarnage_MarkerArea";
+                displayName = "Marker";
+                tooltip = "If a marker name is provided, the radius is ignored. Random positions within the marker area will be used to spawn wrecks, bodies, fires";
+                typeName = "STRING";
+                defaultValue = nil;
+            };
+
+            class Corpses: Edit
+            {
+                property = "TGRO_ModuleRandomCarnage_Corpses";
+                displayName = "Corpses";
+                tooltip = "The number of corpses to spawn.";
+                typeName = "NUMBER";
+                defaultValue = 15;
+            };
+
+            class Wrecks: Edit
+            {
+                property = "TGRO_ModuleRandomCarnage_Wrecks";
+                displayName = "Wrecks";
+                tooltip = "The number of wrecked vehicles to spawn.";
+                typeName = "NUMBER";
+                defaultValue = 3;
+            };
+
+            class FiresPercent: Edit
+            {
+                property = "TGRO_ModuleRandomCarnage_FiresPercent";
+                displayName = "Fires percent";
+                tooltip = "The %chance that a particular wreck will remain on fire.  EG: 50 means 50-50 chance of a spawned wreck being on fire. Effect persists.";
+                typeName = "NUMBER";
+                defaultValue = 25;
+            };
+
+            class SmolderingBodiesPercent: Edit
+            {
+                property = "TGRO_ModuleRandomCarnage_SmolderingBodiesPercent";
+                displayName = "Smoldering bodies percent";
+                tooltip = "The % chance that a particular corpse is smoldering as if burned. EG: 50 means 50-50 chance that a corpse is smoldering. Effect persists.";
+                typeName = "NUMBER";
+                defaultValue = 0;
+            };
+
+            class ModuleDescription: ModuleDescription
+			{
+			};
+        };
+        class ModuleDescription: ModuleDescription
+		{
+			description[] = {
+                "Random Carnage (Corpses, Wrecks, Fires)",
+                "Place the module on its own for carnage in a radius around it.",
+                "Provide a marker name for carnage inside the marker area.",
+                "Provide number of corpses and wrecked vehicles.",
+                "Provide the chance of vehicle wrecks being in flames and corpses smoldering.",
+                "NOTE: These objects are exempt"
+            }; // Short description, will be formatted as structured text
+			sync[] = {"LocationArea_F"}; // Array of synced entities (can contain base classes)
+            duplicate = 1; // Multiple entities of this type can be synced
+		};
+    };
+
 
 };
