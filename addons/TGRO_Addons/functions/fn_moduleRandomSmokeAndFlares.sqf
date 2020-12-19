@@ -17,32 +17,32 @@ private _target = nil;
 private _triggerArea = nil;
 private _ordnance = [];
 
-if ( (_module getVariable "G_40mm_Smoke") == true ) then {
-	_ordnance pushBack "G_40mm_Smoke";
+if ( (_module getVariable "gm_smokeshell_blk_gc") == true ) then {
+	_ordnance pushBack "gm_smokeshell_blk_gc";
 };
 
-if ( (_module getVariable "G_40mm_SmokeRed") == true ) then {
-	_ordnance pushBack "G_40mm_SmokeRed";
+if ( (_module getVariable "gm_smokeshell_blu_gc") == true ) then {
+	_ordnance pushBack "gm_smokeshell_blu_gc";
 };
 
-if ( (_module getVariable "G_40mm_SmokeGreen") == true ) then {
-	_ordnance pushBack "G_40mm_SmokeGreen";
+if ( (_module getVariable "gm_smokeshell_grn_gc") == true ) then {
+	_ordnance pushBack "gm_smokeshell_grn_gc";
 };
 
-if ( (_module getVariable "G_40mm_SmokeYellow") == true ) then {
-	_ordnance pushBack "G_40mm_SmokeYellow";
+if ( (_module getVariable "gm_smokeshell_org_gc") == true ) then {
+	_ordnance pushBack "gm_smokeshell_org_gc";
 };
 
-if ( (_module getVariable "G_40mm_SmokePurple") == true ) then {
-	_ordnance pushBack "G_40mm_SmokePurple";
+if ( (_module getVariable "gm_smokeshell_red_gc") == true ) then {
+	_ordnance pushBack "gm_smokeshell_red_gc";
 };
 
-if ( (_module getVariable "G_40mm_SmokeBlue") == true ) then {
-	_ordnance pushBack "G_40mm_SmokeBlue";
+if ( (_module getVariable "gm_smokeshell_wht_gc") == true ) then {
+	_ordnance pushBack "gm_smokeshell_wht_gc";
 };
 
-if ( (_module getVariable "G_40mm_SmokeOrange") == true ) then {
-	_ordnance pushBack "G_40mm_SmokeOrange";
+if ( (_module getVariable "gm_smokeshell_yel_gc") == true ) then {
+	_ordnance pushBack "gm_smokeshell_yel_gc";
 };
 
 if ( (_module getVariable "F_40mm_White") == true ) then {

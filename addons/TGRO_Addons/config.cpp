@@ -8,7 +8,6 @@ class CfgPatches
              "A3_Functions_F"
          };
          units[] = {
-            //  "TGRO_ModuleTemplate",
             "TGRO_ModuleRandomArtillery",
             "TGRO_ModuleRandomSmokeAndFlares",
             "TGRO_ModuleRandomCarnage"
@@ -66,72 +65,6 @@ class CfgVehicles
 			class AnyBrain;
 		};
     };
-
-    // class TGRO_ModuleTemplate: Module_F
-    // {
-    //     scope = 2;
-    //     displayName = "Module Template";
-    //     category = "TGRO_Modules";
-    //     function = "TGRO_fnc_moduleTemplate";
-    //     functionPriority = 1;
-    //     isGlobal = 0;
-    //     isTriggerActivated = 1;
-    //     isDisposable = 1;
-
-    //     class Attributes: AttributesBase
-    //     {
-    //         class Persistent: Checkbox 
-    //         {
-    //             property = "TGRO_ ModuleTemplate_Persistent";
-    //             displayName = "Persistent";
-    //             tooltip = "Effect persists (constant) throughout the mission.";
-    //             typeName = "BOOLEAN";
-    //             defaultValue = false;
-    //         };
-
-    //         class MarkerArea: Edit
-    //         {
-    //             property = "TGRO_ ModuleTemplate_MarkerArea";
-    //             displayName = "Marker";
-    //             tooltip = "Marker area to be affected. Only 1 marker may be specified.";
-    //             typeName = "STRING";
-    //             defaultValue = nil;
-    //         };
-
-    //         class Radius: Edit
-    //         {
-    //             property = "TGRO_ ModuleTemplate_Radius";
-    //             displayName = "Radius(m)";
-    //             tooltip = "If module is synced to object, this is the radius around the object the module effects.";
-    //             typeName = "NUMBER";
-    //             defaultValue = 0;
-    //         };
-
-    //         class Follow: Checkbox 
-    //         {
-    //             property = "TGRO_ ModuleTemplate_Follow";
-    //             displayName = "Follow";
-    //             tooltip = "If synced to an object this determines whther effect will follow object for the duration of the effect.";
-    //             typeName = "BOOLEAN";
-    //             defaultValue = false;
-    //         };
-
-    //         class ModuleDescription: ModuleDescription
-	// 		{
-	// 		};
-    //     };
-    //     class ModuleDescription: ModuleDescription
-	// 	{
-	// 		description[] = {
-    //             "This is the description.",
-    //             "This module doesn't really do anything.",
-    //             "Use as many lines as you need",
-    //             "This may be used as the template for a module."
-    //         }; // Short description, will be formatted as structured text
-	// 		sync[] = {"LocationArea_F"}; // Array of synced entities (can contain base classes)
-    //         duplicate = 1; // Multiple entities of this type can be synced
-	// 	};
-    // };
 
     class TGRO_ModuleRandomArtillery: Module_F
     {
@@ -228,12 +161,20 @@ class CfgVehicles
                 defaultValue = "Bo_Mk82";
                 class values 
                 {
+
                     // 40mm HE
                     class G_40mm_HE
                     {
                         name = "UGL - 40mm HE Grenade"; 
                         value = "G_40mm_HE";
                         default = 1;
+                    };
+
+                    // hand grenades
+                    class gm_handgrenade_frag_rgd5
+                    {
+                        name = "RGD 5 Fragmentation Grenade (hand grenade)"; 
+                        value = "gm_handgrenade_frag_rgd5"; 
                     };
 
                     // 82mm HE
@@ -288,7 +229,7 @@ class CfgVehicles
                 " ", 
                 "Place module on map and shelling will take place in a radius around it.",
                 "Bombardment will start immediately when not activated by trigger.",
-                "When not synced, and no marker is provided, bombardment is centered in radius around module position.",
+                "When not synced, and no marker is provided, bombardment is centered in radius around the module position.",
                 " ", 
                 "Module may be synced to an object in order to target it.",
                 "Bombardment will be centered in a radius around the object.",
@@ -389,65 +330,65 @@ class CfgVehicles
                 defaultValue = 5;
             };
 
-            class G_40mm_Smoke: CheckBox
+            class gm_smokeshell_blk_gc: CheckBox
             {
-                property = "TGRO_ModuleRandomSmokeAndFlares_G_40mm_Smoke";
-                displayName = "UGL - 40mm Smoke White";
-                tooltip = "40mm, white, smoke shells.";
+                property = "TGRO_ModuleRandomSmokeAndFlares_gm_smokeshell_blk_gc";
+                displayName = "GC - Black Smoke";
+                tooltip = "GC - Black Smoke.  Global Mobilization DLC.";
                 typeName = "BOOLEAN";
                 defaultValue = true;
             };
 
-            class G_40mm_SmokeRed: CheckBox
+            class gm_smokeshell_blu_gc: CheckBox
             {
-                property = "TGRO_ModuleRandomSmokeAndFlares_G_40mm_SmokeRed";
-                displayName = "UGL - 40mm Smoke Red";
-                tooltip = "40mm, red, smoke shells.";
+                property = "TGRO_ModuleRandomSmokeAndFlares_gm_smokeshell_blu_gc";
+                displayName = "GC - Blue Smoke";
+                tooltip = "GC - Blue Smoke.  Global Mobilization DLC.";
                 typeName = "BOOLEAN";
                 defaultValue = false;
             };
 
-            class G_40mm_SmokeGreen: CheckBox
+            class gm_smokeshell_grn_gc: CheckBox
             {
-                property = "TGRO_ModuleRandomSmokeAndFlares_G_40mm_SmokeGreen";
-                displayName = "UGL - 40mm Smoke Green";
-                tooltip = "40mm, green, smoke shells.";
+                property = "TGRO_ModuleRandomSmokeAndFlares_gm_smokeshell_grn_gc";
+                displayName = "GC - Green Smoke";
+                tooltip = "GC - Green Smoke.  Global Mobilization DLC.";
                 typeName = "BOOLEAN";
                 defaultValue = false;
             };
 
-            class G_40mm_SmokeYellow: CheckBox
+            class gm_smokeshell_org_gc: CheckBox
             {
-                property = "TGRO_ModuleRandomSmokeAndFlares_G_40mm_SmokeYellow";
-                displayName = "UGL - 40mm Smoke Yellow";
-                tooltip = "40mm, yellow, smoke shells.";
+                property = "TGRO_ModuleRandomSmokeAndFlares_gm_smokeshell_org_gc";
+                displayName = "GC - Orange Smoke";
+                tooltip = "GC - Orange Smoke.  Global Mobilization DLC.";
                 typeName = "BOOLEAN";
                 defaultValue = false;
             };
 
-            class G_40mm_SmokePurple: CheckBox
+            class gm_smokeshell_red_gc: CheckBox
             {
-                property = "TGRO_ModuleRandomSmokeAndFlares_G_40mm_SmokePurple";
-                displayName = "UGL - 40mm Smoke Purple";
-                tooltip = "40mm, purple, smoke shells.";
+                property = "TGRO_ModuleRandomSmokeAndFlares_gm_smokeshell_red_gc";
+                displayName = "GC - Red Smoke";
+                tooltip = "GC - Red Smoke.  Global Mobilization DLC.";
                 typeName = "BOOLEAN";
                 defaultValue = false;
             };
 
-            class G_40mm_SmokeBlue: CheckBox
+            class gm_smokeshell_wht_gc: CheckBox
             {
-                property = "TGRO_ModuleRandomSmokeAndFlares_G_40mm_SmokeBlue";
-                displayName = "UGL - 40mm Smoke Blue";
-                tooltip = "40mm, blue, smoke shells.";
+                property = "TGRO_ModuleRandomSmokeAndFlares_gm_smokeshell_wht_gc";
+                displayName = "GC - White Smoke";
+                tooltip = "GC - White Smoke.  Global Mobilization DLC.";
                 typeName = "BOOLEAN";
                 defaultValue = false;
             };
 
-            class G_40mm_SmokeOrange: CheckBox
+            class gm_smokeshell_yel_gc: CheckBox
             {
-                property = "TGRO_ModuleRandomSmokeAndFlares_G_40mm_SmokeOrange";
-                displayName = "UGL - 40mm Smoke Orange";
-                tooltip = "40mm, orange, smoke shells.";
+                property = "TGRO_ModuleRandomSmokeAndFlares_gm_smokeshell_yel_gc";
+                displayName = "GC - Yellow Smoke";
+                tooltip = "GC - Yellow Smoke.  Global Mobilization DLC.";
                 typeName = "BOOLEAN";
                 defaultValue = false;
             };
@@ -506,16 +447,16 @@ class CfgVehicles
 			description[] = {
                 "Random Smoke and Flares",
                 " ",
-                "Choose a fixed number of shells, or check 'Persistent' for shelling that lasts for the entire mission.",
-                "Choose the delay betwen shells.",
+                "Choose a fixed number of shells, or check 'Persistent' for smoke/flares that last for the entire mission.",
+                "Choose the delay betwen drops.",
                 " ", 
-                "Place module on map and shelling will take place in a radius around it.",
+                "Place module on map and for smoke/flares to drop in the given radius around it.",
                 "Bombardment will start immediately when not activated by trigger.",
                 "When not synced, and no marker is provided, bombardment is centered in radius around module position.",
                 " ", 
                 "Module may be synced to an object in order to target it.",
-                "Bombardment will be centered in a radius around the object.",
-                "Tick the follow checkbox for bombardment to follow synced entity/object.",
+                "Bombardment will be centered in a radius around the target.",
+                "Tick the follow checkbox for the bombardment to follow the target.",
                 " ",
                 "Provide a marker name instead in order for bombardment to take place within the marker area.",
                 "Tick the 'Use trigger area' checkbox to use the tigger's area for bombardment instead of a marker.", 
@@ -603,7 +544,7 @@ class CfgVehicles
 			description[] = {
                 "Random Carnage",  
                 " ",
-                "Entities will spawn about 60 seconds after mission start so give it some time.",
+                "Entities will spawn about 60 seconds after mission start.",
                 "Entities are based on soldier and vehicle classes that are in the mission.",
                 "NOTE: These objects are exempt from garbage/remains collection.  Use conservatively.",
                 " ",
