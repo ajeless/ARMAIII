@@ -3,7 +3,7 @@
 Repository for ARMA III experiments.
 
 ## Addons/Modules
-[TGRO_Addons](.addons/TGRO_Addons)
+[TGRO_Addons](./addons/TGRO_Addons)
 
 ## Mission Editing/Scripting Examples
 [Add Action to Object](./scripting/add_action.md)   
