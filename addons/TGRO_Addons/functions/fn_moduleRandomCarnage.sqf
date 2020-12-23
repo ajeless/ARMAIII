@@ -16,4 +16,3 @@ if (_activated) then {
 		[_center, _radius, _corpses, _wrecks, _fires, _smolderingBodies] execVM "\TGRO_Addons\scripts\randomCarnageInRadius.sqf";
 	};
 };
- 
