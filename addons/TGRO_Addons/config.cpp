@@ -133,7 +133,6 @@ class CfgVehicles
                 displayName = "Marker";
                 tooltip = "Bombardment will take place in this marker's area.";
                 typeName = "STRING";
-                defaultValue = nil;
             };
 
             class Radius: Edit
@@ -311,7 +310,6 @@ class CfgVehicles
                 displayName = "Marker";
                 tooltip = "Bombardment will take place in this marker's area.";
                 typeName = "STRING";
-                defaultValue = nil;
             };
 
             class Radius: Edit
@@ -516,7 +514,6 @@ class CfgVehicles
                 displayName = "Marker";
                 tooltip = "If a marker name is provided, the radius is ignored. Random positions within the marker area will be used to spawn wrecks, bodies, fires";
                 typeName = "STRING";
-                defaultValue = nil;
             };
 
             class Corpses: Edit
