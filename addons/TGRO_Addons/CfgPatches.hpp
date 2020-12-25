@@ -15,7 +15,7 @@ class CfgPatches
          weapons[] = {};
      };
 
-    class TGRO_Rifles_AK12
+    class TGRO_Weapons
 	{
 		addonRootClass="A3_Weapons_F_Exp";
 		requiredAddons[]=
@@ -26,7 +26,8 @@ class CfgPatches
 		units[]={};
 		weapons[]=
 		{
-			"arifle_AK12_M"
+			"arifle_AK12_M",
+            "H_Balaclava_Magic"
 		};
 	};
 };
