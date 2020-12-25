@@ -8,6 +8,7 @@ class PointerSlot;
 class UnderBarrelSlot;
 class CfgWeapons
 {
+	
 	class Rifle;
 	class Rifle_Base_F: Rifle
 	{
@@ -36,7 +37,7 @@ class CfgWeapons
 		reloadAction="GestureReloadAKM";
 		magazines[]=
 		{
-			"30Rnd_762x39_AK12_Mag_F"
+			"75rnd_762x39_AK12_Mag_F"
 		};
 		magazineWell[]=
 		{
@@ -308,18 +309,81 @@ class CfgWeapons
 			aiRateOfFireDistance=600;
 		};
 	};
-	class arifle_AK12_M: arifle_AK12_base_F
+	class arifle_ACME_AK12_M: arifle_AK12_base_F
 	{
 		author="$STR_A3_Bohemia_Interactive";
-		_generalMacro="arifle_AK12_M";
-		baseWeapon="arifle_AK12_M";
+		_generalMacro="arifle_ACME_AK12_M";
+		baseWeapon="arifle_ACME_AK12_M";
 		scope=2;
-		displayName="AK-12 M 7.62mm";
+		displayName="ACME AK-12 M (Black, 7.62x39)";
 		picture="\A3\Weapons_F_Exp\Rifles\AK12\Data\UI\icon_arifle_AK12_F_X_CA.paa";
 		hiddenSelectionsTextures[]=
 		{
 			"\A3\Weapons_F_Exp\Rifles\AK12\Data\AK12_ak12_1_co.paa",
 			"\A3\Weapons_F_Exp\Rifles\AK12\Data\AK12_ak12_2_co.paa"
+		};
+	};
+
+	class HeadgearItem;
+	class ItemCore;
+	class H_HelmetB: ItemCore
+	{
+		class ItemInfo;
+	};
+
+	class H_Balaclava_Magic: H_HelmetB
+	{
+		
+		author="$STR_A3_Bohemia_Interactive";
+		_generalMacro="H_HelmetO_ViperSP_hex_F";
+		scope=2;
+		displayName="ACME Magic Balaclava";
+		// picture="\A3\characters_F_Gamma\Guerrilla\Data\ui\icon_H_Shemag_olive_ca.paa";
+		// model="\A3\Characters_F_Gamma\Guerrilla\headgear_shemagmask";
+		model="\A3\Characters_F_Bootcamp\Guerrilla\g_balaclava_clean.p3d";
+		picture="\A3\Characters_F_Bootcamp\Data\UI\icon_G_Balaclava_clean_ca.paa";
+		DLC="Expansion";
+		descriptionShort="ACME Magic Shemag";
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\a3\characters_f_bootcamp\guerrilla\data\headgear_balaclava_blk_co.paa"
+		};
+		class ItemInfo: HeadgearItem
+		{
+			mass=6;
+			uniformModel="\A3\Characters_F_Bootcamp\Guerrilla\g_balaclava_clean.p3d";
+			hiddenSelections[]=
+			{
+				"camo"
+			};
+			modelSides[]={0,3};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName="HitHead";
+					armor=1000000;
+					passThrough=.1;
+					explosionShielding=1000000;
+					armorStructural=10000;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=1000000;
+					passThrough=.1;
+					explosionShielding=1000000;
+					armorStructural=10000;
+				};
+			};
+		};
+		subItems[]=
+		{
+			"Integrated_NVG_TI_1_F"
 		};
 	};
 };
