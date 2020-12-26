@@ -1,3 +1,15 @@
+class CfgRecoils
+{
+	class recoil_default;
+	class recoil_ak12: recoil_default
+	{
+		muzzleOuter[]={0.15,0.3,0.2,0.15};
+		kickBack[]={0.015,0.03};
+		permanent=.08;
+		temporary=0.0025;
+	};
+};
+
 class Mode_SemiAuto;
 class Mode_Burst;
 class Mode_FullAuto;
