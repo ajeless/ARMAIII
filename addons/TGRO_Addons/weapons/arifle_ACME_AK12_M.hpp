@@ -18,6 +18,6 @@ class arifle_ACME_AK12_M: arifle_ACME_base_F
     aimTransitionSpeed=1.6;
     dexterity=2.8;
     initSpeed=1500;
-    recoil="recoil_ACME_AK12_M";
+    recoil="recoil_ak12";
     maxZeroing=2000;
 };
