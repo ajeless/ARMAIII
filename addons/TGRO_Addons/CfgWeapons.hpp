@@ -16,7 +16,7 @@ class CfgWeapons
 		class GunParticles;
 	};
 	class UGL_F;
-	class arifle_AK12_base_F: Rifle_Base_F
+	class arifle_ACME_base_F: Rifle_Base_F
 	{
 		author="$STR_A3_Bohemia_Interactive";
 		_generalMacro="arifle_AK12_base_F";
@@ -200,6 +200,7 @@ class CfgWeapons
 		};
 		distanceZoomMin=300;
 		distanceZoomMax=300;
+
 		modes[]=
 		{
             "Single",
@@ -219,6 +220,21 @@ class CfgWeapons
 			class BaseSoundModeType;
 			class StandardSound: BaseSoundModeType
 			{
+				soundSetShot[]=
+				{
+					"AK12_Shot_SoundSet",
+					"AK12_Tail_SoundSet",
+					"AK12_InteriorTail_SoundSet"
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				SoundSetShot[]=
+				{
+					"AK12_silencerShot_SoundSet",
+					"AK12_silencerTail_SoundSet",
+					"AK12_silencerInteriorTail_SoundSet"
+				};
 			};
 			reloadTime=0.1;
 			dispersion=0.00086999999;
@@ -239,6 +255,21 @@ class CfgWeapons
 			class BaseSoundModeType;
 			class StandardSound: BaseSoundModeType
 			{
+				soundSetShot[]=
+				{
+					"AK12_Shot_SoundSet",
+					"AK12_Tail_SoundSet",
+					"AK12_InteriorTail_SoundSet"
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				SoundSetShot[]=
+				{
+					"AK12_silencerShot_SoundSet",
+					"AK12_silencerTail_SoundSet",
+					"AK12_silencerInteriorTail_SoundSet"
+				};
 			};
 			textureType="dual";
 			burst=2;
@@ -261,6 +292,21 @@ class CfgWeapons
 			class BaseSoundModeType;
 			class StandardSound: BaseSoundModeType
 			{
+				soundSetShot[]=
+				{
+					"AK12_Shot_SoundSet",
+					"AK12_Tail_SoundSet",
+					"AK12_InteriorTail_SoundSet"
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				SoundSetShot[]=
+				{
+					"AK12_silencerShot_SoundSet",
+					"AK12_silencerTail_SoundSet",
+					"AK12_silencerInteriorTail_SoundSet"
+				};
 			};
 			reloadTime=0.1;
 			dispersion=0.00086999999;
@@ -309,7 +355,7 @@ class CfgWeapons
 			aiRateOfFireDistance=600;
 		};
 	};
-	class arifle_ACME_AK12_M: arifle_AK12_base_F
+	class arifle_ACME_AK12_M: arifle_ACME_base_F
 	{
 		author="$STR_A3_Bohemia_Interactive";
 		_generalMacro="arifle_ACME_AK12_M";
@@ -323,6 +369,7 @@ class CfgWeapons
 			"\A3\Weapons_F_Exp\Rifles\AK12\Data\AK12_ak12_2_co.paa"
 		};
 	};
+
 
 	class HeadgearItem;
 	class ItemCore;
