@@ -2,4 +2,5 @@
 #include "CfgFactionClasses.hpp"
 #include "CfgFunctions.hpp"
 #include "CfgVehicles.hpp"
+#include "CfgRecoils.hpp"
 #include "CfgWeapons.hpp"

@@ -14,10 +14,10 @@ class arifle_ACME_AK12_M: arifle_ACME_base_F
     magazineReloadSwitchPhase=0.47999999;
     htMin=7;
     htMax=880;
-    inertia=0.3;
-    aimTransitionSpeed=1.6;
-    dexterity=2.8;
-    initSpeed=1100;
+    inertia=0.4;
+    aimTransitionSpeed=1.1;
+    dexterity=2;
+    initSpeed=930;
     recoil="recoil_ak12";
     maxZeroing=2000;
 };
