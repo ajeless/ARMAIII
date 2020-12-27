@@ -1,10 +1,10 @@
-class arifle_ACME_base_F: Rifle_Base_F
+class arifle_ACME_AK12_base: Rifle_Base_F
 {
-    author="$STR_A3_Bohemia_Interactive";
-    _generalMacro="arifle_AK12_base_F";
+    author="The Republic of Curdestand and Private Floydy";
+    _generalMacro="arifle_ACME_AK12_base";
     scope=0;
     displayName="";
-    descriptionShort="$STR_A3_CfgWeapons_arifle_AK12_base_F1";
+    descriptionShort="ACME AK-12 ase configuration";
     model="\A3\Weapons_F_Exp\Rifles\AK12\AK12_F.p3d";
     hiddenSelections[]=
     {
@@ -28,12 +28,13 @@ class arifle_ACME_base_F: Rifle_Base_F
     magazineReloadSwitchPhase=0.47999999;
     htMin=7;
     htMax=880;
-    inertia=0.60000002;
-    aimTransitionSpeed=0.89999998;
-    dexterity=1.4;
-    initSpeed=730;
-    recoil="recoil_ak12";
-    maxZeroing=1000;
+    inertia=0.45;
+    aimTransitionSpeed=1.1;
+    dexterity=2.0;
+    initSpeed=850;
+    recoil="recoil_ACME_ak12";
+    maxZeroing=2000;
+ 
     bullet1[]=
     {
         "A3\sounds_f\weapons\shells\7_62\metal_762_01",
@@ -147,7 +148,7 @@ class arifle_ACME_base_F: Rifle_Base_F
     };
     class Library
     {
-        libTextDesc="$STR_A3_CfgWeapons_arifle_AK12_base_F_Library0";
+        libTextDesc="ACME AK-12 base configuration";
     };
     class WeaponSlotsInfo: WeaponSlotsInfo
     {
@@ -335,5 +336,20 @@ class arifle_ACME_base_F: Rifle_Base_F
         maxRangeProbab=0.050000001;
         aiRateOfFire=6;
         aiRateOfFireDistance=600;
+    };
+};
+
+class arifle_ACME_AK12_M: arifle_ACME_AK12_base
+{
+    author="$STR_A3_Bohemia_Interactive";
+    _generalMacro="arifle_ACME_AK12_M";
+    baseWeapon="arifle_ACME_AK12_M";
+    scope=2;
+    displayName="ACME AK-12 M (Black, 7.62x39)";
+    picture="\A3\Weapons_F_Exp\Rifles\AK12\Data\UI\icon_arifle_AK12_F_X_CA.paa";
+    hiddenSelectionsTextures[]=
+    {
+        "\A3\Weapons_F_Exp\Rifles\AK12\Data\AK12_ak12_1_co.paa",
+        "\A3\Weapons_F_Exp\Rifles\AK12\Data\AK12_ak12_2_co.paa"
     };
 };

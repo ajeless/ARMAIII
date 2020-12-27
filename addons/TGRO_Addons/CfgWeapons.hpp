@@ -17,8 +17,7 @@ class CfgWeapons
 	};
 	class UGL_F;
 	
-	#include "weapons\arifle_ACME_base_F.hpp"
-	#include "weapons\arifle_ACME_AK12_M.hpp"
+	#include "weapons\arifle_ACME_AK12.hpp"
 
 	class HeadgearItem;
 	class ItemCore;
