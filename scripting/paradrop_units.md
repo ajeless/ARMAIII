@@ -1,4 +1,4 @@
-# Paradropping Unit by Adding a Sterrable Parachute
+# Paradrop Units
 
 This code adds a function that moves a unit out of a vehicle and attaches a steerable parachute to them.
 
