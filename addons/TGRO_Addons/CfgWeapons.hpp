@@ -17,8 +17,8 @@ class CfgWeapons
 	};
 	class UGL_F;
 	
-	#include "weapons\arifle_ACME_AK12.hpp"
-
+	#include "weapons\arifle_ACME_MCR21.hpp"
+	
 	class HeadgearItem;
 	class ItemCore;
 	class H_HelmetB: ItemCore
@@ -27,4 +27,5 @@ class CfgWeapons
 	};
 
 	#include "weapons\H_Balaclava_Magic.hpp"
+	#include "weapons\H_HelmetB_ACME_Stealth_Helmet.hpp"
 };

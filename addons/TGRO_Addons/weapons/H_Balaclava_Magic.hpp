@@ -1,16 +1,13 @@
 class H_Balaclava_Magic: H_HelmetB
-{
-    
-    author="$STR_A3_Bohemia_Interactive";
+{   
+    author="ajeless";
     _generalMacro="H_HelmetO_ViperSP_hex_F";
     scope=2;
     displayName="ACME Magic Balaclava";
-    // picture="\A3\characters_F_Gamma\Guerrilla\Data\ui\icon_H_Shemag_olive_ca.paa";
-    // model="\A3\Characters_F_Gamma\Guerrilla\headgear_shemagmask";
     model="\A3\Characters_F_Bootcamp\Guerrilla\g_balaclava_clean.p3d";
     picture="\A3\Characters_F_Bootcamp\Data\UI\icon_G_Balaclava_clean_ca.paa";
     DLC="Expansion";
-    descriptionShort="ACME Magic Shemag";
+    descriptionShort="ACME Magic Balaclava";
     hiddenSelections[]=
     {
         "camo"

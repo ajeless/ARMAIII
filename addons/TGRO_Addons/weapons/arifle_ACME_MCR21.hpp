@@ -1,10 +1,10 @@
-class arifle_ACME_AK12_base: Rifle_Base_F
+class arifle_ACME_MCR_base: Rifle_Base_F
 {
-    author="The Republic of Curdestand and Private Floydy";
-    _generalMacro="arifle_ACME_AK12_base";
+    author="ajeless";
+    _generalMacro="arifle_ACME_MCR_base";
     scope=0;
     displayName="";
-    descriptionShort="ACME AK-12 ase configuration";
+    descriptionShort="ACME MCR base configuration";
     model="\A3\Weapons_F_Exp\Rifles\AK12\AK12_F.p3d";
     hiddenSelections[]=
     {
@@ -19,7 +19,8 @@ class arifle_ACME_AK12_base: Rifle_Base_F
     reloadAction="GestureReloadAKM";
     magazines[]=
     {
-        "75rnd_762x39_AK12_Mag_F"
+        "50Rnd_85x64_ACME_MCR21_Mag",
+        "30Rnd_85x64_ACME_MCR21_Mag"
     };
     magazineWell[]=
     {
@@ -32,7 +33,7 @@ class arifle_ACME_AK12_base: Rifle_Base_F
     aimTransitionSpeed=1.1;
     dexterity=2.0;
     initSpeed=850;
-    recoil="recoil_ACME_ak12";
+    recoil="recoil_ACME_MCR21";
     maxZeroing=2000;
  
     bullet1[]=
@@ -339,13 +340,14 @@ class arifle_ACME_AK12_base: Rifle_Base_F
     };
 };
 
-class arifle_ACME_AK12_M: arifle_ACME_AK12_base
+class arifle_ACME_MCR21: arifle_ACME_MCR_base
 {
-    author="$STR_A3_Bohemia_Interactive";
-    _generalMacro="arifle_ACME_AK12_M";
-    baseWeapon="arifle_ACME_AK12_M";
+    author="ajeless";
+    _generalMacro="arifle_ACME_MCR21";
+    baseWeapon="arifle_ACME_MCR21";
     scope=2;
-    displayName="ACME AK-12 M (Black, 7.62x39)";
+    displayName="ACME MCR-21 (Black, 8.5x64)";
+    descriptionShort="ACME MCR-21 (8.5x64)mm Multirole Combat Rifle";
     picture="\A3\Weapons_F_Exp\Rifles\AK12\Data\UI\icon_arifle_AK12_F_X_CA.paa";
     hiddenSelectionsTextures[]=
     {
