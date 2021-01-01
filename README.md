@@ -1,6 +1,6 @@
 # ARMAIII
 
-Repository for ARMA III experiments.
+Repository for all my ARMA III mods and scripts.
 ## About the game
 ### [The official Bohemia Site](https://www.bohemia.net/)
 ### [The Steam Page](https://store.steampowered.com/app/107410/Arma_3)
@@ -9,7 +9,7 @@ Repository for ARMA III experiments.
 [TGRO_Addons](./addons/TGRO_Addons)
 
 ## Mission Editing/Scripting Experiments
-[Add Action](./scripting/add_action.md)   
+[Add Action](./scripting/add_action.md)      
 [Transporter Spawn](./scripting/transporter_spawn_point.md)    
 [Vector Spawn](./scripting/vector_spawn_point.md)  
 [Keep Loadout on Spawn](./scripting/spawn_loadout.md)  
