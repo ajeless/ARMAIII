@@ -1,4 +1,4 @@
-# Preserving Player Inventory on Death
+# Keeping Loadout on Spawn
 
 This code saves the player's loadout when they're killed and adds it back when they respawn.  This is necessary for preserving inventory counts for ammo, medkits, explosives, etc...
 

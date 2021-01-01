@@ -1,4 +1,4 @@
-# Drop Object at Random Inside Marker Area - Triggered
+# Drop Object - Triggered
 
 Example of how to use a trigger to call a script to drop random artillery/bombs on a position inside a marker area.
 

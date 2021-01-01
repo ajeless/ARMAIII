@@ -1,17 +1,20 @@
 # ARMAIII
 
-Repository for ARMA III experiments.
+Repository for all my ARMA III mods and scripts.
+## About the game
+### [The official Bohemia Site](https://www.bohemia.net/)
+### [The Steam Page](https://store.steampowered.com/app/107410/Arma_3)
 
-## Addons/Modules
+## My Addons
 [TGRO_Addons](./addons/TGRO_Addons)
 
-## Mission Editing/Scripting Examples
-[Add Action to Object](./scripting/add_action.md)   
-[Player Transporter Spawn Point](./scripting/transporter_spawn_point.md)    
-[Player Vector Spawn Point](./scripting/vector_spawn_point.md)  
-[Managing Player Inventory on Death](./scripting/preserving_inventory_on_death.md)  
+## Mission Editing/Scripting Experiments
+[Add Action](./scripting/add_action.md)      
+[Transporter Spawn](./scripting/transporter_spawn_point.md)    
+[Vector Spawn](./scripting/vector_spawn_point.md)  
+[Keep Loadout on Spawn](./scripting/spawn_loadout.md)  
 [Player Tracking Marker](./scripting/tracking_marker.md)    
-[Drop Object on Random Position Inside Marker Area - scripted](./scripting/drop_objects_random_fl.md)   
-[Drop Object on Random Position Inside Marker Area - triggered](./scripting/drop_objects_random_trig.md)    
-[Paradrop a Unit and Add Steerable Parachute](./scripting/paradrop_units.md)    
+[Drop Object - scripted](./scripting/drop_objects_random_fl.md)   
+[Drop Object - triggered](./scripting/drop_objects_random_trig.md)    
+[Paradrop Units](./scripting/paradrop_units.md)    
 [Flak Generator](./scripting/flak_generator.md) 

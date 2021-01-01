@@ -1,4 +1,4 @@
-# Drop Object at Random Inside Marker Area
+# Drop Object - Scripted
 
 This code adds a functions library that enables the dropping of random objects.
 
