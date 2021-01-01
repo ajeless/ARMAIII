@@ -3,4 +3,6 @@
 #include "CfgFunctions.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgRecoils.hpp"
+#include "CfgAmmo.hpp"
+#include "CfgMagazines.hpp"
 #include "CfgWeapons.hpp"
