@@ -220,7 +220,7 @@ class arifle_ACME_MCR_base: Rifle_Base_F
                 "AK12_silencerInteriorTail_SoundSet"
             };
         };
-        reloadTime=0.1;
+        reloadTime=0.115;
         dispersion=0.00086999999;
         minRange=2;
         minRangeProbab=0.5;
@@ -292,7 +292,7 @@ class arifle_ACME_MCR_base: Rifle_Base_F
                 "AK12_silencerInteriorTail_SoundSet"
             };
         };
-        reloadTime=0.1;
+        reloadTime=0.115;
         dispersion=0.00086999999;
         minRange=2;
         minRangeProbab=0.89999998;
