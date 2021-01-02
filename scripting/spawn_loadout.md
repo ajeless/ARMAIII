@@ -26,5 +26,4 @@ removeAllAssignedItems player;
 clearAllItemsFromBackpack player;
 removeBackpack player;
 player setUnitLoadout(player getVariable["Saved_Loadout",[]]);
-deleteMarker format ["respawn_west_%1", name player];
 ```
