@@ -1,3 +1,19 @@
+// CfgMagazineWells Starts Here
+class CfgMagazineWells
+{
+
+	class ACME_85x64
+	{
+		ACME_Magazines[]=
+		{
+			"30Rnd_85x64_Mag_F",
+			"30Rnd_85x64_ACME_MCR21_Mag",
+			"50Rnd_85x64_ACME_MCR21_Mag"
+		};
+	};
+};
+
+// Cfg Weapons Starts Here
 class Mode_SemiAuto;
 class Mode_Burst;
 class Mode_FullAuto;

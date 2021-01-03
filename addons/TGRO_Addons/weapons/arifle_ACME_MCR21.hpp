@@ -24,7 +24,7 @@ class arifle_ACME_MCR_base: Rifle_Base_F
     };
     magazineWell[]=
     {
-        "AK_762x39"
+        "ACME_85x64"
     };
     magazineReloadSwitchPhase=0.47999999;
     htMin=7;
