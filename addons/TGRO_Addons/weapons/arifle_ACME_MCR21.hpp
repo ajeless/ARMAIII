@@ -149,7 +149,7 @@ class arifle_ACME_MCR_base: Rifle_Base_F
     };
     class Library
     {
-        libTextDesc="ACME AK-12 base configuration";
+        libTextDesc="ACME MCR base configuration";
     };
     class WeaponSlotsInfo: WeaponSlotsInfo
     {

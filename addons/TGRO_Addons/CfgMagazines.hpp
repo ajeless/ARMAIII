@@ -66,4 +66,35 @@ class CfgMagazines
 			"\A3\Weapons_F_Enoch\Rifles\AK12\Data\AK12_RPK12.rvmat"
 		};
 	};
+
+
+	class 135Rnd_85x64_Belt: CA_Magazine
+	{
+		author="ajeless";
+		scope=2;
+		displayName="8.5 mm 135rnd ACME ZK-1 Belt";
+		picture="\A3\Weapons_F_Mark\Data\UI\M_338_NM_CA.paa";
+		count=135;
+		ammo="B_85x64_ACME_Ball";
+		initSpeed=815;
+		tracersEvery=3;
+		lastRoundsTracer=5;
+		descriptionShort="8.5mm 135Rnd ACME Belt<br/>Caliber: 8.5x64mm<br/>Rounds: 135<br/>Used in: ACME ZK-21";
+		mass=50;
+	};
+
+	class 84Rnd_8x60_Mag: CA_Magazine
+	{
+		author="ajeless";
+		scope=2;
+		displayName="8mm 84rnd ACME MCR-22 Quad Stacked Mag";
+		picture="\A3\Weapons_F_EPA\Data\ui\M_5rnd_127x108_ball_CA.paa";
+		count=84;
+		ammo="B_80x60_ACME_Ball";
+		initSpeed=820;
+		tracersEvery=2;
+		lastRoundsTracer=4;
+		descriptionShort="8mm 84Rnd ACME Quad Magazine Stack<br/>Caliber: 8x60mm<br/>Rounds: 84<br/>Used in: ACME MCR-22";
+		mass=16;
+	};
 };
