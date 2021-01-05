@@ -29,7 +29,7 @@ class CfgPatches
 			// "arifle_ACME_MCR21",
             "MMG_ACME_ZK21",
             "arifle_ACME_HAR22",
-            "H_Balaclava_Magic",
+            "H_Balaclava_Armored",
             "H_HelmetB_ACME_Stealth_Helmet"
 		};
 	};
