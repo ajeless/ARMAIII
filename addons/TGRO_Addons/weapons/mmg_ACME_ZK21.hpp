@@ -775,6 +775,7 @@ class MMG_ACME_base_F: Rifle_Long_Base_F
     };
     aiDispersionCoefY=20;
     aiDispersionCoefX=15;
+    initialSpeed=0;
 };
 
 class MMG_ACME_ZK21: MMG_ACME_base_F

@@ -21,7 +21,7 @@ class CfgMagazineWells
 	{
 		ACME_Magazines[]=
 		{
-			"84Rnd_8x60_Mag"
+			"66Rnd_8x60_Mag"
 		};
 	};
 };

@@ -1,13 +1,13 @@
-class H_Balaclava_Magic: H_HelmetB
+class H_Balaclava_Armored: H_HelmetB
 {   
     author="ajeless";
     _generalMacro="H_HelmetO_ViperSP_hex_F";
     scope=2;
-    displayName="ACME Magic Balaclava";
+    displayName="ACME Armored Balaclava";
     model="\A3\Characters_F_Bootcamp\Guerrilla\g_balaclava_clean.p3d";
     picture="\A3\Characters_F_Bootcamp\Data\UI\icon_G_Balaclava_clean_ca.paa";
     DLC="Expansion";
-    descriptionShort="ACME Magic Balaclava";
+    descriptionShort="ACME Armored Balaclava";
     hiddenSelections[]=
     {
         "camo"
@@ -30,23 +30,17 @@ class H_Balaclava_Magic: H_HelmetB
             class Head
             {
                 hitpointName="HitHead";
-                armor=1000000;
-                passThrough=.1;
-                explosionShielding=1000000;
-                armorStructural=10000;
+                armor=4;
+                passThrough=.5;
+                explosionShielding=4;
             };
             class Face
             {
                 hitpointName="HitFace";
-                armor=1000000;
-                passThrough=.1;
-                explosionShielding=1000000;
-                armorStructural=10000;
+                armor=4;
+                passThrough=.5;
+                explosionShielding=1;
             };
         };
-    };
-    subItems[]=
-    {
-        "Integrated_NVG_TI_1_F"
     };
 };
