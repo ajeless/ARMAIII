@@ -26,7 +26,9 @@ class CfgPatches
 		units[]={};
 		weapons[]=
 		{
-			"arifle_ACME_MCR21",
+			// "arifle_ACME_MCR21",
+            "MMG_ACME_ZK21",
+            "arifle_ACME_HAR22",
             "H_Balaclava_Magic",
             "H_HelmetB_ACME_Stealth_Helmet"
 		};

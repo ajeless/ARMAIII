@@ -5,4 +5,6 @@
 #include "CfgRecoils.hpp"
 #include "CfgAmmo.hpp"
 #include "CfgMagazines.hpp"
+#include "CfgMagazineWells.hpp"
+#include "CfgSoundShaders.hpp"
 #include "CfgWeapons.hpp"
