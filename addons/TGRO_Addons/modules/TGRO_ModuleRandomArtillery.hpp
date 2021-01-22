@@ -71,7 +71,7 @@ class TGRO_ModuleRandomArtillery: Module_F
             displayName = "Altitude(m)";
             tooltip = "Altitude from which ordnance is to be dropped";
             typeName = "NUMBER";
-            defaultValue = 150;
+            defaultValue = 100;
         };
 
         class Delay: Edit
