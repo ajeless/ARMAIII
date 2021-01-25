@@ -19,7 +19,7 @@ _respawnPointPosition = [player, _spawnPointDistance, _spawnPointDir] call BIS_f
 // Create player vector respawn point
 _playerName = name player;
 _spawnPointName = format ["respawn_%1_%2", playerSide, _playerName];
-PlayerRespawnPoint = createMarker [_spawnPointName, player];
+missionNamespace setVariable ["PlayerRespawnPoint", createMarker [_spawnPointName, player]];
 PlayerRespawnPoint setMarkerText _playerName;
 PlayerRespawnPoint setMarkerAlpha 0; // Comment out to debug
 PlayerRespawnPoint setMarkerPos _respawnPointPosition;

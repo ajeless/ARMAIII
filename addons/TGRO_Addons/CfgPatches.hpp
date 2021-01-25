@@ -10,7 +10,8 @@ class CfgPatches
          units[] = {
             "TGRO_ModuleRandomArtillery",
             "TGRO_ModuleRandomSmokeAndFlares",
-            "TGRO_ModuleRandomCarnage"
+            "TGRO_ModuleRandomCarnage",
+            "TGRO_ModuleVectorRespawn"
          };
          weapons[] = {};
      };

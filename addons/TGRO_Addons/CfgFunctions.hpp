@@ -15,6 +15,7 @@ class CfgFunctions
             class getMenAndVehicleClasses {};
             class vectorRespawnKilled {};
             class vectorRespawnSpawn {};
+            class moduleVectorRespawn {}; 
         };
 
     };

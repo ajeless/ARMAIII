@@ -22,4 +22,5 @@ class CfgVehicles
     #include "modules\TGRO_ModuleRandomArtillery.hpp"
     #include "modules\TGRO_ModuleRandomSmokeAndFlares.hpp"
     #include "modules\TGRO_ModuleRandomCarnage.hpp"
+    #include "modules\TGRO_ModuleVectorRespawn.hpp"
 };
