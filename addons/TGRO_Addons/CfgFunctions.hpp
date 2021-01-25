@@ -13,6 +13,8 @@ class CfgFunctions
             class moduleRandomCarnage {};
             class waitForPopulateMapEntities {};
             class getMenAndVehicleClasses {};
+            class vectorRespawnKilled {};
+            class vectorRespawnSpawn {};
         };
 
     };
