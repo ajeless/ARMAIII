@@ -4,6 +4,7 @@ _spawnArc = _module getVariable "SpawnArc";
 _minDist = _module getVariable "MinDist";
 _avgDist = _module getVariable "AvgDist";
 _maxDist = _module getVariable "MaxDist";
+_preserveLoadout = _module getVariable "PreserveLoadout";
 
 if (_activated) then {
 // Create global player vector respawn anchors
@@ -25,6 +26,8 @@ if (_activated) then {
 	missionNamespace setVariable ["TGRO_VECTOR_RESPAWN_MIN_DIST", _minDist];
 	missionNamespace setVariable ["TGRO_VECTOR_RESPAWN_AVG_DIST", _avgDist];
 	missionNamespace setVariable ["TGRO_VECTOR_RESPAWN_MAX_DIST", _maxDist];
+	missionNamespace setVariable ["TGRO_PRESERVE_LOADOUT", _preserveLoadout];
+
 
 	// Add 'killed' event handlers for each player
 	{

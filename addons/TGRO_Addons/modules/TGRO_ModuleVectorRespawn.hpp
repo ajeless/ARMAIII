@@ -49,6 +49,15 @@ class TGRO_ModuleVectorRespawn: Module_F
             defaultValue = 175;
         };
 
+        class PreserveLoadout: Checkbox   
+        {
+            property = "TGRO_ModuleVectorRespawn_PreserveLoadout";
+            displayName = "PreserveLoadout";
+            tooltip = "Player respawns with inventory they had at time of death.  Ammo gets used up over course of mission, etc...";
+            typeName = "BOOLEAN";
+            defaultValue = false;
+        };
+
         class ModuleDescription: ModuleDescription
         {
         };

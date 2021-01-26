@@ -1,3 +1,8 @@
+// Handle inventory/loadout
+if (TGRO_PRESERVE_LOADOUT) then {
+	player setVariable["Loadout", getUnitLoadout player];
+};
+
 // Get individual player's vector respawn anchor
 _playerRespawnAnchor = nil;
 {
