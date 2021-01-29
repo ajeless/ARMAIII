@@ -1,7 +1,7 @@
-class arifle_ACME_base_F: Rifle_Long_Base_F
+class arifle_ACME_HAR22_base_F: Rifle_Long_Base_F
 	{
 		author="ajeless";
-		_generalMacro="arifle_ACME_base_F";
+		_generalMacro="arifle_ACME_HAR22_base_F";
 		scope=0;
 		magazines[]=
         {
@@ -385,7 +385,7 @@ class arifle_ACME_base_F: Rifle_Long_Base_F
 			requiredOpticType=2;
 		};
 	};
-	class arifle_ACME_HAR22: arifle_ACME_base_F
+	class arifle_ACME_HAR22: arifle_ACME_HAR22_base_F
 	{
 		author="ajeless";
 		_generalMacro="arifle_ACME_HAR22";
