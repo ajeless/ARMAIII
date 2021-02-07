@@ -13,7 +13,7 @@ class CfgWeapons
 	class Rifle_Base_F: Rifle
 	{
 		class WeaponSlotsInfo;
-		// class GunParticles;
+		class GunParticles;
 	};
 
 	class Rifle_Long_Base_F: Rifle_Base_F
@@ -26,6 +26,7 @@ class CfgWeapons
 	// #include "weapons\arifle_ACME_MCR21.hpp"
 	#include "weapons\mmg_ACME_ZK21.hpp"
 	#include "weapons\arifle_ACME_HAR22.hpp"
+
 	
 	class HeadgearItem;
 	class ItemCore;

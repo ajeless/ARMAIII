@@ -8,3 +8,7 @@
 #include "CfgMagazineWells.hpp"
 #include "CfgSoundShaders.hpp"
 #include "CfgWeapons.hpp"
+#include "CfgWorldList.hpp"
+#include "CfgSurfaces.hpp"
+#include "CfgLensFlare.hpp"
+#include "CfgWorlds.hpp"

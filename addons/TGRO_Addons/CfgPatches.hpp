@@ -33,4 +33,20 @@ class CfgPatches
             "H_HelmetB_ACME_Stealth_Helmet"
 		};
 	};
+
+    class Deserted_VR
+	{
+		author="EO";
+		name="";
+		url="";
+		requiredAddons[]=
+		{
+			"A3_Data_F_Bootcamp",
+			"A3_Data_F",
+			"A3_Map_Data"
+		};
+		requiredVersion=0.1;
+		units[]={};
+		weapons[]={};
+	};
 };
