@@ -26,7 +26,7 @@ class CfgWeapons
 	// #include "weapons\arifle_ACME_MCR21.hpp"
 	#include "weapons\mmg_ACME_ZK21.hpp"
 	#include "weapons\arifle_ACME_HAR22.hpp"
-	#include "weapons\arifle_ACME_MX_HyperV.hpp"
+
 	
 	class HeadgearItem;
 	class ItemCore;
