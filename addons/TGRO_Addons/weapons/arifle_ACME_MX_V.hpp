@@ -133,22 +133,22 @@ class arifle_ACME_MX_V_base_Top_F: Rifle_Base_F
 		class BaseSoundModeType;
 		class StandardSound: BaseSoundModeType
 		{
-			soundsetshot[]=
+			soundSetShot[]=
 			{
-				"DMR01_Shot_SoundSet",
-				"DMR01_Tail_SoundSet",
-				"DMR01_InteriorTail_SoundSet"
+				"MX_Shot_SoundSet",
+				"MX_Tail_SoundSet",
+				"MX_InteriorTail_SoundSet"
 			};
 		};
 		class SilencedSound: BaseSoundModeType
 		{
-			soundsetshot[]=
+			soundSetShot[]=
 			{
-				"DMR01_silencerShot_SoundSet",
-				"DMR01_silencerTail_SoundSet",
-				"DMR01_silencerInteriorTail_SoundSet"
+				"MX_silencerShot_SoundSet",
+				"MX_silencerTail_SoundSet",
+				"MX_silencerInteriorTail_SoundSet"
 			};
-		}
+		};
 	};
 	class FullAuto: Mode_FullAuto
 	{
@@ -173,22 +173,22 @@ class arifle_ACME_MX_V_base_Top_F: Rifle_Base_F
 		class BaseSoundModeType;
 		class StandardSound: BaseSoundModeType
 		{
-			soundsetshot[]=
+			soundSetShot[]=
 			{
-				"DMR01_Shot_SoundSet",
-				"DMR01_Tail_SoundSet",
-				"DMR01_InteriorTail_SoundSet"
+				"MX_Shot_SoundSet",
+				"MX_Tail_SoundSet",
+				"MX_InteriorTail_SoundSet"
 			};
 		};
 		class SilencedSound: BaseSoundModeType
 		{
-			soundsetshot[]=
+			soundSetShot[]=
 			{
-				"DMR01_silencerShot_SoundSet",
-				"DMR01_silencerTail_SoundSet",
-				"DMR01_silencerInteriorTail_SoundSet"
+				"MX_silencerShot_SoundSet",
+				"MX_silencerTail_SoundSet",
+				"MX_silencerInteriorTail_SoundSet"
 			};
-		}
+		};
 	};
 	class fullauto_medium: FullAuto
 	{
@@ -206,25 +206,25 @@ class arifle_ACME_MX_V_base_Top_F: Rifle_Base_F
 	};
 	class Burst2: Mode_Burst
 	{
-	class BaseSoundModeType;
-	class StandardSound: BaseSoundModeType
-	{
-		soundSetShot[]=
+		class BaseSoundModeType;
+		class StandardSound: BaseSoundModeType
 		{
-			"DMR01_Shot_SoundSet",
-			"DMR01_tail_SoundSet",
-			"DMR01_InteriorTail_SoundSet"
+			soundSetShot[]=
+			{
+				"MX_Shot_SoundSet",
+				"MX_Tail_SoundSet",
+				"MX_InteriorTail_SoundSet"
+			};
 		};
-	};
-	class SilencedSound: BaseSoundModeType
-	{
-		SoundSetShot[]=
+		class SilencedSound: BaseSoundModeType
 		{
-			"DMR01_silencerShot_SoundSet",
-			"DMR01_silencerTail_SoundSet",
-			"DMR01_silencerInteriorTail_SoundSet"
+			soundSetShot[]=
+			{
+				"MX_silencerShot_SoundSet",
+				"MX_silencerTail_SoundSet",
+				"MX_silencerInteriorTail_SoundSet"
+			};
 		};
-	};
 		textureType="dual";
 		burst=2;
 		reloadTime=0.06;
@@ -262,70 +262,6 @@ class arifle_ACME_MX_V_base_Top_F: Rifle_Base_F
 		aiRateOfFire=8;
 		aiRateOfFireDistance=700;
 	};
-	// class GL_3GL_F: UGL_F
-	// {
-	// 	displayName="$STR_A3_cfgweapons_3gl0";
-	// 	descriptionShort="$STR_A3_cfgweapons_3gl1";
-	// 	useModelOptics=0;
-	// 	useExternalOptic=0;
-	// 	magazines[]=
-	// 	{
-	// 		"1Rnd_HE_Grenade_shell",
-	// 		"UGL_FlareWhite_F",
-	// 		"UGL_FlareGreen_F",
-	// 		"UGL_FlareRed_F",
-	// 		"UGL_FlareYellow_F",
-	// 		"UGL_FlareCIR_F",
-	// 		"1Rnd_Smoke_Grenade_shell",
-	// 		"1Rnd_SmokeRed_Grenade_shell",
-	// 		"1Rnd_SmokeGreen_Grenade_shell",
-	// 		"1Rnd_SmokeYellow_Grenade_shell",
-	// 		"1Rnd_SmokePurple_Grenade_shell",
-	// 		"1Rnd_SmokeBlue_Grenade_shell",
-	// 		"1Rnd_SmokeOrange_Grenade_shell",
-	// 		"3Rnd_HE_Grenade_shell",
-	// 		"3Rnd_UGL_FlareWhite_F",
-	// 		"3Rnd_UGL_FlareGreen_F",
-	// 		"3Rnd_UGL_FlareRed_F",
-	// 		"3Rnd_UGL_FlareYellow_F",
-	// 		"3Rnd_UGL_FlareCIR_F",
-	// 		"3Rnd_Smoke_Grenade_shell",
-	// 		"3Rnd_SmokeRed_Grenade_shell",
-	// 		"3Rnd_SmokeGreen_Grenade_shell",
-	// 		"3Rnd_SmokeYellow_Grenade_shell",
-	// 		"3Rnd_SmokePurple_Grenade_shell",
-	// 		"3Rnd_SmokeBlue_Grenade_shell",
-	// 		"3Rnd_SmokeOrange_Grenade_shell"
-	// 	};
-	// 	magazineWell[]=
-	// 	{
-	// 		"UGL_40x36",
-	// 		"3UGL_40x36"
-	// 	};
-	// 	cameraDir="OP_look";
-	// 	discreteDistance[]={50,75,100,150,200,250,300,350,400};
-	// 	discreteDistanceCameraPoint[]=
-	// 	{
-	// 		"OP_eye_50",
-	// 		"OP_eye_75",
-	// 		"OP_eye_100",
-	// 		"OP_eye_150",
-	// 		"OP_eye_200",
-	// 		"OP_eye_250",
-	// 		"OP_eye_300",
-	// 		"OP_eye_350",
-	// 		"OP_eye_400"
-	// 	};
-	// 	discreteDistanceInitIndex=1;
-	// 	reloadAction="GestureReloadMXUGL";
-	// 	reloadMagazineSound[]=
-	// 	{
-	// 		"A3\Sounds_F\arsenal\weapons\Rifles\MX\Mx_UGL_reload",
-	// 		1,
-	// 		1,
-	// 		10
-	// 	};
-	// };
 	aiDispersionCoefY=6;
 	aiDispersionCoefX=4;
 };
@@ -361,7 +297,7 @@ class arifle_ACME_MXC_V_Base_F: arifle_ACME_MX_V_base_Top_F
 	inertia=0.40000001;
 	aimTransitionSpeed=1.2;
 	dexterity=1.6;
-	initSpeed=720;
+	initSpeed=920;
 	recoil="recoil_mxc";
 	maxZeroing=800;
 	class ItemInfo
@@ -512,7 +448,7 @@ class arifle_ACME_MX_V_Base_F: arifle_ACME_MX_V_base_Top_F
 	inertia=0.5;
 	aimTransitionSpeed=1;
 	dexterity=1.5;
-	initSpeed=800;
+	initSpeed=1000;
 	class ItemInfo
 	{
 		priority=1;
@@ -600,7 +536,7 @@ class arifle_ACME_MX_SW_V_Base_F: arifle_ACME_MX_V_base_Top_F
 	inertia=0.60000002;
 	aimTransitionSpeed=0.80000001;
 	dexterity=1.4;
-	initSpeed=880;
+	initSpeed=1080;
 	recoil="recoil_sw";
 	maxZeroing=1200;
 	class Single: Mode_SemiAuto
@@ -623,22 +559,22 @@ class arifle_ACME_MX_SW_V_Base_F: arifle_ACME_MX_V_base_Top_F
 		class BaseSoundModeType;
 		class StandardSound: BaseSoundModeType
 		{
-			soundsetshot[]=
+			soundSetShot[]=
 			{
-				"DMR01_Shot_SoundSet",
-				"DMR01_Tail_SoundSet",
-				"DMR01_InteriorTail_SoundSet"
+				"MX_Shot_SoundSet",
+				"MX_Tail_SoundSet",
+				"MX_InteriorTail_SoundSet"
 			};
 		};
 		class SilencedSound: BaseSoundModeType
 		{
-			soundsetshot[]=
+			soundSetShot[]=
 			{
-				"DMR01_silencerShot_SoundSet",
-				"DMR01_silencerTail_SoundSet",
-				"DMR01_silencerInteriorTail_SoundSet"
+				"MX_silencerShot_SoundSet",
+				"MX_silencerTail_SoundSet",
+				"MX_silencerInteriorTail_SoundSet"
 			};
-		}
+		};
 	};
 	class ItemInfo
 	{
@@ -915,7 +851,7 @@ class arifle_ACME_MXM_V_Base_F: arifle_ACME_MX_V_base_Top_F
 	inertia=0.60000002;
 	aimTransitionSpeed=0.80000001;
 	dexterity=1.4;
-	initSpeed=920;
+	initSpeed=1120;
 	recoil="recoil_mxm";
 	maxZeroing=1400;
 };

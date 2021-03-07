@@ -32,21 +32,29 @@ class CfgMagazines
 		mass=42;
 	};
 
-	class 30Rnd_65x39_ACME_Caseless_Base_Mag: CA_Magazine
+	class 65x39_ACME_Caseless_Base_Mag: CA_Magazine
 	{
 		author="ajeless";
-		modelSpecial="a3\Weapons_F\MagazineProxies\mag_65x39c_mx_30rnd.p3d";
 		modelSpecialIsProxy=1;
 		hiddenSelections[]=
 		{
 			"camo"
 		};
+		hiddenSelectionsTextures[]=
+		{
+			"\a3\weapons_f\rifles\mx\data\xmx_base_co.paa"
+		};
+		initSpeed=1000;
+		tracersEvery=0;
+		lastRoundsTracer=4;
+		descriptionShort="Caliber: 6.5x39 mm ‒ STANAG Caseless&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: ACME MX/C/M/SW/3GL";
+	};
+
+	class 30Rnd_65x39_ACME_Caseless_Base_Mag: 65x39_ACME_Caseless_Base_Mag
+	{
+		modelSpecial="a3\Weapons_F\MagazineProxies\mag_65x39c_mx_30rnd.p3d";
 		count=30;
 		mass=10;
-		initSpeed=800;
-		tracersEvery=0;
-		lastRoundsTracer=5;
-		descriptionShort="Caliber: 6.5x39 mm ‒ STANAG Caseless&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: ACME MX/C/M/SW/3GL";
 	};
 
 	class 30Rnd_65x39_ACME_Caseless_Sand_Mag_R: 30Rnd_65x39_ACME_Caseless_Base_Mag
@@ -271,22 +279,12 @@ class CfgMagazines
 		ammo="B_65x39_ACME_Caseless_yellow";
 	};
 
-	class 100Rnd_65x39_ACME_Caseless_Base_Mag: CA_Magazine
+	class 100Rnd_65x39_ACME_Caseless_Base_Mag: 65x39_ACME_Caseless_Base_Mag
 	{
-		author="ajeless";
 		modelSpecial="a3\Weapons_F\MagazineProxies\mag_65x39c_mx_100rnd.p3d";
-		modelSpecialIsProxy=1;
-		hiddenSelections[]=
-		{
-			"camo"
-		};
 		count=100;
 		type="2*		256";
 		mass=25;
-		initSpeed=800;
-		tracersEvery=4;
-		lastRoundsTracer=4;
-		descriptionShort="Caliber: 6.5x39 mm ‒ STANAG Caseless&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: ACME MX/C/M/SW/3GL";
 	};
 
 	class 100Rnd_65x39_ACME_Caseless_Sand_Mag_R: 100Rnd_65x39_ACME_Caseless_Base_Mag

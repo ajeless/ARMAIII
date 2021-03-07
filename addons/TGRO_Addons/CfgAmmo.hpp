@@ -65,7 +65,7 @@ class CfgAmmo
 
 	class B_65x39_ACME_Caseless_Base: BulletBase
 	{
-		hit=13.76;
+		hit=10.5;
 		indirectHit=0;
 		indirectHitRange=0;
 		cartridge="";
@@ -75,16 +75,13 @@ class CfgAmmo
 		suppressionRadiusBulletClose=6;
 		suppressionRadiusHit=8;
 		cost=1.2;
-		thrust=210;
-		thrustTime=1.5;
-		timeToLive=6;
 		airLock=1;
-		typicalSpeed=820;
-		caliber=1.5;
-		// model="\A3\Weapons_f\Data\bullettracer\tracer_green";
+		typicalSpeed=1020;
+		caliber=1.4;
+		model="\A3\Weapons_f\Data\bullettracer\tracer_red";
 		tracerScale=1;
-		tracerStartTime=0.00750000001;
-		tracerEndTime=5;
+		tracerStartTime=0.050000001;
+		tracerEndTime=1;
 		airFriction=-0.00089999998;
 		class CamShakeExplode
 		{
