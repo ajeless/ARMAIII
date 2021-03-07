@@ -14,6 +14,5 @@ class CfgFunctions
             class waitForPopulateMapEntities {};
             class getMenAndVehicleClasses {};
         };
-
     };
 };
