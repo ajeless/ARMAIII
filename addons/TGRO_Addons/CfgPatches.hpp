@@ -26,9 +26,20 @@ class CfgPatches
 		units[]={};
 		weapons[]=
 		{
-			// "arifle_ACME_MCR21",
             "MMG_ACME_ZK21",
             "arifle_ACME_HAR22",
+			"arifle_ACME_MXC_V_Sand_F",
+			"arifle_ACME_MXC_V_Khaki_F",
+			"arifle_ACME_MXC_V_Black_F",
+			"arifle_ACME_MX_V_Sand_F",
+			"arifle_ACME_MX_V_Khaki_F",
+			"arifle_ACME_MX_V_Black_F",
+			"arifle_ACME_MX_SW_V_Sand_F",
+			"arifle_ACME_MX_SW_V_Khaki_F",
+			"arifle_ACME_MX_SW_V_Black_F",
+			"arifle_ACME_MXM_V_Sand_F",
+			"arifle_ACME_MXM_V_Khaki_F",
+			"arifle_ACME_MXM_V_Black_F",
             "H_Balaclava_Armored",
             "H_HelmetB_ACME_Stealth_Helmet"
 		};

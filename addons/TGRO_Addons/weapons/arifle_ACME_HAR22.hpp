@@ -9,7 +9,7 @@ class arifle_ACME_HAR22_base_F: Rifle_Long_Base_F
         };
         magazineWell[]=
         {
-            "ACME_5x60_Quad_Mag"
+            "ACME_8x60_Quad_Mag"
         };
 		reloadAction="ReloadGM6";
 		recoil="recoil_ACME_HAR22";
